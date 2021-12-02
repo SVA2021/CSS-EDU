@@ -1,0 +1,9 @@
+.main__position__demo {
+    /* grid-area: 2 / 3 / 3 / 7; */
+    background-color: blue;
+    color: black;
+    display: block;
+    background-color: green;
+    flex-grow: 2;
+    margin: 1em;
+}

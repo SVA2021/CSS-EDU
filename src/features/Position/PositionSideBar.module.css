@@ -1,0 +1,13 @@
+.main__position__sidebar {
+    /* grid-area: 2 / 1 / 3 / 3; */
+    background-color: blue;
+    color: black;
+    display: block;
+    background-color: yellowgreen;
+    flex-grow: 1;
+    margin: 1em;
+}
+
+.sidebar__mainBtn {
+    color:black
+}
