@@ -1,16 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import style from './NavBar.module.css'
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { setSlider } from '../Main/demoSlice'
 
 const NavBar = () => {
+    const dispatch = useAppDispatch();
+
     return (
         <nav className={style.navbar}>
             <ul>
-                <li><Link to="/">CSS EDU</Link></li>
-                <li><Link to="/position">Position of elements</Link></li>
-                <li><Link to="/selectors">CSS Selectors</Link></li>
-                <li><Link to="/animation">Animation</Link></li>
-                <li><Link to="/features">Features</Link></li>
+                <li>CSS EDU</li>
+                <li onClick={() => dispatch(setSlider('positionElem'))}>
+                    Position of elements</li>
+                <li>CSS Selectors</li>
+                <li>Animation</li>
+                <li>Features</li>
             </ul>
         </nav>
     )

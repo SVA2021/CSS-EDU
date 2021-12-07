@@ -1,0 +1,23 @@
+.sidebar__optionItem {
+    border: 1px solid yellow;
+}
+
+.sidebar__optionItem__header {
+    margin: 3px;
+    font-weight: bold;
+    color: aqua;
+}
+
+.sidebar__optionItem__btnList {
+    margin: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sidebar__optionItem__btn {
+    width: auto;
+    padding: 3px;
+    background-color:lightcoral;
+}

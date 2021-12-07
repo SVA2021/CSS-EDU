@@ -1,9 +1,9 @@
-export const positionElem = {
-    float: {//final
-        parent: {
-            display: ["block", "inline", "inline-block", "none", "inherit", "initial"],
-            float: ["left ", "right ", "none", "inherit"],
-            clear: ["left ", "right ", "none", "inherit", "both"],
+export const positionElem = {//pages
+    float: {//mainOption
+        parent: {//optionList
+            display: ["initial", "block", "inline", "inline-block", "none", "inherit",],
+            float: ["none", "left ", "right ", "inherit"],//optionItem
+            clear: ["none", "left ", "right ", "inherit", "both"],
         },
         childItem: {
             display: ["block", "inline", "inline-block", "none", "inherit", "initial"],
@@ -14,39 +14,42 @@ export const positionElem = {
     flex: { //final version
         parent: {
             display: "flex",
-            flexDirection: ["row", "row-reverse", "column", "column-reverse", "initial", "inherit"],
-            justifyContent: ["flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "initial", "inherit"],
-            flexWrap: ["nowrap", "wrap", "wrapReverse", "initial", "inherit"],
-            alignItems: ["stretch", "center", "flexStart", "flexEnd", "baseline", "initial", "inherit"],
-            alignContent: ["stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "initial", "inherit"],
+            flexDirection: ["initial", "row", "row-reverse", "column", "column-reverse", "inherit"],
+            justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
+            flexWrap: ["initial", "nowrap", "wrap", "wrapReverse", "inherit"],
+            alignItems: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"],
+            alignContent: ["initial", "stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "inherit"],
         },
         childItem: {
-            alignSelf: ["stretch", "center", "flexStart", "flexEnd", "baseline", "initial", "inherit"]
+            alignSelf: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"]
         }
     },
     grid: { // add some specific features
         parent: {
             display: "grid",
-            justifyContent: ["flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "initial", "inherit"],
-            alignItems: ["stretch", "center", "flexStart", "flexEnd", "baseline", "initial", "inherit"],
-            alignContent: ["stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "initial", "inherit"],
+            justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
+            alignItems: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"],
+            alignContent: ["initial", "stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "inherit"],
         },
         childItem: {
-            alignSelf: ["stretch", "center", "flexStart", "flexEnd", "baseline", "initial", "inherit"]
+            alignSelf: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"]
         }
     },
     position: { // need to fill
         parent: {
             display: "grid",
-            justifyContent: ["flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "initial", "inherit"],
-            alignItems: ["stretch", "center", "flexStart", "flexEnd", "baseline", "initial", "inherit"],
-            alignContent: ["stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "initial", "inherit"],
+            justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
+            alignItems: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"],
+            alignContent: ["initial", "stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "inherit"],
         },
         childItem: {
-            alignSelf: ["stretch", "center", "flexStart", "flexEnd", "baseline", "initial", "inherit"]
+            alignSelf: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"]
         }
     }
 }
 export const selectorsCSS = {}
 export const animations = {}
 export const features = {}
+
+// let array = Object.keys(positionElem);
+// console.log(array);

@@ -30,7 +30,7 @@ const flex = {
     }
 }
 
-console.log(flexParent);
+// console.log(flexParent);
 
 const OptionBtn = (props) => {
     let classes = (props.isActive)
