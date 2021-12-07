@@ -26,3 +26,9 @@
     padding: 3px;
     background-color:skyblue;
 }
+
+.sidebar__optionItem__btn__active {
+    width: auto;
+    padding: 3px;
+    background-color:red;
+}

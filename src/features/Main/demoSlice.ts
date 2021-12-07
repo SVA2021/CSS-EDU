@@ -4,15 +4,16 @@ import { positionElem, selectorsCSS, animations, features } from "./data"
 
 const initialState: demoState = {
   activeSlider: {},
-  activeDemo: {
-    parent: {},
-    childItem: {}
-  },
+  activeDemoParent: {},
+  activeDemoChild: {},
+  mainOption: ""
 };
 
 interface demoState {
   activeSlider: any
-  activeDemo: any
+  activeDemoParent: any
+  activeDemoChild: any
+  mainOption: string
 }
 
 
@@ -26,15 +27,27 @@ export const demoSlice = createSlice({
     setSlider: (state, action: PayloadAction<pagesType>) => {
       state.activeSlider = pages[action.payload];
     },
-    setDemo: (state, action: PayloadAction<any>) => {
-      state.activeDemo[action.payload.option] = action.payload.optionValue;
+    setDemoParentOption: (state, action: PayloadAction<any>) => {
+      state.activeDemoParent[action.payload.option] = action.payload.optionValue;
+    },
+    setDemoChildOption: (state, action: PayloadAction<any>) => {
+      state.activeDemoChild[action.payload.option] = action.payload.optionValue;
+    },
+    setMainOption: (state, action: PayloadAction<any>) => {
+      state.mainOption = action.payload;
     },
   }
 });
 
-export const { setSlider, setDemo } = demoSlice.actions;
+export const {
+  setSlider,
+  setDemoParentOption, setDemoChildOption,
+  setMainOption
+} = demoSlice.actions;
 
 export const selectSlider = (state: RootState) => state.demo.activeSlider;
-export const selectDemo = (state: RootState) => state.demo.activeDemo;
+export const selectDemoParent = (state: RootState) => state.demo.activeDemoParent;
+export const selectDemoChild = (state: RootState) => state.demo.activeDemoChild;
+export const selectMainOption = (state: RootState) => state.demo.mainOption;
 
 export default demoSlice.reducer;

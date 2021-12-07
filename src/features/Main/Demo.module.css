@@ -1,5 +1,14 @@
-.demo {
-    grid-area: 2 / 3 / 3 / 7;
-    background-color: blue;
-    color: black;
+.parent {
+    border: 5px solid red;
+    border-radius: 10px;
+    background-color: violet;
+    padding: 50px;
+}
+
+.child {
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: orange;
 }

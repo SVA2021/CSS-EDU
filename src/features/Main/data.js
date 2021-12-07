@@ -13,7 +13,7 @@ export const positionElem = {//pages
     },
     flex: { //final version
         parent: {
-            display: "flex",
+            display: ["flex"],
             flexDirection: ["initial", "row", "row-reverse", "column", "column-reverse", "inherit"],
             justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
             flexWrap: ["initial", "nowrap", "wrap", "wrapReverse", "inherit"],
@@ -26,7 +26,7 @@ export const positionElem = {//pages
     },
     grid: { // add some specific features
         parent: {
-            display: "grid",
+            display: ["grid"],
             justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
             alignItems: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"],
             alignContent: ["initial", "stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "inherit"],
@@ -37,7 +37,6 @@ export const positionElem = {//pages
     },
     position: { // need to fill
         parent: {
-            display: "grid",
             justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
             alignItems: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"],
             alignContent: ["initial", "stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "inherit"],
