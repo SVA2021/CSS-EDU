@@ -21,3 +21,9 @@
     padding: 3px;
     background-color:lightcoral;
 }
+
+.sidebar__optionItem__btn__active {
+    width: auto;
+    padding: 3px;
+    background-color: greenyellow;
+}

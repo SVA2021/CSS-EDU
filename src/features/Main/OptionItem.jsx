@@ -1,20 +1,30 @@
 import React from 'react';
 import style from './OptionItem.module.css'
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { selectSlider } from './demoSlice';
+import { selectSlider, setDemoOption } from './demoSlice';
 
 
 const OptionBtn = (props) => {
 
     const dispatch = useAppDispatch();
 
-    let classes = (props.isActive)
-        ? style.sidebar__optionItem__btn
-        : style.sidebar__optionItem__btn + style.sidebar__optionItem__btn__active;
+    const activeOption = props.activeOption;
+    const value = props.value;
+    const active = activeOption[props.optionName] === value
+
+    let classes = (active)
+        ? style.sidebar__optionItem__btn__active
+        : style.sidebar__optionItem__btn;
 
     return (
-        <button className={style.sidebar__optionItem__btn}>
-            {props.value}
+        <button
+            onClick={() => dispatch(setDemoOption({
+                group: props.group,
+                option: props.optionName,
+                optionValue: props.value,
+            }))}
+            className={classes}>
+            {value}
         </button>
     )
 }
@@ -23,6 +33,7 @@ const OptionItem = (props) => {
 
     const optionName = props.optionName;
     const optionValues = props.optionValues;
+    const activeOption = props.activeOption;
 
     if (!optionName) return <div>please choose option</div>
     // debugger
@@ -32,7 +43,12 @@ const OptionItem = (props) => {
                 {optionName}
             </h3>
             <div className={style.sidebar__optionItem__btnList}>
-                {optionValues.map((item) => <OptionBtn key={item} value={item} />)}
+                {optionValues.map((item) => <OptionBtn
+                    key={item} value={item}
+                    group={props.group}
+                    optionName={optionName}
+                    activeOption={activeOption}
+                />)}
             </div>
         </article>
     )
