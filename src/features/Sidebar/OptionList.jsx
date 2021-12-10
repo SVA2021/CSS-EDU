@@ -4,7 +4,7 @@ import { useAppSelector } from '../../app/hooks';
 import { selectDemo, selectMainOption, selectSlider } from '../Main/demoSlice.ts';
 import OptionItem from './OptionItem';
 
-const Options = () => {
+const OptionList = () => {
 
     const page = useAppSelector(selectSlider);
     const activeMainOption = useAppSelector(selectMainOption);
@@ -22,7 +22,7 @@ const Options = () => {
     const currentChildItemOptionArray = Object.keys(mainOption.childItem);
 
     return (
-        <>
+        <article>
             <h3 className={style.sidebar__header}> Options for Parent element </h3>
             <div className={style.sidebar__options}>
                 {currentParentOptionArray.map((item) =>
@@ -32,20 +32,8 @@ const Options = () => {
                         optionValues={mainOption.parent[item]}
                     />)}
             </div>
-            {Boolean(currentChildItemOptionArray.length) && //not work without boolean
-            (<>
-            <h3 className={style.sidebar__header}> Options for Child element </h3>
-            <div className={style.sidebar__options}>
-                {currentChildItemOptionArray.map((item) =>
-                    <OptionItem
-                        key={item} optionName={item} group={'childItem'}
-                        activeOption={activeChildOption}
-                        optionValues={mainOption.childItem[item]}
-                    />)}
-            </div>
-            </>)}
-        </>
+        </article>
     )
 }
 
-export default Options;
+export default OptionList;

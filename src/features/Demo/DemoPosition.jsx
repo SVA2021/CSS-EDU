@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAppSelector } from '../../app/hooks';
 import style from './DemoPosition.module.css'
 import { selectDemo } from '../Main/demoSlice';

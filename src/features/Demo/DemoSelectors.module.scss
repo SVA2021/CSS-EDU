@@ -1,0 +1,21 @@
+.main {
+    display: block;
+    border: 3px solid black;
+    margin: 5px;
+    background-color: brown;
+
+    & li {
+        display: block;
+        border: 3px solid white;
+        margin: 5px;
+        padding: 5px;
+
+        & p {
+            margin: 5px;
+            display: inline-block;
+            border: 3px solid black;
+            padding: 5px;
+        }
+    }
+
+}

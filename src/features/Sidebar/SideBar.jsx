@@ -5,8 +5,10 @@ import { resetOptions, selectMainOption, selectSlider, setMainOption } from '../
 import Options from './Options';
 
 const MainBtn = (props) => {
+
     const active = useAppSelector(selectMainOption);
     const dispatch = useAppDispatch();
+
     const setMain = () => {
         dispatch(setMainOption(props.value));
     }
@@ -20,24 +22,31 @@ const MainBtn = (props) => {
     )
 }
 
+const MainBtnList = () => {
 
-const SideBar = () => {
     const page = useAppSelector(selectSlider);
     const dispatch = useAppDispatch();
 
     const reset = () => {
-        dispatch(resetOptions())
+        dispatch(resetOptions());
     }
 
     const mainBtnList = Object.keys(page);
-    // debugger
+
+    return (
+        <div className={style.sidebar__mainBtn} >
+            {mainBtnList.map((item) => <MainBtn key={item} value={item} />)}
+            <button onClick={reset}>reset all</button>
+        </div>
+    )
+}
+
+const SideBar = () => {
+
     return (
         <article className={"sidebar"} >
             <h2 className={style.sidebar__header}>Settings</h2>
-            <div className={style.sidebar__mainBtn} >
-                {mainBtnList.map((item) => <MainBtn key={item} value={item} />)}
-                <button onClick={reset}>reset all</button>
-            </div>
+            <MainBtnList />
             <Options />
         </article>
     )

@@ -46,9 +46,15 @@ export const positionElem = {//pages
         }
     }
 }
-export const selectorsCSS = {}
+export const selectorsCSS = {
+    elementAndClass: { // need to fill
+        parent: {
+            justifyContent: ["initial", "flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "inherit"],
+            alignItems: ["initial", "stretch", "center", "flexStart", "flexEnd", "baseline", "inherit"],
+            alignContent: ["initial", "stretch", "center", "flexStart", "flexEnd", "spaceBetween", "spaceAround", "inherit"],
+        },
+        childItem: {}
+    }
+}
 export const animations = {}
 export const features = {}
-
-// let array = Object.keys(positionElem);
-// console.log(array);

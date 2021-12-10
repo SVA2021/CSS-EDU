@@ -2,10 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './NavBar.module.css'
 import { useAppDispatch } from '../../app/hooks';
-import { setSlider } from '../Main/demoSlice'
+import { resetOptions, setSlider } from '../Main/demoSlice'
 
 const NavBar = () => {
     const dispatch = useAppDispatch();
+
+    const linkTo = (path) => {
+        dispatch(resetOptions());
+        dispatch(setSlider(path));
+    }
 
     return (
         <nav className={style.navbar}>
@@ -15,11 +20,15 @@ const NavBar = () => {
                 </li>
                 <li>
                     <Link to="/position"
-                        onClick={() => dispatch(setSlider('positionElem'))}>
+                        // onClick={() => dispatch(setSlider('positionElem'))}
+                        onClick={linkTo('positionElem')}
+                        >
                         Position elements</Link>
                 </li>
                 <li>
-                    <Link to="/selectors">CSS Selectors</Link>
+                    <Link 
+                        onClick={linkTo('positionElem')}
+                    to="/selectors">CSS Selectors</Link>
                 </li>
                 <li>
                     <Link to="/animation">Animation</Link>
