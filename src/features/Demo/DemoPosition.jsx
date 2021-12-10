@@ -1,27 +1,24 @@
 import React from 'react';
 import { useAppSelector } from '../../app/hooks';
-import style from './Demo.module.css'
-import { selectDemo } from './demoSlice';
+import style from './DemoPosition.module.css'
+import { selectDemo } from '../Main/demoSlice';
 
-const Demo = (props) => {
+const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
     const childArray = [];
-    const childQty = props.qty;
+    const childQty = 3;
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < childQty; i++) {
         childArray.push(i);
     }
 
     return (
         <section className={"demo"}>
-            <h3>Demo</h3>
+            <h3>Select option from left to change position of elements</h3>
             <div style={activeStyle.parent}
-                className={style.parent}>parent
+                className={style.parent}> parent
                 {childArray.map((item) =>
-                    <div
-                        style={activeStyle.childItem}
-                        key={item}
-                        className={style.child}>
+                    <div key={item} style={activeStyle.childItem} className={style.child}>
                         child #{item}
                     </div>
                 )}
@@ -30,4 +27,4 @@ const Demo = (props) => {
     )
 }
 
-export default Demo;
+export default DemoPosition;

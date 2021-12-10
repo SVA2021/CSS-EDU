@@ -1,12 +1,20 @@
 import React from 'react';
-import Demo from './Demo';
-import SideBar from './SideBar';
+import { Route, Routes } from 'react-router-dom';
+import DemoPosition from '../Demo/DemoPosition';
+import Preloader from '../Preloader/Preloader';
+import SideBar from '../Sidebar/SideBar';
 
 const Main = () => {
     return (
         <>
-        <SideBar />
-        <Demo />
+            <SideBar />
+            <Routes >
+                <Route path="/" element={<Preloader />} />
+                <Route path="/position" element={<DemoPosition />} />
+                <Route path="/selectors" element={<Preloader />} />
+                <Route path="/animation" element={<Preloader />} />
+                <Route path="/features" element={<Preloader />} />
+            </Routes>
         </>
     )
 }

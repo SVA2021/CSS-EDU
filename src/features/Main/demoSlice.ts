@@ -39,6 +39,7 @@ export const demoSlice = createSlice({
         parent: {},
         childItem: {}
       };
+      state.mainOption = "";
     }
   }
 });

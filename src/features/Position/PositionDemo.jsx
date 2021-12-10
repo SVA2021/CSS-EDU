@@ -1,17 +1,13 @@
 import React from 'react';
 import style from './PositionDemo.module.css'
 
-const flexParent: any = {
+const flexParent = {
     flexDirection: ["row", "row-reverse", "column", "column-reverse", "initial", "inherit"],
     justifyContent: ["flexStart", "flexEnd", "center", "spaceBetween", "spaceAround", "spaceEvenly", "initial", "inherit"],
     color: ["red", "green", "yellow", "white"]
-    // flexWrap: [],
-    // flexFlow: [],
-    // alignItems: [],
-    // alignContent: [],
 }
 
-const currentStyle: any = {};
+const currentStyle = {};
 
 for (const key in flexParent) {
     if (Object.hasOwnProperty.call(flexParent, key)) {
@@ -19,13 +15,26 @@ for (const key in flexParent) {
     }
 }
 
-
 const PositionDemo = () => {
     return (
         <article className={style.main__position__demo} style={currentStyle}>
-            <h3>PositionDemo will be here</h3>
-            <p>{currentStyle?.flexDirection}</p>
-            <p>{currentStyle?.justifyContent}</p>
+            <ul>
+                <li>
+                    <p>1</p>
+                </li>
+                <li>
+                    <p>2</p>
+                </li>
+                <li>
+                    <p>3</p>
+                </li>
+                <li>
+                    <p>4</p>
+                </li>
+                <li>
+                    <p>5</p>
+                </li>
+            </ul>
         </article>
     )
 }

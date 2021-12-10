@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './SideBar.module.css'
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import {selectDemo, selectMainOption, selectSlider, setMainOption } from './demoSlice';
+import { useAppSelector } from '../../app/hooks';
+import { selectDemo, selectMainOption, selectSlider } from '../Main/demoSlice.ts';
 import OptionItem from './OptionItem';
 
 const Options = () => {
@@ -12,7 +12,7 @@ const Options = () => {
 
     if (!activeMainOption) {
         return (
-            <div>choose option</div>
+            <div>choose option in Settings</div>
         )
     }
 
@@ -24,17 +24,19 @@ const Options = () => {
         <>
             <h3 className={style.sidebar__header}> Options for Parent element </h3>
             <div className={style.sidebar__options}>
-                {currentParentOptionArray.map((item) => <OptionItem
-                    key={item} optionName={item} group={'parent'}
-                    activeOption={activeParentOption}
-                    optionValues={mainOption.parent[item]} />)}
+                {currentParentOptionArray.map((item) =>
+                    <OptionItem
+                        key={item} optionName={item} group={'parent'}
+                        activeOption={activeParentOption}
+                        optionValues={mainOption.parent[item]} />)}
             </div>
             <h3 className={style.sidebar__header}> Options for Child element </h3>
             <div className={style.sidebar__options}>
-                {currentChildItemOptionArray.map((item) => <OptionItem
-                    key={item} optionName={item} group={'childItem'}
-                    activeOption={activeChildOption}
-                    optionValues={mainOption.childItem[item]} />)}
+                {currentChildItemOptionArray.map((item) =>
+                    <OptionItem
+                        key={item} optionName={item} group={'childItem'}
+                        activeOption={activeChildOption}
+                        optionValues={mainOption.childItem[item]} />)}
             </div>
         </>
     )
