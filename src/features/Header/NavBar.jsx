@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import style from './NavBar.module.css'
 import { useAppDispatch } from '../../app/hooks';
 import { resetOptions, setSlider } from '../Main/demoSlice'
 
 const NavBar = () => {
+
     const dispatch = useAppDispatch();
 
     const linkTo = (path) => {
@@ -16,25 +17,23 @@ const NavBar = () => {
         <nav className={style.navbar}>
             <ul>
                 <li>
-                    <Link to="/">CSS EDU</Link>
+                    <NavLink to="/">CSS EDU</NavLink>
+                </li>
+                <li >
+                    <NavLink to="/position" onClick={() => linkTo('positionElem')}>
+                        Position elements</NavLink>
                 </li>
                 <li>
-                    <Link to="/position"
-                        // onClick={() => dispatch(setSlider('positionElem'))}
-                        onClick={linkTo('positionElem')}
-                        >
-                        Position elements</Link>
+                    <NavLink to="/selectors" onClick={() => linkTo('selectorsCSS')}>
+                        CSS Selectors</NavLink>
                 </li>
                 <li>
-                    <Link 
-                        onClick={linkTo('positionElem')}
-                    to="/selectors">CSS Selectors</Link>
+                    <NavLink to="/animation" onClick={() => linkTo('animations')}>
+                        Animation</NavLink>
                 </li>
                 <li>
-                    <Link to="/animation">Animation</Link>
-                </li>
-                <li>
-                    <Link to="/features">Features</Link>
+                    <NavLink to="/features" onClick={() => linkTo('features')}>
+                        Features</NavLink>
                 </li>
             </ul>
         </nav>

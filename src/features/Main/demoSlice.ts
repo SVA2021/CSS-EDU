@@ -6,20 +6,23 @@ const initialState: demoState = {
   activeSlider: {},
   activeDemo: {
     parent: {},
-    childItem: {}
+    childItem: {},
+    part1: {},
+    part2: {},
+    part3: {},
   },
   mainOption: "",
-  activeSelector: ""
+  // activeSelector: ""
 };
 
 interface demoState {
   activeSlider: any
   activeDemo: any
   mainOption: string,
-  activeSelector: string,
+  // activeSelector: string,
 }
 
-const pages = { positionElem, selectorsCSS, animations, features }
+const pages = { positionElem, animations, selectorsCSS, features }
 type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features";
 
 export const demoSlice = createSlice({
@@ -35,16 +38,20 @@ export const demoSlice = createSlice({
     setMainOption: (state, action: PayloadAction<any>) => {
       state.mainOption = action.payload;
     },
-    setActiveSelector: (state, action: PayloadAction<any>) => {
-      state.activeSelector = action.payload;
-    },
+    // setActiveSelector: (state, action: PayloadAction<any>) => {
+    //   state.activeSelector = action.payload;
+    // },
     resetOptions: (state) => {
+      // state.activeSlider = {}; 
       state.activeDemo = {
         parent: {},
-        childItem: {}
+        childItem: {},
+        part1: {},
+        part2: {},
+        part3: {},
       };
       state.mainOption = "";
-      state.activeSelector = "";
+      // state.activeSelector = "";
     }
   }
 });
@@ -53,13 +60,13 @@ export const {
   setSlider,
   setDemoOption,
   setMainOption,
-  setActiveSelector,
+  // setActiveSelector,
   resetOptions,
 } = demoSlice.actions;
 
 export const selectSlider = (state: RootState) => state.demo.activeSlider;
 export const selectDemo = (state: RootState) => state.demo.activeDemo;
 export const selectMainOption = (state: RootState) => state.demo.mainOption;
-export const selectActiveSelector = (state: RootState) => state.demo.activeSelector;
+// export const selectActiveSelector = (state: RootState) => state.demo.activeSelector;
 
 export default demoSlice.reducer;

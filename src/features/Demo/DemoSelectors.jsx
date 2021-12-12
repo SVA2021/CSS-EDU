@@ -4,6 +4,7 @@ import style from './DemoSelectors.module.scss'
 const DemoSelectors = () => {
     return (
         <article className={"demo"}>
+            <h3>description will be here</h3>
             <ul className={style.main}>
                 <li>li-1
                     <p>p-1</p>

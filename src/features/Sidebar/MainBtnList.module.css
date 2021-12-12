@@ -1,0 +1,28 @@
+.main__sidebar {
+    border: 3px solid red;
+}
+
+.sidebar__header {
+    margin: 5px;
+    font-weight: bold;
+    color: orange;
+}
+
+.sidebar__mainBtn {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sidebar__optionItem__btn {
+    width: auto;
+    padding: 3px;
+    background-color:skyblue;
+}
+
+.sidebar__optionItem__btn__active {
+    width: auto;
+    padding: 3px;
+    background-color:red;
+}

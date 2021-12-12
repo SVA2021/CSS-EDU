@@ -4,12 +4,33 @@ import { useAppSelector } from '../../app/hooks';
 import { selectDemo, selectMainOption, selectSlider } from '../Main/demoSlice.ts';
 import OptionItem from './OptionItem';
 
+const OptionGroup = (props) => {
+
+    const activeOption = useAppSelector(selectDemo);
+    const groupName = props.section;//parent
+    const sectionOfOptions = props.sectionOfOptions; //{ display: [], ...}
+    const sectionKeys = Object.keys(sectionOfOptions); //display float clear
+    const activeCurrentOption = activeOption[groupName];
+
+    return (
+        <article>
+            <h3 className={style.sidebar__header}> Options for {groupName} </h3>
+            <div className={style.sidebar__options}>
+                {sectionKeys.map((item) =>//item = display
+                    <OptionItem
+                        key={item} optionName={item} group={groupName}
+                        activeOption={activeCurrentOption}
+                        optionValues={sectionOfOptions[item]} //initial block inline 
+                    />)}
+            </div>
+        </article>
+    )
+}
+
 const OptionList = () => {
 
     const page = useAppSelector(selectSlider);
     const activeMainOption = useAppSelector(selectMainOption);
-    const activeParentOption = useAppSelector(selectDemo).parent;
-    const activeChildOption = useAppSelector(selectDemo).childItem;
 
     if (!activeMainOption) {
         return (
@@ -18,20 +39,12 @@ const OptionList = () => {
     }
 
     const mainOption = page[activeMainOption];
-    const currentParentOptionArray = Object.keys(mainOption.parent);
-    const currentChildItemOptionArray = Object.keys(mainOption.childItem);
-
+    const optionListKeys = Object.keys(mainOption);
     return (
         <article>
-            <h3 className={style.sidebar__header}> Options for Parent element </h3>
-            <div className={style.sidebar__options}>
-                {currentParentOptionArray.map((item) =>
-                    <OptionItem
-                        key={item} optionName={item} group={'parent'}
-                        activeOption={activeParentOption}
-                        optionValues={mainOption.parent[item]}
-                    />)}
-            </div>
+            {optionListKeys.map((item) =>  
+            <OptionGroup key={item} section={item} sectionOfOptions={mainOption[item]} />
+            )}
         </article>
     )
 }
