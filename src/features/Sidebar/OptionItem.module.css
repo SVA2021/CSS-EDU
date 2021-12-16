@@ -13,16 +13,20 @@
 
 .sidebar__optionItem__btnList {
     margin: 5px;
+    padding: 3px;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .sidebar__optionItem__btn {
-    width: auto;
+    margin: 3px;
     padding: 3px;
+    width: auto;
     background-color:lightcoral;
+    border-radius: 3px;
 }
 
 .sidebar__optionItem__btn__active {

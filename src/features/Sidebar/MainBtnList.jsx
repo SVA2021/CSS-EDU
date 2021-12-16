@@ -35,8 +35,10 @@ const MainBtnList = () => {
     return (
         <div className={style.sidebar__mainBtn} >
             <h2 className={style.sidebar__header}>Settings</h2>
-            {mainBtnList.map((item) => <MainBtn key={item} value={item} />)}
             <button onClick={reset}>reset all</button>
+            <div className={style.sidebar__mainBtn__list} > 
+            {mainBtnList.map((item) => <MainBtn key={item} value={item} />)}
+            </div>
         </div>
     )
 }

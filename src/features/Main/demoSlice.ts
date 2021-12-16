@@ -11,6 +11,7 @@ const initialState: demoState = {
     part2: {},
     part3: {},
   },
+
   mainOption: "",
   // activeSelector: ""
 };
@@ -21,6 +22,14 @@ interface demoState {
   mainOption: string,
   // activeSelector: string,
 }
+
+// interface activeDemoState {
+//   positionElem: any
+//   selectorsCSS: any
+//   animations: any
+//   features: any
+//   home: any
+// }
 
 const pages = { positionElem, animations, selectorsCSS, features }
 type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features";
@@ -37,6 +46,13 @@ export const demoSlice = createSlice({
     },
     setMainOption: (state, action: PayloadAction<any>) => {
       state.mainOption = action.payload;
+      state.activeDemo = {
+        parent: {},
+        childItem: {},
+        part1: {},
+        part2: {},
+        part3: {},
+    };
     },
     // setActiveSelector: (state, action: PayloadAction<any>) => {
     //   state.activeSelector = action.payload;
@@ -44,14 +60,13 @@ export const demoSlice = createSlice({
     resetOptions: (state) => {
       // state.activeSlider = {}; 
       state.activeDemo = {
-        parent: {},
-        childItem: {},
-        part1: {},
-        part2: {},
-        part3: {},
+          parent: {},
+          childItem: {},
+          part1: {},
+          part2: {},
+          part3: {},
       };
       state.mainOption = "";
-      // state.activeSelector = "";
     }
   }
 });
@@ -67,6 +82,9 @@ export const {
 export const selectSlider = (state: RootState) => state.demo.activeSlider;
 export const selectDemo = (state: RootState) => state.demo.activeDemo;
 export const selectMainOption = (state: RootState) => state.demo.mainOption;
-// export const selectActiveSelector = (state: RootState) => state.demo.activeSelector;
+// export const selectDemoPosition = (state: RootState) => state.demo.activeDemo.positionElem;
+// export const selectDemoSelectors = (state: RootState) => state.demo.activeDemo.selectorsCSS;
+// export const selectDemoAnimation = (state: RootState) => state.demo.activeDemo.animations;
+// export const selectDemoFeatures = (state: RootState) => state.demo.activeDemo.features;
 
 export default demoSlice.reducer;

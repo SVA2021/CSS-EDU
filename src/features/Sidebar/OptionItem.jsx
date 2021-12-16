@@ -6,12 +6,18 @@ import { setDemoOption } from '../Main/demoSlice.ts';
 const OptionBtn = (props) => {
 
     const dispatch = useAppDispatch();
-    let value;
+    
+    let value, btnName;
     const activeOption = props?.activeOption;
-    // const value = (typeof (props?.value) == );
-    // console.log(typeof(value));
-    if (typeof (props?.value) == "string") value = props.value;
-    if (typeof (props?.value) == "object") value = props.value.id;
+
+    if (typeof (props?.value) == "string") {
+        value = props.value;
+        btnName = value;
+    }
+    if (typeof (props?.value) == "object") {
+        value = props.value;
+        btnName = value.id;
+    }
     const active = activeOption[props.optionName] === value;
 
     const setOption = () => {
@@ -27,7 +33,7 @@ const OptionBtn = (props) => {
         : style.sidebar__optionItem__btn;
 
     return (
-        <button onClick={setOption} className={classes}> {value} </button>
+        <button onClick={setOption} className={classes}> {btnName} </button>
     )
 }
 
@@ -42,6 +48,7 @@ const OptionItem = (props) => {
     return (
         <article className={style.sidebar__optionItem}>
             <h3 className={style.sidebar__optionItem__header}> {optionName} </h3>
+            <div className={style.sidebar__optionItem__btnList}>
                 {optionValues.map((item) =>
                     <OptionBtn
                         key={item} value={item}
@@ -49,6 +56,7 @@ const OptionItem = (props) => {
                         optionName={optionName}
                         activeOption={activeOption}
                     />)}
+            </div>
         </article>
     )
 }

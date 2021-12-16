@@ -1,7 +1,7 @@
 .main {
     display: block;
     border: 3px solid black;
-    margin: 5px;
+    // margin: 5px;
     background-color: brown;
 
     & li {
@@ -10,12 +10,18 @@
         margin: 5px;
         padding: 5px;
 
-        & p {
+        & p, a {
             margin: 5px;
             display: inline-block;
-            border: 3px solid black;
-            padding: 5px;
+            border: 1px solid black;
+            padding: 1px;
         }
     }
 
+}
+
+.style1 {
+    .intro {
+    background-color: red;
+    }
 }
