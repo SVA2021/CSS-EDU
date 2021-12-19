@@ -1,385 +1,391 @@
 .style1 {
     .intro {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style2 {
     .class1.class2 {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style3 {
     .class1 .class2 {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style4 {
     #firstname {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style5 {
     * {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style6 {
     p {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style7 {
     p.intro {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style8 {
-    div, p {
-    background-color: red;
-    } 
+
+    div,
+    p {
+        background-color: red;
+    }
 }
 
 .style9 {
     div p {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style10 {
-    div > p {
-    background-color: red;
-    } 
+    div>p {
+        background-color: red;
+    }
 }
 
 .style11 {
-    div + p {
-    background-color: red;
-    } 
+    div+p {
+        background-color: red;
+    }
 }
 
 .style12 {
-    span ~ p {
-    background-color: red;
-    } 
+    span~p {
+        background-color: red;
+    }
 }
 
 .style26 {
     p:empty {
-    background-color: red;
-    width: 100px;
-    height: 20px;
-    } 
+        background-color: red;
+        width: 100px;
+        height: 20px;
+    }
 }
 
 .style28 {
     p:first-child {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style31 {
     p:first-of-type {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style38 {
     p:last-child {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style39 {
     p:last-of-type {
-    width: 200px;
-    height: 30px;
-    background-color: red;
-    } 
+        width: 200px;
+        height: 30px;
+        background-color: red;
+    }
 }
 
 .style42 {
     :not(p) {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style43 {
     p:nth-child(2) {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style44 {
     p:nth-last-child(2) {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style45 {
     p:nth-last-of-type(2) {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style46 {
     p:nth-of-type(2) {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style47 {
     p:only-of-type {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style48 {
     p:only-child {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style13 {
     [href] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style14 {
     [href='#00'] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style15 {
     [title~='flower'] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style16 {
     [lang|=en] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style17 {
     a[href^="#0"] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style18 {
     a[href$=".pdf"] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style19 {
     a[href*="w3schools"] {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style20 {
     a:active {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style21 {
     p::after {
-    background-color: red;
-    } 
+        content: "X";
+        color: red;
+        background-color: black;
+    }
 }
 
 .style22 {
     p::before {
-    background-color: red;
-    } 
+        content: "X";
+        color: red;
+        background-color: black;
+    }
 }
 
 .style23 {
     input:checked {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style24 {
     input:default {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style25 {
     input:disabled {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style27 {
     input:enabled {
-    background-color: red;
-    } 
+        background-color: red;
+    }
 }
 
 .style29 {
     p::first-letter {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style30 {
     p::first-letter {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style32 {
     input:focus {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style33 {
     a:hover {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style34 {
     input:in-range {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style35 {
     input:indeterminate {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style36 {
     input:invalid {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style37 {
-    p:lang(it) {
-    color: red;
-    font-weight: bolder;
-    } 
+    p:lang(en) {
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style40 {
     a:link {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style41 {
     ::marker {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style49 {
     input:optional {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style50 {
     input:out-of-range {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style51 {
     input::placeholder {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style52 {
     input:read-only {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style53 {
     input:read-write {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style54 {
     input:required {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style55 {
     :root {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style56 {
     ::selection {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style57 {
     #news:target {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style58 {
     input:valid {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style59 {
     a:visited {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }
 
 .style60 {
     :fullscreen {
-    color: red;
-    font-weight: bolder;
-    } 
+        color: red;
+        font-weight: bolder;
+    }
 }

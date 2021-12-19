@@ -42,7 +42,8 @@ const DemoSelectors = () => {
                     </li>
                     <li>li-5
                         <div>div5</div>
-                        <p title='flower'>p-5 title=flower</p>
+                        <p title='flower'>p-5 "\n /n"
+                        title=flower</p>
                     </li>
                     <p>external p</p>
                     <ul>
@@ -50,12 +51,14 @@ const DemoSelectors = () => {
                             <a href="#00">special link #00</a>
                             <a href="#01w3schools.pdf" >special link #01</a>
                             <a href="#02 w3schools">special link #02</a>
+                            <a href="#news">special link #02</a>
                         </li>
                         <li>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
+                            <input type="text" placeholder='this is placeholder' readOnly/>
+                            <input type="checkbox" checked/>
+                            <input type="number" min="5" max="10" value="7" required/>
+                            <input type="number" min="5" max="10" value="17"/>
+                            <input type="text" required/>
                             <input type="text" disabled/>
                         </li>
                         <li></li>
