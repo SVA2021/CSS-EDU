@@ -65,14 +65,14 @@ const DemoSelectors = () => {
                     </ul>
                 </ul>
             </div>
-            <div>
+            {/* <div>
                 <h4>Part 2. Selection by attributes</h4>
 
             </div>
             <div>
                 <h4>Part 3. Selection by pseudoclasses and pseudoelements</h4>
 
-            </div>
+            </div> */}
         </article>
     )
 }
