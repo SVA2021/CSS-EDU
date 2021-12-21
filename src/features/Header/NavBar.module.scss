@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.navbar {
+    ul {
+        margin: 1% auto;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+        // filter: blur(1px);
+        // background-color: red;
+
+        li {
+            display: block;
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: $color-pink;
+            font-size: larger;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+}

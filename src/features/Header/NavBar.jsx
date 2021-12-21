@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import style from './NavBar.module.css'
+import style from './NavBar.module.scss'
 import { useAppDispatch } from '../../app/hooks';
 import { resetOptions, setSlider } from '../Main/demoSlice'
 

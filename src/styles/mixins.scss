@@ -1,0 +1,33 @@
+@import './variables';
+
+@mixin baseFont {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: $font-size;
+    font-family: $font-text;
+    font-style: normal;
+}
+
+/******************** Media Queries ***********************/
+
+// Small devices
+@mixin mobile {
+    @media ( min-width: #{$screen-mobile-width} ) {
+      @content;
+    }
+  }
+  
+  // Large devices
+  @mixin tablet {
+    @media ( min-width: #{$screen-tablet-width} ) {
+      @content;
+    }
+  }
+  
+  // Extra large devices
+  @mixin desktop {
+    @media ( min-width: #{$screen-desktop-width} ) {
+      @content;
+    }
+  }

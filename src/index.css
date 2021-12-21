@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ /* unlock this code and choose gradient after finishing 
+ 
+  /* background: linear-gradient(-5deg, #1A2EC6, #3044CA,  #FA4F40, #FA5F52);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
