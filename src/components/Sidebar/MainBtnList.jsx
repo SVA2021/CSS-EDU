@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './MainBtnList.module.css'
+import style from './MainBtnList.module.scss'
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { resetOptions, selectMainOption, selectSlider, setMainOption } from '../Main/demoSlice.ts';
 

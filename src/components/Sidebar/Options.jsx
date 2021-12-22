@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './SideBar.module.css'
+import style from './SideBar.module.scss'
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo, selectMainOption, selectSlider } from '../Main/demoSlice.ts';
 import OptionItem from './OptionItem';

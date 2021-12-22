@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppSelector } from '../../app/hooks';
-import style from './DemoPosition.module.css'
+import style from './DemoPosition.module.scss'
 import { selectDemo } from '../Main/demoSlice';
 
 const DemoPosition = (props) => {

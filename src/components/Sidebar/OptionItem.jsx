@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './OptionItem.module.css'
+import style from './OptionItem.module.scss'
 import { useAppDispatch } from '../../app/hooks';
 import { setDemoOption } from '../Main/demoSlice.ts';
 
