@@ -1,13 +1,13 @@
 import React from 'react';
 import MainBtnList from './MainBtnList';
-import OptionList from './OptionList';
+import TotalOptionList from './TotalOptionList';
 
 const SideBar = () => {
 
     return (
         <article className={"sidebar"} >
             <MainBtnList />
-            <OptionList />
+            <TotalOptionList />
         </article>
     )
 }

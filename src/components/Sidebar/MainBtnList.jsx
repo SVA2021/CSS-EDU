@@ -16,7 +16,7 @@ const MainBtnList = () => {
         dispatch(setMainOption(value));
     }
 
-    let isActive = (value) => {
+    const isActive = (value) => {
         if (active === value) {
             return style.sidebar__optionItem__btn__active
         } else {
