@@ -13,23 +13,13 @@ const initialState: demoState = {
   },
 
   mainOption: "",
-  // activeSelector: ""
 };
 
 interface demoState {
   activeSlider: any
   activeDemo: any
   mainOption: string,
-  // activeSelector: string,
 }
-
-// interface activeDemoState {
-//   positionElem: any
-//   selectorsCSS: any
-//   animations: any
-//   features: any
-//   home: any
-// }
 
 const pages = { positionElem, animations, selectorsCSS, features }
 type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features";
@@ -54,11 +44,8 @@ export const demoSlice = createSlice({
         part3: {},
     };
     },
-    // setActiveSelector: (state, action: PayloadAction<any>) => {
-    //   state.activeSelector = action.payload;
-    // },
+   
     resetOptions: (state) => {
-      // state.activeSlider = {}; 
       state.activeDemo = {
           parent: {},
           childItem: {},
@@ -75,16 +62,11 @@ export const {
   setSlider,
   setDemoOption,
   setMainOption,
-  // setActiveSelector,
   resetOptions,
 } = demoSlice.actions;
 
 export const selectSlider = (state: RootState) => state.demo.activeSlider;
 export const selectDemo = (state: RootState) => state.demo.activeDemo;
 export const selectMainOption = (state: RootState) => state.demo.mainOption;
-// export const selectDemoPosition = (state: RootState) => state.demo.activeDemo.positionElem;
-// export const selectDemoSelectors = (state: RootState) => state.demo.activeDemo.selectorsCSS;
-// export const selectDemoAnimation = (state: RootState) => state.demo.activeDemo.animations;
-// export const selectDemoFeatures = (state: RootState) => state.demo.activeDemo.features;
 
 export default demoSlice.reducer;

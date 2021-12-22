@@ -1,5 +1,4 @@
 import React from 'react';
-import style from './MainBtn.module.scss'
 
 const MainBtn = (props) => {
 

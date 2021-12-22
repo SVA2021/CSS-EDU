@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './OptionItem.module.scss'
 import OptionBtn from './OptionBtn';
+import { SubTitle } from '../common/Typography';
 
 const OptionBlock = (props) => {
 
@@ -12,7 +13,7 @@ const OptionBlock = (props) => {
 
     return (
         <article className={style.sidebar__optionItem}>
-            <h3 className={style.sidebar__optionItem__header}> {optionName} </h3>
+            <SubTitle>{optionName}</SubTitle>
             <div className={style.sidebar__optionItem__btnList}>
                 {optionValues.map((item) =>
                     <OptionBtn

@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './SideBar.module.scss'
 import { useAppSelector } from '../../app/hooks';
 import { selectMainOption, selectSlider } from '../../app/demoSlice';
 import ComponentOptionList from './ComponentOptionList';
+import { SubTitleUpper } from '../common/Typography';
 
 const TotalOptionList = () => {
 
@@ -11,7 +11,7 @@ const TotalOptionList = () => {
 
     if (!activeMainOption) {
         return (
-            <div>choose option in Settings</div>
+            <SubTitleUpper>choose option in Settings</SubTitleUpper>
         )
     }
 

@@ -3,6 +3,7 @@ import style from './MainBtnList.module.scss'
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { resetOptions, selectMainOption, selectSlider, setMainOption } from '../../app/demoSlice';
 import MainBtn from './MainBtn';
+import { SectionTitle } from '../common/Typography';
 
 const MainBtnList = () => {
 
@@ -18,9 +19,9 @@ const MainBtnList = () => {
 
     const isActive = (value) => {
         if (active === value) {
-            return style.sidebar__optionItem__btn__active
+            return style.sidebar__mainBtn__active
         } else {
-            return style.sidebar__optionItem__btn;
+            return style.sidebar__mainBtn;
         }
     }
 
@@ -30,8 +31,7 @@ const MainBtnList = () => {
 
     return (
         <div className={style.sidebar__mainBtn} >
-            <h2 className={style.sidebar__header}>Settings</h2>
-            <button onClick={reset}>reset all</button>
+            <SectionTitle>settings</SectionTitle>
             <div className={style.sidebar__mainBtn__list} >
                 {mainBtnList.map((item) => <MainBtn
                     key={item}
@@ -39,6 +39,7 @@ const MainBtnList = () => {
                     class={isActive(item)}
                     setMain={() => setMain(item)}
                 />)}
+                <button onClick={reset}>reset all</button>
             </div>
         </div>
     )

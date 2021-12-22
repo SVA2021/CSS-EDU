@@ -49,3 +49,9 @@ a {
     background-color: $color-section-demo;
     color: $color-text;
   }
+
+  .preloader {
+    grid-area: 2 / 1 / 5 / 7;
+    background-color: blue;
+    color: black;
+}

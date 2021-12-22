@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.sectionTitle {
+    text-transform: uppercase;
+    margin: 5px;
+    font-weight: bold;
+    color: $color-text-title;
+}
+
+.subTitle {
+    color: $color-text-title;
+    padding: 0;
+    margin: 0.3em;
+}
+
+.subTitleUpper {
+    @extend .subTitle;
+    text-transform: uppercase;
+}

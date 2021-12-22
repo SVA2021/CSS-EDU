@@ -1,21 +1,10 @@
-.main__sidebar {
-    border: 3px solid red;
-}
-
-.sidebar__header {
-    margin: 5px;
-    font-weight: bold;
-    color: orange;
-}
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .sidebar__mainBtn {
     margin: 5px;
     padding: 3px;
     border: 3px solid black;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; */
 }
 
 .sidebar__mainBtn__list {
@@ -28,15 +17,14 @@
     justify-content: space-around;
 }
 
-.sidebar__optionItem__btn, .sidebar__optionItem__btn button {
+.sidebar__mainBtn {
     margin: 5px;
     width: auto;
     padding: 3px;
-    background-color:skyblue;
+    background-color: $color-button-main;
 }
 
-.sidebar__optionItem__btn__active {
-    /* width: auto; */
-    /* padding: 3px; */
-    background-color:red;
+.sidebar__mainBtn__active {
+   @extend .sidebar__mainBtn;
+   background-color: $color-button-main-active;
 }

@@ -3,6 +3,7 @@ import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
 import style from './DemoSelectors.module.scss'
 import './selectors.scss'
+import { SectionTitle } from '../common/Typography';
 
 const DemoSelectors = () => {
 
@@ -12,7 +13,8 @@ const DemoSelectors = () => {
     return (
         <article className={"demo"}>
             <header>
-                <h4>Part 1. Selection by elements and class</h4>
+                {/* <h4>Part 1. Selection by elements and class</h4> */}
+                <SectionTitle>CSS Selectors</SectionTitle>
                 <p>syntaxis in css file: {part1?.class}</p>
                 <p>description: {part1?.description}</p>
             </header>
