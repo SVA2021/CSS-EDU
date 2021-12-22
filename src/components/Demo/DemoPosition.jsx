@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppSelector } from '../../app/hooks';
 import style from './DemoPosition.module.scss'
-import { selectDemo } from '../Main/demoSlice';
+import { selectDemo } from '../../app/demoSlice';
 
 const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -18,7 +18,11 @@ const DemoPosition = (props) => {
             <div style={activeStyle.parent}
                 className={style.parent}> parent
                 {childArray.map((item) =>
-                    <div key={item} style={activeStyle.childItem} className={style.child}>
+                    <div
+                        key={item}
+                        style={activeStyle.childItem}
+                        className={style.child}
+                    >
                         child #{item}
                     </div>
                 )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppSelector } from '../../app/hooks';
-import { selectDemo } from '../Main/demoSlice';
+import { selectDemo } from '../../app/demoSlice';
 import style from './DemoSelectors.module.scss'
 import './selectors.scss'
 
@@ -43,7 +43,7 @@ const DemoSelectors = () => {
                     <li>li-5
                         <div>div5</div>
                         <p title='flower'>p-5 "\n /n"
-                        title=flower</p>
+                            title=flower</p>
                     </li>
                     <p>external p</p>
                     <ul>
@@ -54,25 +54,17 @@ const DemoSelectors = () => {
                             <a href="#news">special link #02</a>
                         </li>
                         <li>
-                            <input type="text" placeholder='this is placeholder' readOnly/>
-                            <input type="checkbox" checked/>
-                            <input type="number" min="5" max="10" value="7" required/>
-                            <input type="number" min="5" max="10" value="17"/>
-                            <input type="text" required/>
-                            <input type="text" disabled/>
+                            <input type="text" placeholder='this is placeholder' readOnly />
+                            <input type="checkbox" checked />
+                            <input type="number" min="5" max="10" value="7" required />
+                            <input type="number" min="5" max="10" value="17" />
+                            <input type="text" required />
+                            <input type="text" disabled />
                         </li>
                         <li></li>
                     </ul>
                 </ul>
             </div>
-            {/* <div>
-                <h4>Part 2. Selection by attributes</h4>
-
-            </div>
-            <div>
-                <h4>Part 3. Selection by pseudoclasses and pseudoelements</h4>
-
-            </div> */}
         </article>
     )
 }

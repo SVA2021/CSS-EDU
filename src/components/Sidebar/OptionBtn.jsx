@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './OptionItem.module.scss'
 import { useAppDispatch } from '../../app/hooks';
-import { setDemoOption } from '../Main/demoSlice.ts';
+import { setDemoOption } from '../../app/demoSlice';
 
 const OptionBtn = (props) => {
 

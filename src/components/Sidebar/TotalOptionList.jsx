@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './SideBar.module.scss'
 import { useAppSelector } from '../../app/hooks';
-import { selectMainOption, selectSlider } from '../Main/demoSlice.ts';
+import { selectMainOption, selectSlider } from '../../app/demoSlice';
 import ComponentOptionList from './ComponentOptionList';
 
 const TotalOptionList = () => {

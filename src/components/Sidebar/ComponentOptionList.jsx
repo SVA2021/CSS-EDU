@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './SideBar.module.scss'
 import { useAppSelector } from '../../app/hooks';
-import { selectDemo } from '../Main/demoSlice.ts';
+import { selectDemo } from '../../app/demoSlice';
 import OptionBlock from './OptionBlock';
 
 const ComponentOptionList = (props) => {
