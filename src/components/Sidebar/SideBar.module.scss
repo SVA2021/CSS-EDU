@@ -1,12 +1,14 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
 
 .main__sidebar {
-    border: 3px solid red;
+    border: 3px solid $color-border-section;
 }
 
 .sidebar__header {
     margin: 5px;
     font-weight: bold;
-    color: orange;
+    color: $color-text-title;
 }
 
 .sidebar__mainBtn {
@@ -19,11 +21,11 @@
 .sidebar__optionItem__btn {
     width: auto;
     padding: 3px;
-    background-color:skyblue;
+    background-color: $color-button-option;
 }
 
 .sidebar__optionItem__btn__active {
     width: auto;
     padding: 3px;
-    background-color:red;
+    background-color:$color-button-option-active;
 }

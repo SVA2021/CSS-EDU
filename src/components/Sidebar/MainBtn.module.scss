@@ -1,0 +1,42 @@
+.main__sidebar {
+    border: 3px solid red;
+}
+
+.sidebar__header {
+    margin: 5px;
+    font-weight: bold;
+    color: orange;
+}
+
+.sidebar__mainBtn {
+    margin: 5px;
+    padding: 3px;
+    border: 3px solid black;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+}
+
+.sidebar__mainBtn__list {
+    margin: 5px;
+    padding: 3px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sidebar__optionItem__btn, .sidebar__optionItem__btn button {
+    margin: 5px;
+    width: auto;
+    padding: 3px;
+    background-color:skyblue;
+}
+
+.sidebar__optionItem__btn__active {
+    /* width: auto; */
+    /* padding: 3px; */
+    background-color:red;
+}
