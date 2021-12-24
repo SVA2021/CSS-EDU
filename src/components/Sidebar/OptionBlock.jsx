@@ -12,7 +12,7 @@ const OptionBlock = (props) => {
     if (!optionName) return <div>please choose option</div>
 
     return (
-        <article className={style.sidebar__optionItem}>
+        <div className={style.sidebar__optionItem}>
             <SubTitle>{optionName}</SubTitle>
             <div className={style.sidebar__optionItem__btnList}>
                 {optionValues.map((item) =>
@@ -23,7 +23,7 @@ const OptionBlock = (props) => {
                         activeOption={activeOption}
                     />)}
             </div>
-        </article>
+        </div>
     )
 }
 

@@ -30,7 +30,7 @@ const MainBtnList = () => {
     }
 
     return (
-        <div className={style.sidebar__mainBtn} >
+        <div className={style.sidebar__mainBtn_group} >
             <SectionTitle>settings</SectionTitle>
             <div className={style.sidebar__mainBtn__list} >
                 {mainBtnList.map((item) => <MainBtn
@@ -39,7 +39,7 @@ const MainBtnList = () => {
                     class={isActive(item)}
                     setMain={() => setMain(item)}
                 />)}
-                <button onClick={reset}>reset all</button>
+                <button  className={style.sidebar__mainBtn__reset} onClick={reset}>reset all</button>
             </div>
         </div>
     )

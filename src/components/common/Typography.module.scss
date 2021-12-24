@@ -3,15 +3,15 @@
 
 .sectionTitle {
     text-transform: uppercase;
-    margin: 5px;
+    margin: $offset-element-content-desktop;
     font-weight: bold;
-    color: $color-text-title;
+    color: $color-title-text;
 }
 
 .subTitle {
-    color: $color-text-title;
-    padding: 0;
-    margin: 0.3em;
+    color: $color-title-text;
+    padding: $offset-element-content-desktop;
+    margin: $offset-element-content-desktop;
 }
 
 .subTitleUpper {

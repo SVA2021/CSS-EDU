@@ -1,10 +1,13 @@
-/********************* TYPOGRAPHY *******************************************/
+/********************* TYPOGRAPHY *************************OK*************/
 $font-size-min: 10px;
 $font-size-max: 16px;
 $font-size: 14px;
 
-$font-titles: 'Roboto', Arial, sans-serif;
-$font-text: 'Montserrat', sans-serif;
+$font-titles: 'Roboto',
+Arial,
+sans-serif;
+$font-text: 'Montserrat',
+sans-serif;
 
 $font-size-sectionTitle: 2rem;
 $font-size-subtitle: 1.3rem;
@@ -12,40 +15,7 @@ $line-height-subtitle: 1.8rem;
 $font-size-plainText: 1.2rem;
 $line-height-plainText: 1.7rem;
 
-/********************* Colors  ******************************************/
-//main colors setup
-
-$color-white: #ffffff;
-$color-black: #000000;
-$color-darkblue: #25395C;
-$color-blue: #1C67D2;
-$color-lightblue: #2787EA;
-$color-gray: #A4B0FF;
-$color-pink: #ff00ff;
-$color-orange: #EA7166;
-$color-orange-light: #FCA78A;
-
-// text
-$color-text: $color-black;
-$color-text-title: $color-orange;
-// $color-text-active: #00ff00;
-// border
-$color-border-nav: $color-orange-light;
-$color-border-parent: $color-black;
-$color-border-child: $color-white;
-$color-border-section: $color-black;
-//background
-$color-section-nav: $color-gray;
-$color-section-settings: $color-darkblue;
-$color-section-demo: $color-darkblue;
-
-// $color-background: #5511ff; //main background should be gradient
-$color-button-main: $color-lightblue;
-$color-button-main-active: $color-orange;
-$color-button-option: $color-blue;
-$color-button-option-active: $color-orange;
-
-/********************* Screen Sizes ******************************************/
+/********************* Screen Sizes ************************ok*/
 
 // Width
 $screen-mobile-width: 400px;
@@ -57,6 +27,89 @@ $screen-mobile-height: 640px;
 $screen-tablet-height: 720px;
 $screen-desktop-height: 980px;
 
+/********************* Offsets Basic *********************ok*/
+
+// Offset = padding or margin
+// Margin could be only right and bottom. Top or left should be parent's padding
+$offset-basic: 4px;
+
+// Section
+$offset-section-mobile: $offset-basic * 1;
+$offset-section-tablet: $offset-section-mobile * 1;
+$offset-section-desktop: $offset-section-tablet * 2;
+
+// Between Elements
+$offset-between-elements-mobile: $offset-basic;
+$offset-between-elements-tablet: $offset-between-elements-mobile;
+$offset-between-elements-desktop: $offset-between-elements-tablet * 2;
+
+// Element content (offset from borders of element to content)
+$offset-element-content-mobile: $offset-basic;
+$offset-element-content-tablet: $offset-element-content-mobile * 2;
+$offset-element-content-desktop: $offset-element-content-tablet;
+
+/******************** Element Sizes ***********************/
+
+// Header 
+$height-header-mobile: 75px; //not used
+$height-header-tablet: 100px; //not used
+$height-header-desktop: 75px;
+
+//border-radius
+$border-radius-default: 4px;
+$size-default-border: 1px;
+
+/********************* Colors  ******************************************/
+//main colors setup
+$white: #ffffff;
+$black: #000000;
+$darkblue: #25395C;
+$blue: #1C67D2;
+$lightblue: #2787EA;
+$gray: #A4B0FF;
+$pink: #ff00ff;
+$orange: #EA7166;
+$orange-light: #FCA78A;
+
+// Background colors
+// base values and names
+$color-section-background: #090A1D;
+$color-element-background: $pink;
+$color-label-background: #AAAAAA;
+$color-element-hover-background: #EBEBEB;
+// main sections
+$color-nav-background: $orange-light;
+$color-sidebar-background: $lightblue;
+$color-demo-background: $lightblue;
+$color-preloader-background: $lightblue;
+// elements
+$color-button-main-background: $gray;
+$color-button-main-active-background: $orange;
+$color-button-main-reset-background: $white;
+$color-button-option-background: $blue;
+$color-button-option-active-background: $orange;
+
+// Typography colors
+$color-element-text: $black;
+$color-plain-text: $black;
+$color-title-text: $orange;
+$color-label-text: $black;
+$color-highlited-text: $pink;
+$color-nav-text: $black;
+
+// Element decoration colors
+$color-underline: #00B3BE;
+$color-element-border: #F6F6F6;
+$color-title-text-highliter: #6E3ED2;
+
+// border
+$color-border-nav: $orange-light;
+$color-border-parent: $black;
+$color-border-child: $white;
+$color-border-section: $black;
+
+
+
 // Colors Used: #25395C, #2787EA, #1C67D2, #A4B0FF, #EA7166, #FCA78A
 
 // Colors Used: #F9F9F9, #95060F, #1F563E, #BEC1C2
@@ -66,4 +119,3 @@ $screen-desktop-height: 980px;
 // Colors Used: #FCFCF6, #111111, #FF460F, #7EAFFF, #F68CB9
 
 // Colors Used: #1A2EC6, #3044CA, #4C6AD6, #F7250E, #FA4F40, #FA5F52
-

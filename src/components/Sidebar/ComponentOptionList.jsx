@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './SideBar.module.scss'
+// import style from './SideBar.module.scss'
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
 import OptionBlock from './OptionBlock';
@@ -17,7 +17,7 @@ const ComponentOptionList = (props) => {
     return (
         <article>
             <SubTitleUpper>Options for {groupName}</SubTitleUpper>
-            <div className={style.sidebar__options}>
+            <div>
                 {sectionKeys.map((item) =>//item = display
                     <OptionBlock
                         key={item}

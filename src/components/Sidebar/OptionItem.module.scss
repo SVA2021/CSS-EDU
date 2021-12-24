@@ -1,4 +1,8 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .sidebar__optionItem {
+    margin: $offset-basic;
     border: 1px solid yellow;
 }
 

@@ -14,44 +14,43 @@ a {
 
 * {
     box-sizing: border-box;
-// delete when finalize color pattern
-    // Color: #25395C, #2787EA, #1C67D2, #A4B0FF, #EA7166, #FCA78A;
-    // Color: #F9F9F9, #95060F, #1F563E, #BEC1C2;
-    // Color: #AFD5EB, #F04520, #EF869C, #1073E5;
-    // Color: #FCFCF6, #111111, #FF460F, #7EAFFF, #F68CB9;
-    // Color: #1A2EC6, #3044CA, #4C6AD6, #F7250E, #FA4F40, #FA5F52;
 }
 
 .container {
-    margin: auto;
+    @include baseOffset;
+    // margin: auto;
     text-align: center;
     display: grid;
     /* height: 97vh; */
-    /* grid-template-columns: 15% 15% 15% 15% 15% 15% ; */
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-  
-    /* grid-template-rows: 20% 70% 4% ; */
-  
-    grid-gap: 2%;
-    background-color: $color-pink;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    // grid-gap: $offset-basic;
+    // background-color: $black;
     padding: 10px;
-  }
-  
-  .sidebar {
-      grid-area: 2 / 1 / 3 / 3;
-      background-color: $color-section-settings;
-      color: $color-text;
-  }
-  
-  .demo {
-    /* padding: 30px; */
-    grid-area: 2 / 3 / 3 / 7;
-    background-color: $color-section-demo;
-    color: $color-text;
-  }
+}
 
-  .preloader {
+.sidebar {
+    @include baseOffset;
+    grid-area: 2 / 1 / 3 / 3;
+    background-color: $color-sidebar-background;
+    // color: $color-text;
+}
+
+.demo {
+    @include baseOffset;
+    grid-area: 2 / 3 / 3 / 7;
+    background-color: $color-demo-background;
+    // color: $color-title-text; 
+}
+
+.preloader {
+    @include baseOffset;
     grid-area: 2 / 1 / 5 / 7;
-    background-color: blue;
+    background-color: $color-preloader-background;
     color: black;
 }
+
+// Сначала положение элемента относительно других: position, left/right/top/bottom, float, clear, z-index.
+// Затем размеры и отступы: width, height, margin, padding…
+// Рамка border, она частично относится к размерам.
+// Общее оформление содержимого: list-style-type, overflow…
+// Цветовое и стилевое оформление: background, color, font…
