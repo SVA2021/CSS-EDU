@@ -1,5 +1,5 @@
-import classNames from 'classnames';
-import React, { FC } from 'react';
+// import classNames from 'classnames';
+import React from 'react';
 
 import styles from './Button.module.scss';
 
@@ -12,7 +12,7 @@ import styles from './Button.module.scss';
 // };
 
 const Button = ({ children, ...props }) => (
-  <button
+  <button 
     {...props}
   >
     {children}

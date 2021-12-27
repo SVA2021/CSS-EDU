@@ -12,7 +12,7 @@
         li {
             @include buttonOffset;
             display: block;
-            border-radius: $border-radius-default;
+            border-radius: $border-radius-default * 2;
             background-color: $color-nav-background;
             color: $color-nav;
             font-size: larger;

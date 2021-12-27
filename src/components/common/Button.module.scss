@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button_base {
+    @include elementOffset;
+
+    color: $color-button;
+    border: none;
+    border-radius: $border-radius-default;
+    background-color: $color-button-background;
+
+    &:hover {
+        color: $color-button-hover;
+        transform: scale(1.1);
+        transition: transform 0.15s linear;
+    }
+}

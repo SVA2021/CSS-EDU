@@ -1,12 +1,12 @@
 @import './variables';
 
 @mixin baseFont {
-    margin: 0;
+  margin: 0;
 
-    font-weight: 500;
-    font-size: $font-size;
-    font-family: $font-text;
-    font-style: normal;
+  font-weight: 500;
+  font-size: $font-size;
+  font-family: $font-text;
+  font-style: normal;
 }
 
 @mixin baseOffset {
@@ -23,25 +23,41 @@
   padding: $offset-element-content-desktop * 0.5 $offset-element-content-desktop;
 }
 
+@mixin buttonBase {
+  @include elementOffset;
+
+  color: $color-button;
+  cursor: pointer;
+  border: none;
+  border-radius: $border-radius-default;
+  background-color: $color-button-background;
+
+  // &:hover {
+  //   transform: scale(1.1);
+  //   transition: transform 0.15s linear;
+  // }
+
+}
+
 /******************** Media Queries ***********************/
 
 // Small devices
 @mixin mobile {
-    @media ( min-width: #{$screen-mobile-width} ) {
-      @content;
-    }
+  @media (min-width: #{$screen-mobile-width}) {
+    @content;
   }
-  
-  // Large devices
-  @mixin tablet {
-    @media ( min-width: #{$screen-tablet-width} ) {
-      @content;
-    }
+}
+
+// Large devices
+@mixin tablet {
+  @media (min-width: #{$screen-tablet-width}) {
+    @content;
   }
-  
-  // Extra large devices
-  @mixin desktop {
-    @media ( min-width: #{$screen-desktop-width} ) {
-      @content;
-    }
+}
+
+// Extra large devices
+@mixin desktop {
+  @media (min-width: #{$screen-desktop-width}) {
+    @content;
   }
+}

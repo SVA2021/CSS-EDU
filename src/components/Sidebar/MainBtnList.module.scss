@@ -17,17 +17,15 @@
 }
 
 .sidebar__mainBtn {
-    @include elementOffset;
+    @include buttonBase;
 
-    border: none;
-    border-radius: $border-radius-default;
-    background-color: $color-button-background;
     text-transform: uppercase;
 
     &:hover {
         transform: scale(1.1);
         transition: transform 0.15s linear;
     }
+
 }
 
 .sidebar__mainBtn__active {
@@ -35,7 +33,6 @@
     background-color: $color-button-active-background;
 
     &:hover {
-        transform: none;
         cursor: no-drop;
         color: $color-button-hover;
     }

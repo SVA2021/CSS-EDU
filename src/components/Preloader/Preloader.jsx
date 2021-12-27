@@ -1,9 +1,10 @@
 import React from 'react';
+import { SectionTitle } from '../common/Typography';
 
 const Preloader = () => {
     return (
         <section className={'preloader'}>
-            <h3>preloader will be here</h3>
+            <SectionTitle>preloader will be here</SectionTitle>
         </section>
     )
 }

@@ -18,15 +18,19 @@
 }
 
 .sidebar__optionItem__btn {
-    @include elementOffset;
+    @include buttonBase;
 
-    border: none;
-    border-radius: $border-radius-default;
-    background-color: $color-button-background;
-
+    &:hover {
+        box-shadow: 2px 2px 5px $orange, -2px -2px 5px $orange;
+    }
 }
 
 .sidebar__optionItem__btn__active {
     @extend .sidebar__optionItem__btn;
     background-color: $color-button-active-background;
+    color: $color-button-hover;
+
+    &:hover {
+        box-shadow: 2px 2px 5px $green, -2px -2px 5px $green;
+    }
 }
