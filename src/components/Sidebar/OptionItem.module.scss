@@ -1,40 +1,32 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.sidebar__optionItem {
-    margin: $offset-basic;
-    border: 1px solid yellow;
+.sidebar__optionBlock {
+    margin: $offset-element-content-desktop * 0.5 0;
 }
 
-.sidebar__optionItem__header {
-    /* width: 100%; */
-    /* display: block; */
-    margin: 3px;
-    font-weight: bold;
-    color: aqua;
-    flex-basis: 10;
-}
+.sidebar__optionBlock__btnList {
+    @include elementOffset;
 
-.sidebar__optionItem__btnList {
-    margin: 5px;
-    padding: 3px;
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: stretch;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
 }
 
 .sidebar__optionItem__btn {
-    margin: 3px;
-    padding: 3px;
-    width: auto;
-    background-color:lightcoral;
-    border-radius: 3px;
+    @include elementOffset;
+
+    border: none;
+    border-radius: $border-radius-default;
+    background-color: $color-button-background;
+
 }
 
 .sidebar__optionItem__btn__active {
-    width: auto;
-    padding: 3px;
-    background-color: greenyellow;
+    @extend .sidebar__optionItem__btn;
+    background-color: $color-button-active-background;
 }

@@ -35,12 +35,12 @@ $offset-basic: 4px;
 
 // Section
 $offset-section-mobile: $offset-basic * 1;
-$offset-section-tablet: $offset-section-mobile * 1;
+$offset-section-tablet: $offset-section-mobile * 2;
 $offset-section-desktop: $offset-section-tablet * 2;
 
 // Between Elements
 $offset-between-elements-mobile: $offset-basic;
-$offset-between-elements-tablet: $offset-between-elements-mobile;
+$offset-between-elements-tablet: $offset-between-elements-mobile * 2;
 $offset-between-elements-desktop: $offset-between-elements-tablet * 2;
 
 // Element content (offset from borders of element to content)
@@ -57,56 +57,61 @@ $height-header-desktop: 75px;
 
 //border-radius
 $border-radius-default: 4px;
+$border-radius-section: $border-radius-default * 4;
 $size-default-border: 1px;
 
 /********************* Colors  ******************************************/
 //main colors setup
-$white: #ffffff;
-$black: #000000;
-$darkblue: #25395C;
-$blue: #1C67D2;
-$lightblue: #2787EA;
-$gray: #A4B0FF;
-$pink: #ff00ff;
-$orange: #EA7166;
-$orange-light: #FCA78A;
+
+$orange: #F97F29;
+$green: #DFF296;
+$dark: #19283F;
+$light: #F5F5F5;
 
 // Background colors
-// base values and names
-$color-section-background: #090A1D;
-$color-element-background: $pink;
-$color-label-background: #AAAAAA;
-$color-element-hover-background: #EBEBEB;
+// // base values and names
+// $color-section-background: #090A1D;
+// $color-element-background: $pink;
+// $color-label-background: #AAAAAA;
+// $color-element-hover-background: #EBEBEB;
+
 // main sections
-$color-nav-background: $orange-light;
-$color-sidebar-background: $lightblue;
-$color-demo-background: $lightblue;
-$color-preloader-background: $lightblue;
+
+$color-nav-background: $light;
+$color-nav-hover-background: $orange;
+// $color-sidebar-background: $lightblue;
+// $color-demo-background: $lightblue;
+// $color-preloader-background: $lightblue;
 // elements
-$color-button-main-background: $gray;
-$color-button-main-active-background: $orange;
-$color-button-main-reset-background: $white;
-$color-button-option-background: $blue;
-$color-button-option-active-background: $orange;
+$color-button-background: $green;
+$color-button-active-background: $orange;
+$color-button-reset-background: $light;
+// $color-button-option-background: $green;
+// $color-button-option-active-background: $orange;
 
 // Typography colors
-$color-element-text: $black;
-$color-plain-text: $black;
-$color-title-text: $orange;
-$color-label-text: $black;
-$color-highlited-text: $pink;
-$color-nav-text: $black;
+$color-element-text: $dark;
+$color-plain-text: $dark;
+$color-title-text: $light;
+$color-label-text: $dark;
+$color-highlited-text: $orange;
+$color-nav-text: $dark;
 
 // Element decoration colors
-$color-underline: #00B3BE;
-$color-element-border: #F6F6F6;
-$color-title-text-highliter: #6E3ED2;
+
+$color-nav: $dark;
+$color-nav-hover: $light;
+$color-button: $dark;
+$color-button-hover: $light;
+// $color-underline: #00B3BE;
+// $color-element-border: #F6F6F6;
+// $color-title-text-highliter: #6E3ED2;
 
 // border
-$color-border-nav: $orange-light;
-$color-border-parent: $black;
-$color-border-child: $white;
-$color-border-section: $black;
+$color-border-nav: $orange;
+$color-border-parent: $dark;
+$color-border-child: $light;
+$color-border-section: $light;
 
 
 

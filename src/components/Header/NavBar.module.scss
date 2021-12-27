@@ -1,26 +1,30 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .navbar {
-    background-color: $color-nav-background;
 
     ul {
-        margin: 1% auto;
-        padding: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         list-style-type: none;
-        // filter: blur(1px);
-        // background-color: red;
 
         li {
+            @include buttonOffset;
             display: block;
-            margin: 10px;
-            padding: 5px;
-            border: 2px solid blue;
-            background-color: $pink;
+            border-radius: $border-radius-default;
+            background-color: $color-nav-background;
+            color: $color-nav;
             font-size: larger;
             cursor: pointer;
+        }
+
+        li:hover {
+            border-radius: $border-radius-section;
+            background-color: $color-nav-hover-background;
+            color: $color-nav-hover;
+            transform: scale(1.25);
+            transition: all 0.25s linear;
         }
     }
 }

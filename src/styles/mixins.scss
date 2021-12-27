@@ -12,10 +12,15 @@
 @mixin baseOffset {
   margin: $offset-section-desktop;
   padding: $offset-section-desktop;
-  // margin-right: $offset-section-desktop;
-  // margin-bottom: $offset-section-desktop; 
-  // padding-right: $offset-section-desktop;
-  // padding-bottom: $offset-section-desktop;
+}
+
+@mixin buttonOffset {
+  padding: $offset-between-elements-desktop * 0.5 $offset-between-elements-desktop;
+}
+
+@mixin elementOffset {
+  margin: $offset-element-content-desktop * 0.5 $offset-element-content-desktop;
+  padding: $offset-element-content-desktop * 0.5 $offset-element-content-desktop;
 }
 
 /******************** Media Queries ***********************/

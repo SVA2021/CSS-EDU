@@ -1,9 +1,17 @@
+.fix{
+    width: 49%;
+    // height: 100%;
+    position: fixed;
+}
+
 .parent {
     border: 5px solid red;
     border-radius: 10px;
     background-color: violet;
     padding: 50px;
+    // position: fixed;
 }
+
 
 .child {
     margin: 10px;

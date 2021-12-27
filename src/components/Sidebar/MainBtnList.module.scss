@@ -2,15 +2,14 @@
 @import '../../styles/mixins';
 
 .sidebar__mainBtn_group {
-    margin: $offset-basic;
-    padding: $offset-basic;
-    border: 3px solid black;
+    @include elementOffset;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
 }
 
 .sidebar__mainBtn__list {
-    margin: $offset-basic;
-    padding: $offset-basic * 2;
-    // border: 3px solid black;
+    @include elementOffset;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,19 +17,31 @@
 }
 
 .sidebar__mainBtn {
-    padding: $offset-basic * 2;
+    @include elementOffset;
+
     border: none;
-    background-color: $color-button-main-background;
     border-radius: $border-radius-default;
+    background-color: $color-button-background;
     text-transform: uppercase;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.15s linear;
+    }
 }
 
 .sidebar__mainBtn__active {
     @extend .sidebar__mainBtn;
-    background-color: $color-button-main-active-background;
+    background-color: $color-button-active-background;
+
+    &:hover {
+        transform: none;
+        cursor: no-drop;
+        color: $color-button-hover;
+    }
 }
 
 .sidebar__mainBtn__reset {
     @extend .sidebar__mainBtn;
-    background-color: $color-button-main-reset-background;
+    background-color: $color-button-reset-background;
 }

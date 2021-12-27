@@ -16,18 +16,21 @@ const DemoPosition = (props) => {
     return (
         <section className={"demo"}>
             <SectionTitle>Select option from left to change position of elements</SectionTitle>
+            <div className={style.fix}>
+
             <div style={activeStyle.parent}
                 className={style.parent}> parent
                 {childArray.map((item) =>
                     <div
-                        key={item}
-                        style={activeStyle.childItem}
-                        className={style.child}
+                    key={item}
+                    style={activeStyle.childItem}
+                    className={style.child}
                     >
                         child #{item}
                     </div>
                 )}
             </div>
+                </div>
         </section>
     )
 }

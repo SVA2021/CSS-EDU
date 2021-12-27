@@ -12,9 +12,9 @@ const OptionBlock = (props) => {
     if (!optionName) return <div>please choose option</div>
 
     return (
-        <div className={style.sidebar__optionItem}>
+        <div className={style.sidebar__optionBlock}>
             <SubTitle>{optionName}</SubTitle>
-            <div className={style.sidebar__optionItem__btnList}>
+            <div className={style.sidebar__optionBlock__btnList}>
                 {optionValues.map((item) =>
                     <OptionBtn
                         key={item} value={item}
