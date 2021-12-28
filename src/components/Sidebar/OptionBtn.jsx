@@ -7,17 +7,18 @@ const OptionBtn = (props) => {
 
     const dispatch = useAppDispatch();
 
-    let value, btnName;
+    let value= props.value; 
+    let btnName = value.name;
     const activeOption = props?.activeOption;
 
-    if (typeof (props?.value) == "string") {
-        value = props.value;
-        btnName = value;
-    }
-    if (typeof (props?.value) == "object") {
-        value = props.value;
-        btnName = value.id;
-    }
+    // if (typeof (props?.value) == "string") {
+    //     value = props.value;
+    //     btnName = value;
+    // }
+    // if (typeof (props?.value) == "object") {
+        // value = props.value;
+        // btnName = value.name;
+    // }
     const active = activeOption[props.optionName] === value;
 
     const setOption = () => {

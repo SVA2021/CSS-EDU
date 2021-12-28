@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useAppSelector } from '../../app/hooks';
 import style from './DemoPosition.module.scss'
 import { selectDemo } from '../../app/demoSlice';
@@ -7,7 +7,7 @@ import { SectionTitle } from '../common/Typography';
 const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
     const childArray = [];
-    const childQty = 3;
+    const childQty = 7;
 
     for (let i = 0; i < childQty; i++) {
         childArray.push(i);
@@ -18,19 +18,19 @@ const DemoPosition = (props) => {
             <SectionTitle>Select option from left to change position of elements</SectionTitle>
             <div className={style.fix}>
 
-            <div style={activeStyle.parent}
-                className={style.parent}> parent
-                {childArray.map((item) =>
-                    <div
-                    key={item}
-                    style={activeStyle.childItem}
-                    className={style.child}
-                    >
-                        child #{item}
-                    </div>
-                )}
-            </div>
+                <div style={activeStyle.parent}
+                    className={style.parent}> parent
+                    {childArray.map((item) =>
+                        <div
+                            key={item}
+                            style={activeStyle.childItem}
+                            className={style.child}
+                        >
+                            child #{item}
+                        </div>
+                    )}
                 </div>
+            </div>
         </section>
     )
 }
