@@ -18,11 +18,8 @@ const MainBtnList = () => {
     }
 
     const isActive = (value) => {
-        if (active === value) {
-            return style.sidebar__mainBtn__active
-        } else {
-            return style.sidebar__mainBtn;
-        }
+        return (active === value)
+            ? style.sidebar__mainBtn__active : style.sidebar__mainBtn;
     }
 
     const reset = () => {
@@ -39,7 +36,9 @@ const MainBtnList = () => {
                     class={isActive(item)}
                     setMain={() => setMain(item)}
                 />)}
-                <button  className={style.sidebar__mainBtn__reset} onClick={reset}>reset all</button>
+                <button className={style.sidebar__mainBtn__reset} onClick={reset}>
+                    reset all
+                </button>
             </div>
         </div>
     )

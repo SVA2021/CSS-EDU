@@ -1,7 +1,7 @@
 /********************* TYPOGRAPHY *************************OK*************/
 $font-size-min: 10px;
 $font-size-max: 16px;
-$font-size: 20px;
+$font-size: 14px;
 
 $font-titles: 'Roboto',
 Arial,
@@ -10,7 +10,7 @@ $font-text: 'Montserrat',
 sans-serif;
 
 $font-size-sectionTitle: 2rem;
-$font-size-subtitle: 1.3rem;
+$font-size-subtitle: 1.5rem;
 $line-height-subtitle: 1.8rem;
 $font-size-plainText: 1.2rem;
 $line-height-plainText: 1.7rem;
@@ -58,7 +58,7 @@ $height-header-desktop: 75px;
 //border-radius
 $border-radius-default: 4px;
 $border-radius-section: $border-radius-default * 4;
-$size-default-border: 1px;
+$size-default-border: 2px;
 
 /********************* Colors  ******************************************/
 //main colors setup

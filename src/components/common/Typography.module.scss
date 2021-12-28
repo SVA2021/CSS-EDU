@@ -2,16 +2,20 @@
 @import '../../styles/mixins';
 
 .sectionTitle {
-    text-transform: uppercase;
     margin: $offset-element-content-desktop;
+    text-transform: uppercase;
     font-weight: bold;
+    font-size: $font-size-sectionTitle;
+    line-height: $line-height-subtitle;
     color: $color-title-text;
 }
 
 .subTitle {
-    color: $color-title-text;
-    padding: $offset-element-content-desktop;
     margin: $offset-element-content-desktop;
+    padding: $offset-element-content-desktop;
+    font-size: $font-size-subtitle;
+    line-height: $line-height-subtitle;
+    color: $color-title-text;
 }
 
 .subTitleUpper {
