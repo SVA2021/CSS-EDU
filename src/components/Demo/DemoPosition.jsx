@@ -6,6 +6,21 @@ import { SectionTitle } from '../common/Typography';
 
 const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
+
+    const propertyCopy = (obj) => {
+        let result = {};
+        for (const key in obj) {
+            if (Object.hasOwnProperty.call(obj, key)) {
+                // const element = obj[key];
+                result[key] = obj[key].name;
+            }
+        }
+        return result;
+    }
+
+    let parentStyle = propertyCopy(activeStyle.parent);
+    let childStyle = propertyCopy(activeStyle.childItem);
+
     const childArray = [];
     const childQty = 7;
 
@@ -18,12 +33,12 @@ const DemoPosition = (props) => {
             <SectionTitle>Select option from left to change position of elements</SectionTitle>
             <div className={style.fix}>
 
-                <div style={activeStyle.parent}
+                <div style={parentStyle}
                     className={style.parent}> parent
                     {childArray.map((item) =>
                         <div
                             key={item}
-                            style={activeStyle.childItem}
+                            style={childStyle}
                             className={style.child}
                         >
                             child #{item}
