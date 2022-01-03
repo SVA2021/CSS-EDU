@@ -169,7 +169,7 @@ export const positionElem = {//pages
 }
 
 export const selectorsCSS = {
-    CSSMainSelectors: { // need to fill
+    CSSMainSelectors: {
         part1: {
             elementAndClass: [
                 { style: `style1`, name: `class`, class: `.intro`, description: `Selects all elements with class='intro'` },
@@ -197,17 +197,17 @@ export const selectorsCSS = {
                 { style: `style47`, name: `:only-of-type`, class: `p:only-of-type`, description: `Selects every <p> element that is the only <p> element of its parent` },
                 { style: `style48`, name: `:only-child`, class: `p:only-child`, description: `Selects every <p> element that is the only child of its parent` },
                 { style: `style13`, name: `[attribute]`, class: `[target]`, description: `Selects all elements with a target attribute` },
-                { style: `style14`, name: `[attribute=value]`, class: `[target=_blank]`, description: `Selects all elements with target="_blank"` },
+                { style: `style14`, name: `[attribute=value]`, class: `[href='#00']`, description: `Selects all elements with href='#00'` },
                 { style: `style15`, name: `[attribute~=value]`, class: `[title~=flower]`, description: `Selects all elements with a title attribute containing the word "flower"` },
                 { style: `style16`, name: `[attribute|=value]`, class: `[lang|=en]`, description: `Selects all elements with a lang attribute value equal to "en" or starting with "en-"` },
                 { style: `style17`, name: `[attribute^=value]`, class: `a[href^="https"]`, description: `Selects every <a> element whose href attribute value begins with "https"` },
                 { style: `style18`, name: `[attribute$=value]`, class: `a[href$=".pdf"]`, description: `Selects every <a> element whose href attribute value ends with ".pdf"` },
                 { style: `style19`, name: `[attribute*=value]`, class: `a[href*="w3schools"]`, description: `Selects every <a> element whose href attribute value contains the substring "w3schools"` },
-                { style: `style20`, name: `:active`, class: `a:active`, description: `Selects the active link` },
+                { style: `style20`, name: `:active`, class: `a:active`, description: `Selects the active link (click on link to see effect)` },
                 { style: `style21`, name: `::after`, class: `p::after`, description: `Insert something after the content of each <p> element` },
                 { style: `style22`, name: `::before`, class: `p::before`, description: `Insert something before the content of each <p> element` },
                 { style: `style23`, name: `:checked`, class: `input:checked`, description: `Selects every checked <input> element` },
-                { style: `style24`, name: `:default`, class: `input:default`, description: `Selects the default <input> element` },
+                { style: `style24`, name: `:default`, class: `input:default`, description: `Selects the default checked <input> element` },
                 { style: `style25`, name: `:disabled`, class: `input:disabled`, description: `Selects every disabled <input> element` },
                 { style: `style27`, name: `:enabled`, class: `input:enabled`, description: `Selects every enabled <input> element` },
                 { style: `style29`, name: `::first-letter`, class: `p::first-letter`, description: `Selects the first letter of every <p> element` },
@@ -215,7 +215,7 @@ export const selectorsCSS = {
                 { style: `style32`, name: `:focus`, class: `input:focus`, description: `Selects the input element which has focus` },
                 { style: `style33`, name: `:hover`, class: `a:hover`, description: `Selects links on mouse over` },
                 { style: `style34`, name: `:in-range`, class: `input:in-range`, description: `Selects input elements with a value within a specified range` },
-                { style: `style35`, name: `:indeterminate`, class: `input:indeterminate`, description: `Selects input elements that are in an indeterminate state` },
+                // { style: `style35`, name: `:indeterminate`, class: `input:indeterminate`, description: `Selects input elements that are in an indeterminate state` },
                 { style: `style36`, name: `:invalid`, class: `input:invalid`, description: `Selects all input elements with an invalid value` },
                 { style: `style37`, name: `:lang(language)`, class: `p:lang(it)`, description: `Selects every <p> element with a lang attribute equal to "it" (Italian)` },
                 { style: `style40`, name: `:link`, class: `a:link`, description: `Selects all unvisited links` },
@@ -248,10 +248,3 @@ export const animations = {
     }
 }
 export const features = {};
-
-// let newArray = positionElem.flex.childItem.map((item) => {
-//     let i = 1;
-//     return {id: i++, name: item}
-// })
-
-// console.log(newArray);

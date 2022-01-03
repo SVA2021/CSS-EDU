@@ -215,12 +215,16 @@
 .style23 {
     input:checked {
         @include select;
+        height: 50px;
+        width: 50px;
     }
 }
 
 .style24 {
     input:default {
         @include select;
+        height: 50px;
+        width: 50px;
     }
 }
 
@@ -269,6 +273,8 @@
 .style35 {
     input:indeterminate {
         @include select;
+        height: 50px;
+        width: 50px;
     }
 }
 
