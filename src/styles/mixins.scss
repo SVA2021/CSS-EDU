@@ -39,6 +39,11 @@
 
 }
 
+@mixin select {
+  color: $light;
+  background-color: $orange;
+  font-weight: bold;
+}
 /******************** Media Queries ***********************/
 
 // Small devices

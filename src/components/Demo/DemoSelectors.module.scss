@@ -3,6 +3,7 @@
 .main {
     display: block;
     border: $size-default-border * 2 solid $orange;
+    border-radius: $border-radius-default;
     margin: $offset-basic;
     padding: $offset-basic;
     background-color: $green;
@@ -11,6 +12,7 @@
         display: block;
         margin: $offset-basic;
         padding: $offset-basic;
+        border-radius: $border-radius-default;
         border: $size-default-border * 2 solid $dark;
 
         & p,
@@ -18,6 +20,7 @@
             display: inline-block;
             margin: $offset-basic;
             padding: $offset-basic;
+            border-radius: $border-radius-default;
             border: $size-default-border * 2 solid $orange;
         }
     }
@@ -29,6 +32,7 @@
 }
 
 .fix {
+    border-radius: $border-radius-default;
     border: $size-default-border * 2 solid $light;
 
     & header {

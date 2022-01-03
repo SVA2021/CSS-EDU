@@ -1,44 +1,44 @@
-@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .style1 {
     .intro {
-        background-color: red;
+        @include select;
     }
 }
 
 .style2 {
     .class1.class2 {
-        background-color: red;
+        @include select;
     }
 }
 
 .style3 {
     .class1 .class2 {
-        background-color: red;
+        @include select;
     }
 }
 
 .style4 {
     #firstname {
-        background-color: red;
+        @include select;
     }
 }
 
 .style5 {
     * {
-        background-color: red;
+        @include select;
     }
 }
 
 .style6 {
     p {
-        background-color: red;
+        @include select;
     }
 }
 
 .style7 {
     p.intro {
-        background-color: red;
+        @include select;
     }
 }
 
@@ -46,37 +46,37 @@
 
     div,
     p {
-        background-color: red;
+        @include select;
     }
 }
 
 .style9 {
     div p {
-        background-color: red;
+        @include select;
     }
 }
 
 .style10 {
     div>p {
-        background-color: red;
+        @include select;
     }
 }
 
 .style11 {
     div+p {
-        background-color: red;
+        @include select;
     }
 }
 
 .style12 {
     span~p {
-        background-color: red;
+        @include select;
     }
 }
 
 .style26 {
     p:empty {
-        background-color: red;
+        @include select;
         width: 100px;
         height: 20px;
     }
@@ -84,19 +84,19 @@
 
 .style28 {
     p:first-child {
-        background-color: red;
+        @include select;
     }
 }
 
 .style31 {
     p:first-of-type {
-        background-color: red;
+        @include select;
     }
 }
 
 .style38 {
     p:last-child {
-        background-color: red;
+        @include select;
     }
 }
 
@@ -104,290 +104,266 @@
     p:last-of-type {
         width: 200px;
         height: 30px;
-        background-color: red;
+        @include select;
     }
 }
 
 .style42 {
     :not(p) {
-        background-color: red;
+        @include select;
     }
 }
 
 .style43 {
     p:nth-child(2) {
-        background-color: red;
+        @include select;
     }
 }
 
 .style44 {
     p:nth-last-child(2) {
-        background-color: red;
+        @include select;
     }
 }
 
 .style45 {
     p:nth-last-of-type(2) {
-        background-color: red;
+        @include select;
     }
 }
 
 .style46 {
     p:nth-of-type(2) {
-        background-color: red;
+        @include select;
     }
 }
 
 .style47 {
     p:only-of-type {
-        background-color: red;
+        @include select;
     }
 }
 
 .style48 {
     p:only-child {
-        background-color: red;
+        @include select;
     }
 }
 
 .style13 {
     [href] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style14 {
     [href='#00'] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style15 {
     [title~='flower'] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style16 {
     [lang|=en] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style17 {
     a[href^="#0"] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style18 {
     a[href$=".pdf"] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style19 {
     a[href*="w3schools"] {
-        background-color: red;
+        @include select;
     }
 }
 
 .style20 {
     a:active {
-        background-color: red;
+        @include select;
     }
 }
 
 .style21 {
     p::after {
+        @include select;
         content: "X";
-        color: red;
-        background-color: black;
     }
 }
 
 .style22 {
     p::before {
+        @include select;
         content: "X";
-        color: red;
-        background-color: black;
     }
 }
 
 .style23 {
     input:checked {
-        background-color: red;
+        @include select;
     }
 }
 
 .style24 {
     input:default {
-        background-color: red;
+        @include select;
     }
 }
 
 .style25 {
     input:disabled {
-        background-color: red;
+        @include select;
     }
 }
 
 .style27 {
     input:enabled {
-        background-color: red;
+        @include select;
     }
 }
 
 .style29 {
     p::first-letter {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style30 {
     p::first-line {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style32 {
     input:focus {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style33 {
     a:hover {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style34 {
     input:in-range {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style35 {
     input:indeterminate {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style36 {
     input:invalid {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style37 {
     p:lang(en) {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style40 {
     a:link {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style41 {
     ::marker {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style49 {
     input:optional {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style50 {
     input:out-of-range {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style51 {
     input::placeholder {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style52 {
     input:read-only {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style53 {
     input:read-write {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style54 {
     input:required {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style55 {
     :root {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style56 {
     ::selection {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style57 {
     #news:target {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style58 {
     input:valid {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style59 {
     a:visited {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
 
 .style60 {
     :fullscreen {
-        color: red;
-        font-weight: bolder;
+        @include select;
     }
 }
