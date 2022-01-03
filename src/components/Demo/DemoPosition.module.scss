@@ -3,6 +3,7 @@
 
 .fix{
     position: fixed;
+    padding: $offset-basic * 2;
     margin: auto;
     width: 49%;
     border: $size-default-border * 2 solid $light;
@@ -13,10 +14,11 @@
 }
 
 .parent {
-    padding: $offset-basic;
+    padding: $offset-basic * 2;
     border: $size-default-border * 4 solid $orange;
     border-radius: $border-radius-default;
     background-color: $green;
+    text-align: center;
 }
 
 

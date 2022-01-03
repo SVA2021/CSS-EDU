@@ -22,7 +22,7 @@ const DemoPosition = (props) => {
     let childText = JSON.stringify(childStyle, null, ' ').replace(/"/gm, '');
 
     const childArray = [];
-    const childQty = 4;
+    const childQty = 3;
 
     for (let i = 0; i < childQty; i++) {
         childArray.push(i);
@@ -30,19 +30,20 @@ const DemoPosition = (props) => {
 
     return (
         <section className={"demo"}>
-            <SectionTitle>Select options to change position</SectionTitle>
+            <SectionTitle>Position of elements</SectionTitle>
             <div className={style.fix}>
-                <p><b>CSS code for parent:</b>{parentText}</p>
-                <p><b>CSS code for child:</b>{childText}</p>
+                <p><b>CSS of parent:</b>{parentText}</p>
+                <p><b>CSS of child:</b>{childText}</p>
                 <div style={parentStyle}
-                    className={style.parent}> parent
+                    className={style.parent}>parent
                     {childArray.map((item) =>
                         <div
                             key={item}
                             style={childStyle}
                             className={style.child}
                         >
-                            child #{item}
+                            <b>child #{item} </b>  
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         </div>
                     )}
                 </div>

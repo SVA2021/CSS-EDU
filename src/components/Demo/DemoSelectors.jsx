@@ -14,7 +14,7 @@ const DemoSelectors = () => {
             <SectionTitle>CSS Selectors</SectionTitle>
             <div className={style.fix}>
                 <header>
-                    <p><b>syntaxis in css file: </b>{part1?.class}</p>
+                    <p><b>CSS: </b>{part1?.class}</p>
                     <p><b>description: </b>{part1?.description}</p>
                 </header>
                 <div className={part1?.style}>
