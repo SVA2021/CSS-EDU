@@ -242,7 +242,7 @@ export const animations = {
     AnimationSelectors: { // need to fill
         part1: {
             mainAnimatedProperties: [
-                { id: `border`, initValue: `1px`, finalValue: `20px` },
+                { id: 1, name: `border`, initValue: `1px`, finalValue: `20px` },
             ]
         }
     }

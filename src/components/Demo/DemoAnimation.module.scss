@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.fix{
+    position: fixed;
+    padding: $offset-basic * 2;
+    margin: auto;
+    width: 49%;
+    border: $size-default-border * 2 solid $light;
+
+    & p{
+        color: $light;
+    }
+}
+
+.parent {
+    padding: $offset-basic * 2;
+    border: $size-default-border * 4 solid $orange;
+    border-radius: $border-radius-default;
+    background-color: $green;
+    text-align: center;
+}
+
+
+.child {
+    margin: $offset-basic * 4;
+    padding: $offset-basic * 4;
+    height: $height-demo-child;
+    border: $size-default-border * 2 solid $light;
+    border-radius: $border-radius-default;
+    background-color: $orange;
+}
