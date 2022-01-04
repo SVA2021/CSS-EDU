@@ -1,20 +1,20 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.fix{
+.fix {
     position: fixed;
-    padding: $offset-basic * 2;
+    padding: $offset-basic * 4;
     margin: auto;
     width: 49%;
     border: $size-default-border * 2 solid $light;
 
-    & p{
+    & p {
         color: $light;
     }
 }
 
 .parent {
-    padding: $offset-basic * 2;
+    padding: $offset-basic * 4;
     border: $size-default-border * 4 solid $orange;
     border-radius: $border-radius-default;
     background-color: $green;
@@ -29,4 +29,20 @@
     border: $size-default-border * 2 solid $light;
     border-radius: $border-radius-default;
     background-color: $orange;
+}
+
+.button {
+    @include buttonBase;
+    @include buttonOffset;
+
+    z-index: 100;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.15s linear;
+        box-shadow: 2px 2px 5px $orange, -2px -2px 5px $orange;
+    }
 }
