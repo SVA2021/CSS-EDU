@@ -237,14 +237,14 @@ export const selectorsCSS = {
     }
 }
 
-
 export const animations = {
     AnimationSelectors: { // need to fill
         part1: {
-            mainAnimatedProperties: [
-                { id: 1, name: `border`, initValue: `1px`, finalValue: `20px` },
+            properties: [
+                { id: 1, name: `border`, initValue: `1px solid black`, finalValue: `15px solid lightblue` },
             ]
         }
     }
 }
+
 export const features = {};
