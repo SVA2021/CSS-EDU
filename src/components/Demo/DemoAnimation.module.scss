@@ -14,6 +14,7 @@
 }
 
 .parent {
+    position: relative;
     padding: $offset-basic * 4;
     border: $size-default-border * 4 solid $orange;
     border-radius: $border-radius-default;
@@ -21,11 +22,11 @@
     text-align: center;
 }
 
-
 .child {
+    position: relative;
     margin: $offset-basic * 4;
     padding: $offset-basic * 4;
-    height: $height-demo-child;
+    height: 200px;
     border: $size-default-border * 2 solid $light;
     border-radius: $border-radius-default;
     background-color: $orange;

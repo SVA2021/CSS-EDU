@@ -31,8 +31,7 @@ const DemoAnimation = (props) => {
                 <p><b>Initial value: </b>{initValue}</p>
                 <p><b>Final value: </b>{finalValue}</p>
                 <div className={style.parent}>
-                    <AnimatedBlock
-                        className={style.child}
+                    <AnimatedBlock className={style.child}
                         name={animationProperty}
                         initialParam={initialParam}
                         finalParam={finalParam}
