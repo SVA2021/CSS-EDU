@@ -17,7 +17,7 @@ const OptionBlock = (props) => {
             <div className={style.sidebar__optionBlock__btnList}>
                 {optionValues.map((item) =>
                     <OptionBtn
-                        key={item} value={item}
+                        key={item.optionName} value={item}
                         group={props.group}
                         optionName={optionName}
                         activeOption={activeOption}

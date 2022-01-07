@@ -63,8 +63,8 @@ const DemoSelectors = () => {
                         </li>
                         <li>
                             <input type="text" placeholder='this is placeholder' readOnly />
-                            <label for="type1" value="checked"><input type="checkbox" name="type1" checked />checked</label>
-                            <label for="type2"><input type="checkbox" name="type2" />not checked</label>
+                            <label htmlFor="type1" value="checked"><input type="checkbox" name="type1" checked />checked</label>
+                            <label htmlFor="type2"><input type="checkbox" name="type2" />not checked</label>
                             <input type="number" min="5" max="10" value="7" required />
                             <input type="number" min="5" max="10" value="17" />
                             <input type="text" required />

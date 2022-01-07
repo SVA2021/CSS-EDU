@@ -241,7 +241,28 @@ export const animations = {
     AnimationSelectors: { // need to fill
         part1: {
             properties: [
-                { id: 1, name: `border`, initValue: `1px solid black`, finalValue: `15px solid lightblue` },
+                { id: 1, name: `border`, initValue: `1px solid black`, finalValue: `10px dotted red` },
+                { id: 2, name: `background`, initValue: `red top left/5px 5px`, finalValue: `blue bottom right/50px 50px` },
+                { id: 3, name: `bottom`, initValue: `0px`, finalValue: `100px` },
+                { id: 4, name: `left`, initValue: `0px`, finalValue: `100px` },
+                { id: 5, name: `top`, initValue: `0px`, finalValue: `100px` },
+                { id: 6, name: `right`, initValue: `0px`, finalValue: `100px` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
+                { id: 3, name: ``, initValue: ``, finalValue: `` },
             ]
         }
     }
