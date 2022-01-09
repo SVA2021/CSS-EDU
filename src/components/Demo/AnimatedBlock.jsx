@@ -1,5 +1,6 @@
 import { useSpring, animated } from 'react-spring';
 import { usePrevious, isEmpty, getDiff } from '../../app/functionStore.js';
+import image from '../../img/OrangeCar.png';
 
 const AnimatedBlock = (props) => {
 
@@ -8,7 +9,7 @@ const AnimatedBlock = (props) => {
   const finalParam = props.finalParam;
   const cancelStatus = props.cancelStatus;
 
-  const animationTime = 1000;
+  const animationTime = 1500;
 
   const propsAnimation = useSpring({
     from: initialParam,
@@ -27,7 +28,18 @@ const AnimatedBlock = (props) => {
   }
 
   return (
-    <animated.div className={props.className} style={result}>{animationProperty}</animated.div>
+    <animated.div className={props.className} style={result}>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Ab maiores dolore quos autem vitae alias, quaerat facilis? </p>
+      <img src={image} alt="animated" width={'250px'} height={'auto'} />
+      <p>
+        Aspernatur ad mollitia, laudantium excepturi commodi architecto, aut at ab dolorem qui quo!
+        Aspernatur ad mollitia, laudantium excepturi commodi architecto, aut at ab dolorem qui quo!
+        Aspernatur ad mollitia, laudantium excepturi commodi architecto, aut at ab dolorem qui quo!
+        Aspernatur ad mollitia, laudantium excepturi commodi architecto, aut at ab dolorem qui quo!
+        Aspernatur ad mollitia, laudantium excepturi commodi architecto, aut at ab dolorem qui quo!
+      </p>
+    </animated.div>
   )
 }
 

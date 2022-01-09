@@ -1,16 +1,17 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.fix {
-    position: fixed;
+div.fix {
+    position: sticky;
+    // position: fixed;
     padding: $offset-basic * 4;
     margin: auto;
-    width: 49%;
+    // width: 49%;
     border: $size-default-border * 2 solid $light;
 
-    & p {
-        color: $light;
-    }
+    // & p {
+    //     color: $light;
+    // }
 }
 
 .parent {
@@ -26,7 +27,8 @@
     position: relative;
     margin: $offset-basic * 4;
     padding: $offset-basic * 4;
-    height: 200px;
+    // height: 200px;
+    height: auto;
     border: $size-default-border * 2 solid $light;
     border-radius: $border-radius-default;
     background-color: $orange;
