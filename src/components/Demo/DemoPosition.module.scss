@@ -1,14 +1,16 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.fix{
-    position: fixed;
+div.fix {
+    position: sticky;
     padding: $offset-basic * 2;
     margin: auto;
-    width: 49%;
+    top: 0;
+    // width: 49%;
     border: $size-default-border * 2 solid $light;
+    overflow-y: auto;
 
-    & p{
+    & p {
         color: $light;
     }
 }

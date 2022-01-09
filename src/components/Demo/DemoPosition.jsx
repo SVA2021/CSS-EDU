@@ -22,7 +22,7 @@ const DemoPosition = (props) => {
     let childText = JSON.stringify(childStyle, null, ' ').replace(/"/gm, '');
 
     const childArray = [];
-    const childQty = 3;
+    const childQty = 7;
 
     for (let i = 0; i < childQty; i++) {
         childArray.push(i);
