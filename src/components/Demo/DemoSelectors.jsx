@@ -2,7 +2,7 @@ import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
 import style from './DemoSelectors.module.scss'
 import './selectors.scss'
-import { SectionTitle } from '../common/Typography';
+import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
 const DemoSelectors = () => {
 
@@ -14,8 +14,8 @@ const DemoSelectors = () => {
             <SectionTitle>CSS Selectors</SectionTitle>
             <div className={style.fix}>
                 <header>
-                    <p><b>CSS: </b>{part1?.class}</p>
-                    <p><b>description: </b>{part1?.description}</p>
+                    <Highlighted><Strong>CSS: </Strong>{part1?.class}</Highlighted>
+                    <Highlighted><Strong>description: </Strong>{part1?.description}</Highlighted>
                 </header>
                 <div className={part1?.style}>
                     <ul className={style.main}>

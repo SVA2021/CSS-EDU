@@ -22,3 +22,22 @@
     @extend .subTitle;
     text-transform: uppercase;
 }
+
+.strong {
+    // margin: $offset-element-content-desktop;
+    // text-transform: uppercase;
+    font-weight: bolder;
+    // font-size: $font-size-sectionTitle;
+    // line-height: $line-height-subtitle;
+    color: $color-title-text;
+}
+
+.highlighted {
+    // margin: $offset-element-content-desktop;
+    // text-transform: uppercase;
+    // font-weight: bold;
+    // font-size: $font-size-sectionTitle;
+    // line-height: $line-height-subtitle;
+    color: $color-highlited-text;
+    // background-color: ;
+}

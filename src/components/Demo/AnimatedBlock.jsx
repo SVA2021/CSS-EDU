@@ -9,7 +9,7 @@ const AnimatedBlock = (props) => {
   const finalParam = props.finalParam;
   const cancelStatus = props.cancelStatus;
 
-  const animationTime = 1500;
+  const animationTime = 1500; //dynamic change by input make SPA unstable
 
   const propsAnimation = useSpring({
     from: initialParam,

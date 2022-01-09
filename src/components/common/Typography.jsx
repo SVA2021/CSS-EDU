@@ -17,3 +17,15 @@ export const SubTitleUpper = ({ children }) => (
         {children}
     </h4>
 );
+
+export const Strong = ({ children }) => (
+    <strong className={s.strong}>
+        {children}
+    </strong>
+);
+
+export const Highlighted = ({ children }) => (
+    <p className={s.highlighted}>
+        {children}
+    </p>
+);

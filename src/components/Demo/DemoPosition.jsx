@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../app/hooks';
 import style from './DemoPosition.module.scss'
 import { selectDemo } from '../../app/demoSlice';
-import { SectionTitle } from '../common/Typography';
+import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
 const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -32,8 +32,8 @@ const DemoPosition = (props) => {
         <section className={"demo"}>
             <SectionTitle>Position of elements</SectionTitle>
             <div className={style.fix}>
-                <p><b>CSS of parent:</b>{parentText}</p>
-                <p><b>CSS of child:</b>{childText}</p>
+                <Highlighted><Strong>CSS of parent: </Strong>{parentText}</Highlighted>
+                <Highlighted><Strong>CSS of child: </Strong>{childText}</Highlighted>
                 <div style={parentStyle}
                     className={style.parent}>parent
                     {childArray.map((item) =>
@@ -42,8 +42,8 @@ const DemoPosition = (props) => {
                             style={childStyle}
                             className={style.child}
                         >
-                            <b>child #{item} </b>  
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            <b>child #{item} </b>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </div>
                     )}
                 </div>

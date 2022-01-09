@@ -10,9 +10,9 @@ div.fix {
     border: $size-default-border * 2 solid $light;
     overflow-y: auto;
 
-    & p {
-        color: $light;
-    }
+    // & p {
+    //     color: $light;
+    // }
 }
 
 .parent {
