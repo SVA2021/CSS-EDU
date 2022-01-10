@@ -28,3 +28,25 @@ export function getDiff(o1, o2) {
     }, {});
     return diff;
 }
+
+export const propertyCopy = (obj) => {
+    let result = {};
+    for (const key in obj) {
+        if (Object.hasOwnProperty.call(obj, key)) {
+            result[key] = obj[key].name;
+        }
+    }
+    return result;
+}
+
+export const setArray = (qty, array) => {
+    array.length = 0;
+    for (let i = 0; i < qty; i++) {
+        array.push(i);
+    }
+    return array;
+}
+
+export const normalizeObjText = (str) => {
+    return JSON.stringify(str, null, ' ').replace(/"/gm, '');
+}

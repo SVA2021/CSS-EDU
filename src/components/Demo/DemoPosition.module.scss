@@ -6,13 +6,9 @@ div.fix {
     padding: $offset-basic * 2;
     margin: auto;
     top: 0;
-    // width: 49%;
     border: $size-default-border * 2 solid $light;
     overflow-y: auto;
 
-    // & p {
-    //     color: $light;
-    // }
 }
 
 .parent {
