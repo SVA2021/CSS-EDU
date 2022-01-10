@@ -10,11 +10,12 @@ const DemoAnimation = (props) => {
     const activeDemoStatus = activeStyle.part1.properties;
     const [cancelStatus, setCancel] = useState(false);
 
-    if (!activeDemoStatus) return <div>please choose option</div>
+    if (!activeDemoStatus) return <div className={style.empty}>please choose option</div>
 
     const animationProperty = activeDemoStatus.name;
     const initValue = activeDemoStatus.initValue;
     const finalValue = activeDemoStatus.finalValue;
+    const description = activeDemoStatus.description;
 
     const initialParam = {};
     const finalParam = {};
@@ -28,6 +29,7 @@ const DemoAnimation = (props) => {
                 <button className={style.button} onClick={() => setCancel(false)}>start</button>
                 <button className={style.button} onClick={() => setCancel(true)}>stop</button>
                 <Highlighted><Strong>Animated property: </Strong>{animationProperty}</Highlighted>
+                <Highlighted><Strong>Description: </Strong>{description}</Highlighted>
                 <Highlighted>
                     <Strong>Initial value: </Strong>{initValue}
                     <Strong>     Final value: </Strong>{finalValue}
