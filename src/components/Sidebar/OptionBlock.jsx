@@ -9,7 +9,7 @@ const OptionBlock = (props) => {
     const optionValues = props?.optionValues;
     const activeOption = props?.activeOption;
 
-    if (!optionName) return <div>please choose option</div>
+    let isAlone = (optionValues.length === 1);
 
     return (
         <div className={style.sidebar__optionBlock}>
@@ -21,6 +21,7 @@ const OptionBlock = (props) => {
                         group={props.group}
                         optionName={optionName}
                         activeOption={activeOption}
+                        isAlone={isAlone}
                     />)}
             </div>
         </div>

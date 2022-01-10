@@ -11,14 +11,6 @@ const OptionBtn = (props) => {
     let btnName = value.name;
     const activeOption = props?.activeOption;
 
-    // if (typeof (props?.value) == "string") {
-    //     value = props.value;
-    //     btnName = value;
-    // }
-    // if (typeof (props?.value) == "object") {
-        // value = props.value;
-        // btnName = value.name;
-    // }
     const active = activeOption[props.optionName] === value;
 
     const setOption = () => {
@@ -28,6 +20,8 @@ const OptionBtn = (props) => {
             optionValue: value,
         }))
     }
+
+    if (props.isAlone) setOption();
 
     let classes = (active)
         ? style.sidebar__optionItem__btn__active
