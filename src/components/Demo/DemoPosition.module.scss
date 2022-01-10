@@ -8,6 +8,7 @@ div.fix {
     top: 0;
     border: $size-default-border * 2 solid $light;
     overflow-y: auto;
+    border-radius: $border-radius-default;
 
 }
 

@@ -8,11 +8,10 @@
 .sidebar__optionBlock__btnList {
     @include elementOffset;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(40%, 1fr));
+    justify-self: center;
+
     border: $size-default-border solid $color-border-section;
     border-radius: $border-radius-section;
 }

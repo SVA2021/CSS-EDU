@@ -5,6 +5,7 @@ div.fix {
     position: sticky;
     padding: $offset-basic * 4;
     margin: auto;
+    border-radius: $border-radius-default;
     border: $size-default-border * 2 solid $light;
 }
 
