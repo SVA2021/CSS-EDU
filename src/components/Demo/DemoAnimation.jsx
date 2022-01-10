@@ -8,14 +8,13 @@ import AnimatedBlock from './AnimatedBlock';
 const DemoAnimation = (props) => {
     const activeStyle = useAppSelector(selectDemo);
     const activeDemoStatus = activeStyle.part1.properties;
+
     const [cancelStatus, setCancel] = useState(false);
 
-    if (!activeDemoStatus) return <div className={style.empty}>please choose option</div>
-
-    const animationProperty = activeDemoStatus.name;
-    const initValue = activeDemoStatus.initValue;
-    const finalValue = activeDemoStatus.finalValue;
-    const description = activeDemoStatus.description;
+    const animationProperty = activeDemoStatus?.name;
+    const initValue = activeDemoStatus?.initValue;
+    const finalValue = activeDemoStatus?.finalValue;
+    const description = activeDemoStatus?.description;
 
     const initialParam = {};
     const finalParam = {};
