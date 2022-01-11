@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './OptionItem.module.scss'
 import { useAppDispatch } from '../../app/hooks';
 import { setDemoOption } from '../../app/demoSlice';
@@ -7,7 +7,7 @@ const OptionBtn = (props) => {
 
     const dispatch = useAppDispatch();
 
-    let value= props.value; 
+    let value = props.value;
     let btnName = value.name;
     const activeOption = props?.activeOption;
 
@@ -21,7 +21,9 @@ const OptionBtn = (props) => {
         }))
     }
 
-    if (props.isAlone) setOption();
+    useEffect(() => {
+        if (props.isAlone) setOption();
+    });
 
     let classes = (active)
         ? style.sidebar__optionItem__btn__active
