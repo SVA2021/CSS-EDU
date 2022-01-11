@@ -14,7 +14,8 @@ const Main = () => {
                 <Route path="/position" element={<DemoPosition />} />
                 <Route path="/selectors" element={<DemoSelectors />} />
                 <Route path="/animation" element={<DemoAnimation />} />
-                <Route path="/features" element={<Preloader />} />
+                <Route path="/css-features" element={<Preloader />} />
+                <Route path="/js" element={<Preloader />} />
             </Routes>
         </>
     )

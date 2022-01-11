@@ -63,10 +63,10 @@ const DemoSelectors = () => {
                         </li>
                         <li>
                             <input type="text" placeholder='this is placeholder' readOnly />
-                            <label htmlFor="type1" value="checked"><input type="checkbox" name="type1" checked />checked</label>
+                            <label htmlFor="type1" value="checked"><input type="checkbox" name="type1" checked readOnly />checked</label>
                             <label htmlFor="type2"><input type="checkbox" name="type2" />not checked</label>
-                            <input type="number" min="5" max="10" value="7" required />
-                            <input type="number" min="5" max="10" value="17" />
+                            <input type="number" min="5" max="10" value="7" required onChange={(e) => (e)} />
+                            <input type="number" min="5" max="10" value="17" onChange={(e) => (e)} />
                             <input type="text" required />
                             <input type="text" disabled placeholder='this input disabled' />
                         </li>

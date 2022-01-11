@@ -32,8 +32,12 @@ const NavBar = () => {
                         Animation</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/features" onClick={() => linkTo('features')}>
-                        Features</NavLink>
+                    <NavLink to="/css-features" onClick={() => linkTo('css-features')}>
+                        CSS Features</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/js" onClick={() => linkTo('js')}>
+                        JS Features</NavLink>
                 </li>
             </ul>
         </nav>

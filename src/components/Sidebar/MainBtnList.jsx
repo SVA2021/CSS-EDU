@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './MainBtnList.module.scss'
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { resetOptions, selectMainOption, selectSlider, setMainOption } from '../../app/demoSlice';
 import MainBtn from './MainBtn';
 import { SectionTitle } from '../common/Typography';
+import { isEmpty } from '../../app/functionStore';
 
 const MainBtnList = () => {
 
@@ -11,13 +12,15 @@ const MainBtnList = () => {
     const page = useAppSelector(selectSlider);
     const dispatch = useAppDispatch();
 
-    const mainBtnList = Object.keys(page);
+    const mainBtnList = (isEmpty(page)) ? [] : Object.keys(page);
 
     const setMain = (value) => {
         dispatch(setMainOption(value));
     }
-
-    if (mainBtnList.length === 1) setMain(mainBtnList[0]);
+    
+    useEffect(() => {
+        if (mainBtnList.length === 1) setMain(mainBtnList[0]);
+    });
 
     const isActive = (value) => {
         return (active === value)
