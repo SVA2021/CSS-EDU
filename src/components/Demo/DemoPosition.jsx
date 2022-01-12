@@ -4,6 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import { normalizeObjText, propertyCopy, setArray } from '../../app/functionStore';
+import InputRange from '../common/Input';
 
 const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -34,7 +35,7 @@ const DemoPosition = (props) => {
                     <input type="number" min="1" max="7" value={inputQty} name="childQty"
                         onChange={(e) => setQty(e.target.value)} />
                     <label htmlFor="strLength"><Strong>   set length of text into child items </Strong></label>
-                    <input type="range" min="0" max="5" value={strLength} name="strLength"
+                    <InputRange type="range" min="0" max="5" value={strLength} name="strLength"
                         onChange={(e) => setLength(e.target.value)} />
                 </fieldset>
                 <Highlighted><Strong>CSS of parent: </Strong>{parentText}</Highlighted>

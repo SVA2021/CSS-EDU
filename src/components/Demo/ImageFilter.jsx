@@ -5,6 +5,7 @@ import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import image from '../../img/OrangeCar.png';
 import { normalizeObjText } from '../../app/functionStore';
+import InputRange from '../common/Input';
 
 const ImageFilter = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -32,7 +33,7 @@ const ImageFilter = (props) => {
                 <fieldset>
                     <legend><Strong>Settings</Strong></legend>
                     <label htmlFor="optionValue"><Strong>set option value</Strong></label>
-                    <input type="range" min="0" max="10" value={optionValue} name="optionValue"
+                    <InputRange type="range" min="0" max="10" value={optionValue} name="optionValue"
                         onChange={(e) => setOptionValue(e.target.value)} />
                 </fieldset>
                 <Highlighted><Strong>CSS: </Strong>{currentStyleTexted}</Highlighted>

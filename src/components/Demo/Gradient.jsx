@@ -4,6 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import { normalizeObjText } from '../../app/functionStore';
+import InputRange from '../common/Input';
 
 const Gradient = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -37,25 +38,25 @@ const Gradient = (props) => {
                     <fieldset>
                         <legend><Strong>Direction</Strong></legend>
                         <label htmlFor="angle"><Strong>set direction angle</Strong></label>
-                        <input type="range" min="0" max="24" value={angle} name="angle"
+                        <InputRange min="0" max="24" value={angle} name="angle"
                             onChange={(e) => setAngle(e.target.value)} />
                     </fieldset>
                     <fieldset>
                         <legend><Strong>Color Positions</Strong></legend>
                         <label htmlFor="startColorPos"><Strong>set startColor</Strong></label>
-                        <input type="range" min="0" max="20" value={startColorPos} name="startColorPos"
+                        <InputRange min="0" max="20" value={startColorPos} name="startColorPos"
                             onChange={(e) => setStartColorPos(e.target.value)} />
                         <label htmlFor="endColorPos"><Strong>set endColor</Strong></label>
-                        <input type="range" min="0" max="20" value={endColorPos} name="endColorPos"
+                        <InputRange min="0" max="20" value={endColorPos} name="endColorPos"
                             onChange={(e) => setEndColorPos(e.target.value)} />
                     </fieldset>
                     <fieldset>
                         <legend><Strong>Set XY Position</Strong></legend>
                         <label htmlFor="x"><Strong>set X position</Strong></label>
-                        <input type="range" min="0" max="20" value={posX} name="x"
+                        <InputRange min="0" max="20" value={posX} name="x"
                             onChange={(e) => setX(e.target.value)} />
                         <label htmlFor="y"><Strong>set Y position</Strong></label>
-                        <input type="range" min="0" max="20" value={posY} name="y"
+                        <InputRange min="0" max="20" value={posY} name="y"
                             onChange={(e) => setY(e.target.value)} />
                     </fieldset>
                 </div>
