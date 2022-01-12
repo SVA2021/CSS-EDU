@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { positionElem, selectorsCSS, animations, features } from "./data"
+import { positionElem, selectorsCSS, animations, features, js } from "./data"
 
 const initialState: demoState = {
   activeSlider: {},
@@ -21,8 +21,8 @@ interface demoState {
   mainOption: string,
 }
 
-const pages = { positionElem, animations, selectorsCSS, features }
-type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features";
+const pages = { positionElem, animations, selectorsCSS, features, js }
+type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features" | "js";
 
 export const demoSlice = createSlice({
   name: 'demo',
@@ -42,16 +42,16 @@ export const demoSlice = createSlice({
         part1: {},
         part2: {},
         part3: {},
-    };
+      };
     },
-   
+
     resetOptions: (state) => {
       state.activeDemo = {
-          parent: {},
-          childItem: {},
-          part1: {},
-          part2: {},
-          part3: {},
+        parent: {},
+        childItem: {},
+        part1: {},
+        part2: {},
+        part3: {},
       };
       state.mainOption = "";
     }
