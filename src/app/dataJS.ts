@@ -1,5 +1,5 @@
-const allSameItemArray: Array<boolean> = [false, false, false, false, false,];
-const notSameArray: Array<boolean> = [false, true, false, true, false,];
+const allSameItemArray: Array<boolean> = [false, false, false, false, false, false, false,];
+const notSameArray: Array<boolean> = [false, true, false, true, false, true, true];
 
 interface jsMethod {
     array: {

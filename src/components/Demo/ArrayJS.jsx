@@ -1,19 +1,14 @@
 import { useAppSelector } from '../../app/hooks';
-// import style from './DemoPosition.module.scss'
 import style from './ArrayJS.module.scss'
 import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, SectionTitle, Strong, SubTitleUpper } from '../common/Typography';
-import React, { useState } from 'react';
-import { normalizeObjText, propertyCopy, setArray } from '../../app/functionStore';
-import InputRange from '../common/Input';
+import { Highlighted, Strong, SubTitleUpper } from '../common/Typography';
 import { arrayHandle } from '../../app/dataJS';
 
 const ArrayElement = (props) => {
-
+    const index = props.index;
     const status = (props.modified) ? style.modified : style.original;
-
     return (
-        <div className={status}></div>
+        <div className={status}>{index}</div>
     )
 }
 
@@ -22,31 +17,41 @@ const ArrayJS = (props) => {
     const activeDemoStatus = activeStyle.part1.arrayMethod;
     const initArray = activeDemoStatus.initial;
     const method = activeDemoStatus.name;
-    const [inputQty, setQty] = useState(3);
+    const description = activeDemoStatus.description;
+    const typeOfResult = activeDemoStatus.typeOfResult;
+    const statusOfResult = activeDemoStatus.statusOfResult;
+    const target = activeDemoStatus.target;
 
+    const resultArray = [];
+    resultArray.length = 5;
+    resultArray.fill(false);
 
-    const childQty = inputQty;
+    const result = arrayHandle(method, initArray);
 
-    const array = [];
-    array.length = 5;
-    array.fill(false);
-
-    const result= arrayHandle(method, initArray);
-    console.log(result);
     return (
         <section className={"demo"}>
-            <SubTitleUpper>Array method</SubTitleUpper>
-            <Highlighted><Strong>method: </Strong>123</Highlighted>
+            <header>
+                <SubTitleUpper>Array method</SubTitleUpper>
+                <Highlighted><Strong>method: </Strong>{method}</Highlighted>
+                <Highlighted><Strong>description: </Strong>{description}</Highlighted>
+            </header>
 
             <div className={style.fix}>
                 <div className={style.parent}>
                     <Highlighted>initial state</Highlighted>
-                    {initArray.map((item) => <ArrayElement modified={item} />)}
+                    {initArray.map((item, index) => <ArrayElement key={(index).toString()} modified={item} />)}
                 </div>
                 <div className={style.parent}>
                     <Highlighted>final state</Highlighted>
-                    {array.map((item) => <ArrayElement modified={true} />)}
-
+                    <Highlighted><Strong>returned result type: </Strong>{statusOfResult} array</Highlighted>
+                    {(target) &&
+                        <div><Strong>target of searching</Strong> <ArrayElement modified={true} /></div>}
+                    {(typeOfResult === 'array')
+                        ? result.map((item, index) =>
+                            <ArrayElement key={(index).toString()} modified={item} index={index} />)
+                        : <div className={style.parent}>
+                            <div className={style.result}><Strong>result: </Strong>{result.toString()}</div>
+                        </div>}
                 </div>
             </div>
         </section>
