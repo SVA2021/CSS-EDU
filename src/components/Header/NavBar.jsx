@@ -17,7 +17,7 @@ const NavBar = () => {
         <nav className={style.navbar}>
             <ul>
                 <li>
-                    <NavLink to="/">CSS EDU</NavLink>
+                    <NavLink to="/">HOME</NavLink>
                 </li>
                 <li >
                     <NavLink to="/position" onClick={() => linkTo('positionElem')}>
@@ -37,7 +37,7 @@ const NavBar = () => {
                 </li>
                 <li>
                     <NavLink to="/js" onClick={() => linkTo('js')}>
-                        JS Features</NavLink>
+                        JS Methods</NavLink>
                 </li>
             </ul>
         </nav>

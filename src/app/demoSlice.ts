@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { positionElem, selectorsCSS, animations, features, js } from "./data"
+import { positionElem, selectorsCSS, animations, features } from "./data";
+import { js } from './dataJS';
 
 const initialState: demoState = {
   activeSlider: {},

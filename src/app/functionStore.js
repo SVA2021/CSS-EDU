@@ -39,10 +39,10 @@ export const propertyCopy = (obj) => {
     return result;
 }
 
-export const setArray = (qty, array) => {
+export const setArray = (qty, array, item = '') => {
     array.length = 0;
     for (let i = 0; i < qty; i++) {
-        array.push(i);
+        array.push(i + item);
     }
     return array;
 }
