@@ -224,35 +224,35 @@ export const js: jsMethod = {
         part1: {
             stringFeatures: [
                 {
-                    id: 1, name: 'getChar',
+                    id: 6, name: 'getChar',
                     description: 'To get a character, use: []'
                 },
                 {
-                    id: 2, name: 'toLowerCase',
+                    id: 1, name: 'toLowerCase',
                     description: 'To lowercase a string'
                 },
                 {
-                    id: 3, name: 'toUpperCase',
+                    id: 2, name: 'toUpperCase',
                     description: 'To uppercase a string'
                 },
                 {
-                    id: 4, name: 'repeat',
+                    id: 7, name: 'repeat',
                     description: 'repeats the string'
                 },
                 {
-                    id: 5, name: 'trim',
+                    id: 3, name: 'trim',
                     description: 'removes (“trims”) spaces from the beginning and end of the string'
                 },
                 {
-                    id: 6, name: 'substring',
+                    id: 10, name: 'substring',
                     description: 'Returns the part of the string between start and end'
                 },
                 {
-                    id: 7, name: 'substr',
+                    id: 11, name: 'substr',
                     description: 'Returns the part of the string from start, with the given length'
                 },
                 {
-                    id: 8, name: 'slice',
+                    id: 12, name: 'slice',
                     description: 'Returns the part of the string from start to (but not including) end'
                 },
                 {
@@ -260,15 +260,15 @@ export const js: jsMethod = {
                     description: 'To look for a substring, returns the position where the match was found or -1'
                 },
                 {
-                    id: 10, name: 'includes',
+                    id: 8, name: 'includes',
                     description: 'It is the right choice if we need to test for the match, but dont need its position'
                 },
                 {
-                    id: 11, name: 'startsWith',
+                    id: 4, name: 'startsWith',
                     description: 'To look for a substring at start'
                 },
                 {
-                    id: 12, name: 'endsWith',
+                    id: 5, name: 'endsWith',
                     description: 'To look for a substring at end'
                 },
             ],
@@ -356,33 +356,32 @@ export const stringHandle = (
     str: string,
     method: string,
     start: number | null | undefined,
-    end: number | null | undefined,
-    length: number | null | undefined) => {
+    end: number | null | undefined) => {
     switch (method) {
-        case 'getChar':
-            return (start) ? str[start] : null;
+        case 'trim':
+            return str.trim();
         case 'toLowerCase':
             return str.toLowerCase();
         case 'toUpperCase':
             return str.toUpperCase();
+        case 'getChar':
+            return (start) ? str[start] : ' '; //start = index
         case 'repeat':
-            return (start) ? str.repeat(start) : null;
-        case 'trim':
-            return str.trim();
-        case 'substring':
-            return (start && end) ? str.substring(start, end) : null;
+            return (start) ? str.repeat(start) : ' ';
         case 'substr':
-            return (start && length) ? str.substr(start, length) : null;
+            return (start && end) ? str.substr(start, end) : ' ';//end = length
+        case 'substring':
+            return (start && end) ? str.substring(start, end) : ' ';
         case 'slice':
-            return (start && end) ? str.slice(start, end) : null;
+            return (start && end) ? str.slice(start, end) : ' ';
         case 'indexOf':
-            return (start) ? str.indexOf('start', start) : null;
+            return (start) ? str.indexOf('start', start) : ' '; //pos
         case 'includes':
-            return (start) ? str.includes('start', start) : null;
+            return (start) ? str.includes('start', start) : ' '; //bool
         case 'startsWith':
-            return str.startsWith(' start');
+            return str.startsWith(' start'); //bool
         case 'endsWith':
-            return str.endsWith('end ');
+            return str.endsWith('end '); //bool
         default:
             break;
     }
