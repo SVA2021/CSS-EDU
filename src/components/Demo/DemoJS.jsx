@@ -3,6 +3,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { SubTitleUpper } from '../common/Typography';
 import { isEmpty } from '../../app/functionStore';
 import ArrayJS from './ArrayJS';
+import StringJS from './StringJS';
 
 const DemoJS = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -14,10 +15,8 @@ const DemoJS = (props) => {
 
     return (
         <>
-            {/* <ArrayJS /> */}
             {(activeOption === 'arrayMethod') && <ArrayJS />}
-            {(activeOption === 'stringFeatures') && <SubTitleUpper />}
-            {/* {(activeOption === 'nfilter') && <SubTitleUpper />} */}
+            {(activeOption === 'stringFeatures') && <StringJS />}
         </>
     )
 }

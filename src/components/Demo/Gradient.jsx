@@ -4,7 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import { normalizeObjText } from '../../app/functionStore';
-import InputRange from '../common/Input';
+import {InputRange} from '../common/Input.jsx';
 
 const Gradient = (props) => {
     const activeStyle = useAppSelector(selectDemo);

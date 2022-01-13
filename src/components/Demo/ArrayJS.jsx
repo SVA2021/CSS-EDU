@@ -22,10 +22,6 @@ const ArrayJS = (props) => {
     const statusOfResult = activeDemoStatus.statusOfResult;
     const target = activeDemoStatus.target;
 
-    const resultArray = [];
-    resultArray.length = 5;
-    resultArray.fill(false);
-
     const result = arrayHandle(method, initArray);
 
     return (
@@ -38,11 +34,11 @@ const ArrayJS = (props) => {
 
             <div className={style.fix}>
                 <div className={style.parent}>
-                    <Highlighted>initial state</Highlighted>
+                    <SubTitleUpper>initial state</SubTitleUpper>
                     {initArray.map((item, index) => <ArrayElement key={(index).toString()} modified={item} />)}
                 </div>
                 <div className={style.parent}>
-                    <Highlighted>final state</Highlighted>
+                    <SubTitleUpper>final state</SubTitleUpper>
                     <Highlighted><Strong>returned result type: </Strong>{statusOfResult} array</Highlighted>
                     {(target) &&
                         <div><Strong>target of searching</Strong> <ArrayElement modified={true} /></div>}

@@ -5,7 +5,7 @@ import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import image from '../../img/OrangeCar.png';
 import { normalizeObjText } from '../../app/functionStore';
-import InputRange from '../common/Input';
+import {InputRange} from '../common/Input.jsx';
 
 const ImageFilter = (props) => {
     const activeStyle = useAppSelector(selectDemo);

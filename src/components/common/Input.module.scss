@@ -14,7 +14,7 @@
 
 .slider:hover {
     opacity: 1;
-  }
+}
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -24,4 +24,14 @@
     border-radius: 50%;
     background: $light;
     cursor: pointer;
+}
+
+.number {
+    margin: $offset-basic;
+    width: 48px;
+    height: 32px;
+    border-radius: $border-radius-default;
+    background: $orange;
+    color: $light;
+    font-weight: bolder;
 }

@@ -4,7 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import { normalizeObjText, propertyCopy, setArray } from '../../app/functionStore';
-import InputRange from '../common/Input';
+import { InputRange, InputNumber } from '../common/Input.jsx';
 
 const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -32,7 +32,7 @@ const DemoPosition = (props) => {
                 <fieldset>
                     <legend><Strong>Settings</Strong></legend>
                     <label htmlFor="childQty"><Strong>set qty of child items   </Strong></label>
-                    <input type="number" min="1" max="7" value={inputQty} name="childQty"
+                    <InputNumber min="1" max="7" value={inputQty} name="childQty"
                         onChange={(e) => setQty(e.target.value)} />
                     <label htmlFor="strLength"><Strong>   set length of text into child items </Strong></label>
                     <InputRange type="range" min="0" max="5" value={strLength} name="strLength"

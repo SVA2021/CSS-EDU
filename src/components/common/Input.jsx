@@ -1,9 +1,13 @@
 import styles from './Input.module.scss';
 
-const InputRange = (props) => {
+export const InputRange = (props) => {
   return (
     <input type="range" className={styles.slider} {...props} />
   )
 };
 
-export default InputRange;
+export const InputNumber = (props) => {
+  return (
+    <input type="number" className={styles.number} {...props} />
+  )
+};
