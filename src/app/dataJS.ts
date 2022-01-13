@@ -9,7 +9,7 @@ interface jsMethod {
     }
     string: {
         part1: {
-            stringFeatures: any
+            stringFeatures: Array<stringFeaturesType>
         }
     }
 }
@@ -22,6 +22,12 @@ interface arrayMethodType {
     statusOfResult: null | 'new' | 'old'
     target: null | 'key' | 'value'
     initial: Array<boolean>
+}
+
+interface stringFeaturesType {
+    id: number
+    name: string
+    description: string
 }
 
 export const js: jsMethod = {
@@ -217,12 +223,54 @@ export const js: jsMethod = {
     string: {
         part1: {
             stringFeatures: [
-                { id: 1, name: 'linear-gradient', min: 0, max: 100, unit: '%' },
-                { id: 2, name: 'repeating-linear-gradient', min: 0, max: 100, unit: '%' },
-                { id: 3, name: 'radial-gradient', min: 0, max: 10, unit: 'px' },
-                { id: 4, name: 'repeating-radial-gradient', min: 0, max: 10, unit: 'px' },
-                { id: 5, name: 'conic-gradient', min: 0, max: 200, unit: '%' },
-                { id: 6, name: 'repeating-conic-gradient', min: 0, max: 200, unit: '%' },
+                {
+                    id: 1, name: 'getChar',
+                    description: 'To get a character, use: []'
+                },
+                {
+                    id: 2, name: 'toLowerCase',
+                    description: 'To lowercase a string'
+                },
+                {
+                    id: 3, name: 'toUpperCase',
+                    description: 'To uppercase a string'
+                },
+                {
+                    id: 4, name: 'repeat',
+                    description: 'repeats the string'
+                },
+                {
+                    id: 5, name: 'trim',
+                    description: 'removes (“trims”) spaces from the beginning and end of the string'
+                },
+                {
+                    id: 6, name: 'substring',
+                    description: 'Returns the part of the string between start and end'
+                },
+                {
+                    id: 7, name: 'substr',
+                    description: 'Returns the part of the string from start, with the given length'
+                },
+                {
+                    id: 8, name: 'slice',
+                    description: 'Returns the part of the string from start to (but not including) end'
+                },
+                {
+                    id: 9, name: 'indexOf',
+                    description: 'To look for a substring, returns the position where the match was found or -1'
+                },
+                {
+                    id: 10, name: 'includes',
+                    description: 'It is the right choice if we need to test for the match, but dont need its position'
+                },
+                {
+                    id: 11, name: 'startsWith',
+                    description: 'To look for a substring at start'
+                },
+                {
+                    id: 12, name: 'endsWith',
+                    description: 'To look for a substring at end'
+                },
             ],
         },
     },
@@ -299,6 +347,42 @@ export const arrayHandle = (method: string, array: Array<boolean>) => {
         case 'reduce':
             result = [...array];
             return result.reduce((sum, current) => sum + Number(current), 0);
+        default:
+            break;
+    }
+}
+
+export const stringHandle = (
+    str: string,
+    method: string,
+    start: number | null | undefined,
+    end: number | null | undefined,
+    length: number | null | undefined) => {
+    switch (method) {
+        case 'getChar':
+            return (start) ? str[start] : null;
+        case 'toLowerCase':
+            return str.toLowerCase();
+        case 'toUpperCase':
+            return str.toUpperCase();
+        case 'repeat':
+            return (start) ? str.repeat(start) : null;
+        case 'trim':
+            return str.trim();
+        case 'substring':
+            return (start && end) ? str.substring(start, end) : null;
+        case 'substr':
+            return (start && length) ? str.substr(start, length) : null;
+        case 'slice':
+            return (start && end) ? str.slice(start, end) : null;
+        case 'indexOf':
+            return (start) ? str.indexOf('start', start) : null;
+        case 'includes':
+            return (start) ? str.includes('start', start) : null;
+        case 'startsWith':
+            return str.startsWith(' start');
+        case 'endsWith':
+            return str.endsWith('end ');
         default:
             break;
     }
