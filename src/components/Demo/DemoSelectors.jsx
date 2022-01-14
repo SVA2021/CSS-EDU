@@ -7,18 +7,21 @@ import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 const DemoSelectors = () => {
 
     const activeStyle = useAppSelector(selectDemo);
-    const part1 = activeStyle.part1.elementAndClass;
+    const activeDemoStatus = (activeStyle) ? activeStyle.part1.elementAndClass : null;
+    const description = (activeDemoStatus) ? activeDemoStatus.description : null;
+    const selectorStyle = (activeDemoStatus) ? activeDemoStatus.style : null;
+    const selectorCSS = (activeDemoStatus) ? activeDemoStatus.class : null;
 
     return (
         <section className={"demo"}>
             <SectionTitle>CSS Selectors</SectionTitle>
-            <div className={style.fix}>
-                <header>
-                    <Highlighted><Strong>CSS: </Strong>{part1?.class}</Highlighted>
-                    <Highlighted><Strong>description: </Strong>{part1?.description}</Highlighted>
+            <div className={style.demo__selectors__container}>
+                <header className={style.demo__description}>
+                    <Highlighted><Strong>CSS: </Strong>{selectorCSS}</Highlighted>
+                    <Highlighted><Strong>description: </Strong>{description}</Highlighted>
                 </header>
-                <div className={part1?.style}>
-                    <ul className={style.main}>
+                <div className={selectorStyle}>
+                    <ul className={style.demo__selectors__main}>
                         ul
                         <li>li-1
                             <p className='class1 class2'>p-1 class = name1 name2
@@ -49,12 +52,12 @@ const DemoSelectors = () => {
                                 title=flower</p>
                         </li>
                     </ul>
-                    <p className={style.additionP}>external p</p>
+                    <p className={style.demo__selectors__externalP}>external p</p>
                     <ol>
                         <li>1</li>
                         <li id="news">2</li>
                     </ol>
-                    <ul className={style.main}>
+                    <ul className={style.demo__selectors__main}>
                         <li>
                             <a href="#00">special link #00</a>
                             <a href="#01w3schools.pdf" >special link #01</a>

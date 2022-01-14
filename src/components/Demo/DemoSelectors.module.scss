@@ -1,10 +1,21 @@
 @import '../../styles/variables';
 
-.main {
+.demo__selectors__container {
+
+    & header {
+        color: $light;
+
+        & b {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.demo__selectors__main {
     display: block;
     border: $size-default-border * 2 solid $orange;
     border-radius: $border-radius-default;
-    margin: $offset-basic;
+    margin: $offset-basic * 4;
     padding: $offset-basic;
     background-color: $green;
 
@@ -27,19 +38,14 @@
 
 }
 
-.additionP {
+.demo__selectors__externalP {
     color: $orange;
 }
 
-.fix {
-    border-radius: $border-radius-default;
-    border: $size-default-border * 2 solid $light;
+.demo__description {
+    margin: $offset-basic * 2 $offset-basic;
+    padding: $offset-basic;
 
-    & header {
-        color: $light;
-
-        & b {
-            text-transform: uppercase;
-        }
-    }
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
 }
