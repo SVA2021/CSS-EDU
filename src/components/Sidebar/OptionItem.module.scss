@@ -6,7 +6,8 @@
 }
 
 .sidebar__optionBlock__btnList {
-    @include elementOffset;
+    // @include elementOffset;
+    padding: $offset-basic * 4;
 
     display: grid;
     grid-template-columns:  repeat(auto-fill, minmax(40%, 1fr));

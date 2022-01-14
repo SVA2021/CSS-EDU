@@ -32,6 +32,9 @@ export const demoSlice = createSlice({
     setSlider: (state, action: PayloadAction<pagesType>) => {
       state.activeSlider = pages[action.payload];
     },
+    resetSlider: (state) => {
+      state.activeSlider = {};
+    },
     setDemoOption: (state, action: PayloadAction<any>) => {
       state.activeDemo[action.payload.group][action.payload.option] = action.payload.optionValue;
     },
@@ -61,6 +64,7 @@ export const demoSlice = createSlice({
 
 export const {
   setSlider,
+  resetSlider,
   setDemoOption,
   setMainOption,
   resetOptions,

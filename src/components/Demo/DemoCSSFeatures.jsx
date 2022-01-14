@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
 import { SubTitleUpper } from '../common/Typography';
-import React from 'react';
+// import React from 'react';
 import { isEmpty } from '../../app/functionStore';
 import ImageFilter from './ImageFilter';
 import Gradient from './Gradient';

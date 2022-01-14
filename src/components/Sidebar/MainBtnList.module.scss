@@ -2,14 +2,20 @@
 @import '../../styles/mixins';
 
 .sidebar__mainBtn_group {
-    @include elementOffset;
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
+    
+    margin: $offset-basic *2 auto;
+    // padding: $offset-basic * 4;
+    // @include elementOffset;
+    // border: $size-default-border solid $color-border-section;
+    // border-radius: $border-radius-section;
 }
 
 .sidebar__mainBtn__list {
-    @include elementOffset;
+    // @include elementOffset;
+    padding: $offset-basic * 2;
 
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

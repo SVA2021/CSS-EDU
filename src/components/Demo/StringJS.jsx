@@ -13,8 +13,8 @@ const StringJS = (props) => {
     const id = activeDemoStatus.id;
     const description = activeDemoStatus.description;
 
-    const [start, setStart] = useState(null);
-    const [end, setEnd] = useState(null);
+    const [start, setStart] = useState('');
+    const [end, setEnd] = useState('');
     const [subStr, setSubStr] = useState('');
 
     const initString = ` start AnYLetteRS end `;
@@ -59,7 +59,7 @@ const StringJS = (props) => {
                     {(id === 8 || id === 9) &&
                         <>
                             <label htmlFor="subStr"><Strong>substring</Strong></label>
-                            <InputText maxlength="9" value={subStr} name="subStr"
+                            <InputText maxLength="9" value={subStr} name="subStr"
                                 onChange={(e) => setSubStr(e.target.value)} />
                         </>}
                 </fieldset>

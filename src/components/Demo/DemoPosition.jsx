@@ -1,5 +1,5 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './DemoPosition.module.scss'
+import style from './Demo.module.scss'
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
@@ -28,22 +28,24 @@ const DemoPosition = (props) => {
     return (
         <section className={"demo"}>
             <SectionTitle>Position of elements</SectionTitle>
-            <div className={style.fix}>
-                <fieldset>
+            <header className={style.demo__description}>
+                <Highlighted><Strong>CSS of parent: </Strong>{parentText}</Highlighted>
+                <Highlighted><Strong>CSS of child: </Strong>{childText}</Highlighted>
+            </header>
+            <div className={style.demo__container__sticked}>
+                <fieldset className={style.demo__settings}>
                     <legend><Strong>Settings</Strong></legend>
                     <label htmlFor="childQty"><Strong>set qty of child items   </Strong></label>
                     <InputNumber min="1" max="7" value={inputQty} name="childQty"
                         onChange={(e) => setQty(e.target.value)} />
                     <label htmlFor="strLength"><Strong>   set length of text into child items </Strong></label>
-                    <InputRange type="range" min="0" max="5" value={strLength} name="strLength"
+                    <InputRange min="0" max="5" value={strLength} name="strLength"
                         onChange={(e) => setLength(e.target.value)} />
                 </fieldset>
-                <Highlighted><Strong>CSS of parent: </Strong>{parentText}</Highlighted>
-                <Highlighted><Strong>CSS of child: </Strong>{childText}</Highlighted>
-                <div style={parentStyle}
-                    className={style.parent}>parent
+                <div style={parentStyle} className={style.demo__parent}>
+                    parent
                     {childArray.map((item) =>
-                        <div key={item} style={childStyle} className={style.child} >
+                        <div key={item.toString()} style={childStyle} className={style.demo__child} >
                             <Strong>child #{item} </Strong>
                             {childInnerText}
                         </div>

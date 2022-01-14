@@ -36,7 +36,7 @@ $offset-basic: 4px;
 // Section
 $offset-section-mobile: $offset-basic * 1;
 $offset-section-tablet: $offset-section-mobile * 2;
-$offset-section-desktop: $offset-section-tablet * 2;
+$offset-section-desktop: $offset-section-tablet;
 
 // Between Elements
 $offset-between-elements-mobile: $offset-basic;

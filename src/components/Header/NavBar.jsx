@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './NavBar.module.scss'
 import { useAppDispatch } from '../../app/hooks';
-import { resetOptions, setSlider } from '../../app/demoSlice';
+import { resetOptions, setSlider, resetSlider } from '../../app/demoSlice';
 
 const NavBar = () => {
 
@@ -17,7 +17,7 @@ const NavBar = () => {
         <nav className={style.navbar}>
             <ul>
                 <li>
-                    <NavLink to="/">HOME</NavLink>
+                    <NavLink to="/" onClick={() => dispatch(resetSlider())}>HOME</NavLink>
                 </li>
                 <li >
                     <NavLink to="/position" onClick={() => linkTo('positionElem')}>
