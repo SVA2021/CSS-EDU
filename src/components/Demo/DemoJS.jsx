@@ -1,15 +1,15 @@
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
-import { SubTitleUpper } from '../common/Typography';
 import { isEmpty } from '../../app/functionStore';
 import ArrayJS from './ArrayJS';
 import StringJS from './StringJS';
+import DemoBlank from './DemoBlank';
 
 const DemoJS = (props) => {
     const activeStyle = useAppSelector(selectDemo);
     const activeDemoStatus = activeStyle.part1;
 
-    if (isEmpty(activeDemoStatus)) return <SubTitleUpper>choose option in Settings</SubTitleUpper>;
+    if (isEmpty(activeDemoStatus)) return <DemoBlank/>
 
     const activeOption = Object.keys(activeDemoStatus)[0];
 
