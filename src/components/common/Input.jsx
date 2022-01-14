@@ -11,3 +11,9 @@ export const InputNumber = (props) => {
     <input type="number" className={styles.number} {...props} />
   )
 };
+
+export const InputText = (props) => {
+  return (
+    <input type="text" className={styles.text} {...props} />
+  )
+};

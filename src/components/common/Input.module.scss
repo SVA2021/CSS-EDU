@@ -35,3 +35,8 @@
     color: $light;
     font-weight: bolder;
 }
+
+.text {
+    @extend .number;
+    width: 100px;
+}
