@@ -1,13 +1,14 @@
-import React from 'react';
+import Demo from './components/Demo/Demo';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import SideBar from './components/Sidebar/SideBar';
 
 function App() {
 
   return (
     <div className="container">
       <Header />
-      <Main />
+      <SideBar />
+      <Demo />
     </div>
   );
 }

@@ -1,16 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
+import Preloader from '../Preloader/Preloader';
+import DemoPosition from '../Demo/DemoPosition';
+import DemoSelectors from '../Demo/DemoSelectors';
 import DemoAnimation from '../Demo/DemoAnimation';
 import DemoCSSFeatures from '../Demo/DemoCSSFeatures';
 import DemoJS from '../Demo/DemoJS';
-import DemoPosition from '../Demo/DemoPosition';
-import DemoSelectors from '../Demo/DemoSelectors';
-import Preloader from '../Preloader/Preloader';
-import SideBar from '../Sidebar/SideBar';
 
-const Main = () => {
+const Demo = () => {
     return (
         <>
-            <SideBar />
             <Routes >
                 <Route path="/" element={<Preloader />} />
                 <Route path="/position" element={<DemoPosition />} />
@@ -23,4 +21,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default Demo;

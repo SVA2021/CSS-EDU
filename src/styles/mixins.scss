@@ -10,8 +10,8 @@
 }
 
 @mixin baseOffset {
-  margin: $offset-section-desktop;
-  padding: $offset-section-desktop;
+  margin: $offset-section-desktop / 2;
+  padding: $offset-section-desktop / 2;
 }
 
 @mixin buttonOffset {
