@@ -1,5 +1,5 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './Gradient.module.scss'
+import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
@@ -42,8 +42,8 @@ const Gradient = (props) => {
             </header>
 
             <div className={style.demo__container__sticked}>
-                <div className={style.form}>
-                    <fieldset className={style.demo__settings}>
+                <div className={style.form__gradient}>
+                    <fieldset className={style.demo__settings__gradient}>
                         <legend><Strong>Color Positions</Strong></legend>
                         <label htmlFor="startColorPos"><Strong>set startColor</Strong></label>
                         <InputRange min="0" max="20" value={startColorPos} name="startColorPos"
@@ -52,13 +52,13 @@ const Gradient = (props) => {
                         <InputRange min="0" max="20" value={endColorPos} name="endColorPos"
                             onChange={(e) => setEndColorPos(e.target.value)} />
                     </fieldset>
-                    {!showDirectionField && <fieldset className={style.demo__settings} hidden={showDirectionField}>
+                    {!showDirectionField && <fieldset className={style.demo__settings__gradient} hidden={showDirectionField}>
                         <legend><Strong>Direction</Strong></legend>
                         <label htmlFor="angle"><Strong>set direction angle</Strong></label>
                         <InputRange min="0" max="24" value={angle} name="angle"
                             onChange={(e) => setAngle(e.target.value)} />
                     </fieldset>}
-                    <fieldset className={style.demo__settings} hidden={showPositionField}>
+                    {!showPositionField && <fieldset className={style.demo__settings__gradient} >
                         <legend><Strong>Set XY Position</Strong></legend>
                         <label htmlFor="x"><Strong>set X position</Strong></label>
                         <InputRange min="0" max="20" value={posX} name="x"
@@ -66,9 +66,9 @@ const Gradient = (props) => {
                         <label htmlFor="y"><Strong>set Y position</Strong></label>
                         <InputRange min="0" max="20" value={posY} name="y"
                             onChange={(e) => setY(e.target.value)} />
-                    </fieldset>
+                    </fieldset>}
                 </div>
-                <div className={style.gradient} style={currentStyle}></div>
+                <div className={style.block__gradient} style={currentStyle}></div>
             </div>
         </section>
     )

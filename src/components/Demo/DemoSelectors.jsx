@@ -1,6 +1,6 @@
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
-import style from './DemoSelectors.module.scss'
+import style from './Demo.module.scss';
 import './selectors.scss'
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
@@ -15,12 +15,12 @@ const DemoSelectors = () => {
     return (
         <section className={"demo"}>
             <SectionTitle>CSS Selectors</SectionTitle>
-                <div className={style.demo__selectors__container}>
-                    <header className={style.demo__description}>
-                        <Highlighted><Strong>CSS: </Strong>{selectorCSS}</Highlighted>
-                        <Highlighted><Strong>description: </Strong>{description}</Highlighted>
-                    </header>
-            <div className={style.demo__container__sticked}>
+            <div className={style.demo__selectors__container}>
+                <header className={style.demo__description}>
+                    <Highlighted><Strong>CSS: </Strong>{selectorCSS}</Highlighted>
+                    <Highlighted><Strong>description: </Strong>{description}</Highlighted>
+                </header>
+                <div className={style.demo__container__sticked}>
                     <div className={selectorStyle}>
                         <ul className={style.demo__selectors__main}>
                             ul

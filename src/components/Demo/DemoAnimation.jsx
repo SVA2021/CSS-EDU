@@ -1,6 +1,5 @@
 import { useAppSelector } from '../../app/hooks';
-// import style from './Demo.module.scss';
-import style from './DemoAnimation.module.scss';
+import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import { useState } from 'react';

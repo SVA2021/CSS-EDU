@@ -1,7 +1,8 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.demo__container__sticked { //mixin
+.demo__container__sticked {
+    //mixin
     position: sticky;
     margin: $offset-basic *2 auto;
     padding: $offset-basic * 4;
@@ -12,16 +13,14 @@
 }
 
 .demo__description {
-    //not in gradient
-    margin: $offset-basic;
-    padding: $offset-basic;
-    
+
     //mixin
     border: $size-default-border solid $color-border-section;
     border-radius: $border-radius-section;
 }
 
-.demo__settings {//mixin
+.demo__settings {
+    //mixin
     margin: $offset-basic auto;
     border-radius: $border-radius-default;
 }
@@ -36,8 +35,7 @@
 }
 
 .demo__child {
-    position: relative; //only in animation
-//mixin
+    //mixin
     margin: $offset-basic * 4;
     padding: $offset-basic * 4;
     height: auto;
@@ -47,8 +45,52 @@
     background-color: $orange;
 }
 
+//only in selectors
+.demo__selectors__main {
+    display: block;
+    border: $size-default-border * 2 solid $orange;
+    border-radius: $border-radius-default;
+    margin: $offset-basic * 4;
+    padding: $offset-basic;
+    background-color: $green;
 
-.button { //only in animation
+    & li {
+        display: block;
+        margin: $offset-basic;
+        padding: $offset-basic;
+        border-radius: $border-radius-default;
+        border: $size-default-border * 2 solid $dark;
+
+        & p,
+        a {
+            display: inline-block;
+            margin: $offset-basic;
+            padding: $offset-basic;
+            border-radius: $border-radius-default;
+            border: $size-default-border * 2 solid $orange;
+        }
+    }
+
+}
+
+.demo__selectors__externalP {
+    color: $orange;
+}
+
+
+//only in animation
+.demo__parent__positioned {
+    @extend .demo__parent;
+    position: relative;
+}
+
+.demo__child__positioned {
+    @extend .demo__child;
+    position: relative;
+}
+
+
+.button {
 
     @include buttonBase;
 
@@ -62,4 +104,34 @@
         transition: transform 0.15s linear;
         box-shadow: 2px 2px 5px $orange, -2px -2px 5px $orange;
     }
+}
+
+// image - gradient only classes
+
+.demo__settings__gradient {
+    //mixin
+    border-radius: $border-radius-section;
+    width: calc(100% - $offset-basic * 2);
+    height: 120px;
+
+    & input {
+        width: 100%;
+    }
+}
+
+.block__gradient {
+    //only gradient
+    height: 360px;
+    margin: $offset-basic;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
+}
+
+.form__gradient {
+    //only gradient
+    margin: $offset-basic *2 $offset-basic;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
