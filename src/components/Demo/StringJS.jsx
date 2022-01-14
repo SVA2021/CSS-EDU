@@ -4,7 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, Strong, SubTitleUpper } from '../common/Typography';
 import { stringHandle } from '../../app/dataJS';
 import { useState } from 'react';
-import { InputNumber } from '../common/Input';
+import { InputNumber, InputText } from '../common/Input';
 
 const StringJS = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -15,6 +15,7 @@ const StringJS = (props) => {
 
     const [start, setStart] = useState(null);
     const [end, setEnd] = useState(null);
+    const [subStr, setSubStr] = useState('');
 
     const initString = ` start AnYLetteRS end `;
 
@@ -27,13 +28,14 @@ const StringJS = (props) => {
     }
     let endDescription = (id === 11) ? 'set length ' : 'set end position ';
 
-    const result = stringHandle(initString, method, start, end);
+    const result = stringHandle(initString, method, start, end, subStr);
+
     if (id === 4 || id === 5 || id === 8) {
         resultDescription = result.toString();
     } else {
         resultDescription = result;
     }
-    
+
     return (
         <section className={"demo"}>
             <header>
@@ -51,8 +53,14 @@ const StringJS = (props) => {
                     {(id >= 10) &&
                         <>
                             <label htmlFor="end"><Strong>{endDescription}</Strong></label>
-                            <InputNumber min="0" max="9" value={end} name="end"
+                            <InputNumber min="0" max="19" value={end} name="end"
                                 onChange={(e) => setEnd(e.target.value)} />
+                        </>}
+                    {(id === 8 || id === 9) &&
+                        <>
+                            <label htmlFor="subStr"><Strong>substring</Strong></label>
+                            <InputText maxlength="9" value={subStr} name="subStr"
+                                onChange={(e) => setSubStr(e.target.value)} />
                         </>}
                 </fieldset>
             </header>

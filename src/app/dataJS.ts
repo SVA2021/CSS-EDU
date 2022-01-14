@@ -356,7 +356,8 @@ export const stringHandle = (
     str: string,
     method: string,
     start: number | null | undefined,
-    end: number | null | undefined) => {
+    end: number | null | undefined,
+    subStr: string ) => {
     switch (method) {
         case 'trim':
             return str.trim();
@@ -375,9 +376,9 @@ export const stringHandle = (
         case 'slice':
             return (start && end) ? str.slice(start, end) : ' ';
         case 'indexOf':
-            return (start) ? str.indexOf('start', start) : ' '; //pos
+            return (start && subStr) ? str.indexOf(subStr, start) : ' '; //pos
         case 'includes':
-            return (start) ? str.includes('start', start) : ' '; //bool
+            return (start && subStr) ? str.includes(subStr, start) : ' '; //bool
         case 'startsWith':
             return str.startsWith(' start'); //bool
         case 'endsWith':
