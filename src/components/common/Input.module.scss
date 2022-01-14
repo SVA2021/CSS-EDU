@@ -3,7 +3,7 @@
 .slider {
     -webkit-appearance: none;
     height: 8px;
-    margin: $offset-basic;
+    margin: $offset-basic * 2 $offset-basic;
     background: $orange;
     border-radius: $border-radius-default;
     outline: none;

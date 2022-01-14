@@ -1,25 +1,37 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-div.fix {
+.demo__container__sticked {
     position: sticky;
+    margin: $offset-basic *2 auto;
     padding: $offset-basic * 4;
-    margin: auto;
-    border-radius: $border-radius-default;
-    border: $size-default-border * 2 solid $light;
+    top: 0;
+    overflow-y: auto;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
 }
 
-.parent {
-    position: relative;
-    padding: $offset-basic * 4;
-    border: $size-default-border * 4 solid $orange;
+.demo__description {
+    // margin: $offset-basic;
+    // padding: $offset-basic;
+
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
+}
+
+.demo__parent {
+    position: relative; //only in animation
+
+    margin: $offset-basic * 2 auto;
+    padding: $offset-basic * 2;
+    border: $size-default-border * 2 solid $orange;
     border-radius: $border-radius-default;
     background-color: $green;
-    text-align: center;
 }
 
-.child {
-    position: relative;
+.demo__child {
+    position: relative; //only in animation
+
     margin: $offset-basic * 4;
     padding: $offset-basic * 4;
     height: auto;
@@ -28,11 +40,11 @@ div.fix {
     background-color: $orange;
 }
 
-.empty {
-    @extend .fix;
-    @include buttonBase;
-    display: block;
-}
+// .empty {
+//     @extend .fix;
+//     @include buttonBase;
+//     display: block;
+// }
 
 .button {
     @include buttonBase;

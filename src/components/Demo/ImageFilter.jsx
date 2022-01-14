@@ -1,11 +1,11 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './DemoPosition.module.scss'
+import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import image from '../../img/OrangeCar.png';
 import { normalizeObjText } from '../../app/functionStore';
-import {InputRange} from '../common/Input.jsx';
+import { InputRange } from '../common/Input.jsx';
 
 const ImageFilter = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -29,19 +29,21 @@ const ImageFilter = (props) => {
     return (
         <section className={"demo"}>
             <SectionTitle>Image filter</SectionTitle>
-            <div className={style.fix}>
-                <fieldset>
-                    <legend><Strong>Settings</Strong></legend>
-                    <label htmlFor="optionValue"><Strong>set option value</Strong></label>
-                    <InputRange type="range" min="0" max="10" value={optionValue} name="optionValue"
-                        onChange={(e) => setOptionValue(e.target.value)} />
-                </fieldset>
+            <header className={style.demo__description}>
                 <Highlighted><Strong>CSS: </Strong>{currentStyleTexted}</Highlighted>
                 <Highlighted>
                     <Strong>min: </Strong>{minValue}{unit}
                     <Strong>     max: </Strong>{maxValue}{unit}
                 </Highlighted>
-                <div className={style.parent}>
+            </header>
+            <div className={style.demo__container__sticked}>
+                <fieldset className={style.demo__settings}>
+                    <legend><Strong>Settings</Strong></legend>
+                    <label htmlFor="optionValue"><Strong>set option value</Strong></label>
+                    <InputRange type="range" min="0" max="10" value={optionValue} name="optionValue"
+                        onChange={(e) => setOptionValue(e.target.value)} />
+                </fieldset>
+                <div className={style.demo__parent}>
                     <img src={image} style={currentStyle} alt="orange car" width={'600px'} />
                 </div>
             </div>

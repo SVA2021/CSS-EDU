@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.demo__container__sticked {
+.demo__container__sticked { //mixin
     position: sticky;
     margin: $offset-basic *2 auto;
     padding: $offset-basic * 4;
@@ -12,33 +12,54 @@
 }
 
 .demo__description {
+    //not in gradient
     margin: $offset-basic;
     padding: $offset-basic;
-
+    
+    //mixin
     border: $size-default-border solid $color-border-section;
     border-radius: $border-radius-section;
 }
 
-.demo__settings {
+.demo__settings {//mixin
     margin: $offset-basic auto;
     border-radius: $border-radius-default;
 }
 
 .demo__parent {
+    //mixin
     margin: $offset-basic * 2 auto;
     padding: $offset-basic * 2;
     border: $size-default-border * 2 solid $orange;
     border-radius: $border-radius-default;
     background-color: $green;
-    text-align: center;
 }
 
 .demo__child {
+    position: relative; //only in animation
+//mixin
     margin: $offset-basic * 4;
     padding: $offset-basic * 4;
-    height: $height-demo-child;
+    height: auto;
     color: $dark;
     border: $size-default-border * 2 solid $dark;
     border-radius: $border-radius-default;
     background-color: $orange;
+}
+
+
+.button { //only in animation
+
+    @include buttonBase;
+
+    z-index: 100;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.15s linear;
+        box-shadow: 2px 2px 5px $orange, -2px -2px 5px $orange;
+    }
 }

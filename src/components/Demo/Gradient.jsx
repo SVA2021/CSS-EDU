@@ -4,7 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import { normalizeObjText } from '../../app/functionStore';
-import {InputRange} from '../common/Input.jsx';
+import { InputRange } from '../common/Input.jsx';
 
 const Gradient = (props) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -18,10 +18,11 @@ const Gradient = (props) => {
 
     const activeOption = activeDemoStatus?.name;
     let angleCSS = "";
-    if (activeDemoStatus.id < 3) angleCSS = String(angle * 15) + "deg , ";
-    if (activeDemoStatus.id > 4) angleCSS = "from " + String(angle * 15) + "deg ";
+    const id = activeDemoStatus.id;
+    if (id < 3) angleCSS = String(angle * 15) + "deg , ";
+    if (id > 4) angleCSS = "from " + String(angle * 15) + "deg ";
     let positionXY = "";
-    if (activeDemoStatus.id > 2) positionXY = "at " + String(posX * 5) + "% " + String(posY * 5) + "%, ";
+    if (id > 2) positionXY = "at " + String(posX * 5) + "% " + String(posY * 5) + "%, ";
     const startColorPositionCSS = String(startColorPos * 5) + "%";
     const endColorPositionCSS = String(endColorPos * 5) + "%";
     const gradientCSS = " " + activeOption + "( "
@@ -30,18 +31,19 @@ const Gradient = (props) => {
 
     const currentStyle = { background: gradientCSS };
     const currentStyleTexted = normalizeObjText(currentStyle);
+
+    const showDirectionField = (id === 3 || id === 4);
+    const showPositionField = (id < 3);
     return (
         <section className={"demo"}>
             <SectionTitle>Gradient</SectionTitle>
-            <div className={style.fix}>
+            <header className={style.demo__description}>
+                <Highlighted><Strong>CSS: </Strong>{currentStyleTexted}</Highlighted>
+            </header>
+
+            <div className={style.demo__container__sticked}>
                 <div className={style.form}>
-                    <fieldset>
-                        <legend><Strong>Direction</Strong></legend>
-                        <label htmlFor="angle"><Strong>set direction angle</Strong></label>
-                        <InputRange min="0" max="24" value={angle} name="angle"
-                            onChange={(e) => setAngle(e.target.value)} />
-                    </fieldset>
-                    <fieldset>
+                    <fieldset className={style.demo__settings}>
                         <legend><Strong>Color Positions</Strong></legend>
                         <label htmlFor="startColorPos"><Strong>set startColor</Strong></label>
                         <InputRange min="0" max="20" value={startColorPos} name="startColorPos"
@@ -50,7 +52,13 @@ const Gradient = (props) => {
                         <InputRange min="0" max="20" value={endColorPos} name="endColorPos"
                             onChange={(e) => setEndColorPos(e.target.value)} />
                     </fieldset>
-                    <fieldset>
+                    {!showDirectionField && <fieldset className={style.demo__settings} hidden={showDirectionField}>
+                        <legend><Strong>Direction</Strong></legend>
+                        <label htmlFor="angle"><Strong>set direction angle</Strong></label>
+                        <InputRange min="0" max="24" value={angle} name="angle"
+                            onChange={(e) => setAngle(e.target.value)} />
+                    </fieldset>}
+                    <fieldset className={style.demo__settings} hidden={showPositionField}>
                         <legend><Strong>Set XY Position</Strong></legend>
                         <label htmlFor="x"><Strong>set X position</Strong></label>
                         <InputRange min="0" max="20" value={posX} name="x"
@@ -60,8 +68,7 @@ const Gradient = (props) => {
                             onChange={(e) => setY(e.target.value)} />
                     </fieldset>
                 </div>
-                <Highlighted><Strong>CSS: </Strong>{currentStyleTexted}</Highlighted>
-                <div className={style.main} style={currentStyle}></div>
+                <div className={style.gradient} style={currentStyle}></div>
             </div>
         </section>
     )

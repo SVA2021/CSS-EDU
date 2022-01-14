@@ -9,8 +9,14 @@ const DemoCSSFeatures = (props) => {
     const activeStyle = useAppSelector(selectDemo);
     const activeDemoStatus = activeStyle.part1;
 
-    if (isEmpty(activeDemoStatus)) return <DemoBlank/>;
-    return (Object.keys(activeDemoStatus)[0] === 'filter') ? <ImageFilter /> : <Gradient />
+    if (isEmpty(activeDemoStatus)) return <DemoBlank />;
+
+    return (
+        <>
+            {(Object.keys(activeDemoStatus)[0] === 'filter') && <ImageFilter />}
+            {(Object.keys(activeDemoStatus)[0] === 'gradient') && <Gradient />}
+        </>
+    )
 }
 
 export default DemoCSSFeatures;

@@ -1,5 +1,15 @@
 @import '../../styles/variables';
 
+.demo__container__sticked {
+    position: sticky;
+    margin: $offset-basic *2 auto;
+    padding: $offset-basic * 2;
+    top: 0;
+    overflow-y: auto;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
+}
+
 .demo__selectors__container {
 
     & header {
@@ -43,7 +53,7 @@
 }
 
 .demo__description {
-    margin: $offset-basic * 2 $offset-basic;
+    // margin: $offset-basic * 2 $offset-basic;
     padding: $offset-basic;
 
     border: $size-default-border solid $color-border-section;

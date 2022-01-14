@@ -1,9 +1,50 @@
-.main {
-    height: 400px;
-    width: 100%;
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.demo__container__sticked {
+    //mixin
+    position: sticky;
+    margin: $offset-basic;
+    padding: $offset-basic;
+    top: 0;
+    overflow-y: auto;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
+}
+
+.demo__description {
+    //mixin
+    margin: $offset-basic;
+    padding: $offset-basic;
+
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
+}
+
+.demo__settings {
+    //mixin
+    border-radius: $border-radius-section;
+    width: calc(100% - $offset-basic * 2);
+    height: 120px;
+
+    & input {
+        width: 100%;
+    }
+}
+
+.gradient {
+    //only gradient
+    height: 360px;
+    margin: $offset-basic;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
 }
 
 .form {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    //only gradient
+    margin: $offset-basic *2 $offset-basic;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

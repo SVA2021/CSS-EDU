@@ -1,5 +1,6 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './DemoAnimation.module.scss'
+// import style from './Demo.module.scss';
+import style from './DemoAnimation.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import { useState } from 'react';
@@ -24,17 +25,21 @@ const DemoAnimation = (props) => {
     return (
         <section className={"demo"}>
             <SectionTitle>Animation</SectionTitle>
-            <div className={style.fix}>
-                <button className={style.button} onClick={() => setCancel(false)}>start</button>
-                <button className={style.button} onClick={() => setCancel(true)}>stop</button>
+            <header className={style.demo__description}>
                 <Highlighted><Strong>Animated property: </Strong>{animationProperty}</Highlighted>
                 <Highlighted><Strong>Description: </Strong>{description}</Highlighted>
                 <Highlighted>
                     <Strong>Initial value: </Strong>{initValue}
                     <Strong>     Final value: </Strong>{finalValue}
                 </Highlighted>
-                <div className={style.parent}>
-                    <AnimatedBlock className={style.child}
+            </header>
+            <div className={style.demo__container__sticked}>
+                <div className={style.demo__settings}>
+                    <button className={style.button} onClick={() => setCancel(false)}>start</button>
+                    <button className={style.button} onClick={() => setCancel(true)}>stop</button>
+                </div>
+                <div className={style.demo__parent}>
+                    <AnimatedBlock className={style.demo__child}
                         name={animationProperty}
                         initialParam={initialParam}
                         finalParam={finalParam}

@@ -1,5 +1,5 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './Demo.module.scss'
+import style from './DemoPosition.module.scss'
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
@@ -10,7 +10,7 @@ const DemoPosition = (props) => {
     const activeStyle = useAppSelector(selectDemo);
 
     const [inputQty, setQty] = useState(3);
-    const [strLength, setLength] = useState(3);
+    const [strLength, setLength] = useState(1);
 
     const childQty = inputQty;
     const str = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
