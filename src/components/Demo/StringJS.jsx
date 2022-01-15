@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './ArrayJS.module.scss'
+import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, Strong, SubTitleUpper } from '../common/Typography';
+import { Highlighted, Strong, SubTitleUpperDark, SectionTitle } from '../common/Typography';
 import { stringHandle } from '../../app/dataJS';
 import { useState } from 'react';
 import { InputNumber, InputText } from '../common/Input';
@@ -38,16 +38,18 @@ const StringJS = (props) => {
 
     return (
         <section className={"demo"}>
-            <header>
-                <SubTitleUpper>String methods</SubTitleUpper>
+            <SectionTitle>String methods</SectionTitle>
+            <header className={style.demo__description}>
                 <Highlighted><Strong>method: </Strong>{method}</Highlighted>
                 <Highlighted><Strong>description: </Strong>{description}</Highlighted>
-                <fieldset>
+            </header>
+            <div className={style.demo__container__sticked}>
+                <fieldset className={style.demo__settings}>
                     <legend><Strong>Settings</Strong></legend>
                     {(id >= 5) &&
                         <>
                             <label htmlFor="start"><Strong>{startDescription}</Strong></label>
-                            <InputNumber min="0" max="9" value={start} name="start"
+                            <InputNumber min="0" max="19" value={start} name="start"
                                 onChange={(e) => setStart(e.target.value)} />
                         </>}
                     {(id >= 10) &&
@@ -63,16 +65,13 @@ const StringJS = (props) => {
                                 onChange={(e) => setSubStr(e.target.value)} />
                         </>}
                 </fieldset>
-            </header>
-
-            <div className={style.fix}>
-                <div className={style.parent}>
-                    <SubTitleUpper>initial state</SubTitleUpper>
-                    <div className={style.result}>{initString}</div>
+                <div className={style.demo__parent}>
+                    <SubTitleUpperDark>initial state</SubTitleUpperDark>
+                    <div className={style.demo__child__array}>{initString}</div>
                 </div>
-                <div className={style.parent}>
-                    <SubTitleUpper>final state</SubTitleUpper>
-                    <div className={style.result}>{resultDescription}</div>
+                <div className={style.demo__parent}>
+                    <SubTitleUpperDark>result</SubTitleUpperDark>
+                    <div className={style.demo__child__array}>{resultDescription}</div>
                 </div>
             </div>
         </section>
