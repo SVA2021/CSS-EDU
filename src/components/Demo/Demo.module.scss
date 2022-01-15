@@ -135,3 +135,62 @@
     justify-content: center;
     align-items: center;
 }
+
+// js - array classes
+
+.demo__array__original {
+    margin: $offset-basic * 2;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px - $offset-basic * 2;
+    border: $size-default-border * 2 solid $light;
+    background-color: $orange;
+    border-radius: $border-radius-default;
+}
+
+.demo__array__modified {
+    @extend .demo__array__original;
+    border-radius: 50%;
+}
+
+// .demo__array__result {
+//     // @extend .demo__array__original;
+    
+//     margin: $offset-basic * 2;
+//     display: inline-block;
+//     // height: 50px;
+//     // width: 50px;
+//     line-height: 50px - $offset-basic * 2;
+//     border: $size-default-border * 2 solid $light;
+//     background-color: $orange;
+//     border-radius: $border-radius-default;
+//     color: $dark;
+//     height: 50px;
+//     width: 250px;
+// }
+
+// .demo__parent__array {
+//     @extend .demo__parent;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.demo__child__array {
+    @extend .demo__child;
+    
+    margin: $offset-basic * 4;
+    padding: $offset-basic * 2;
+    border: $size-default-border solid $color-border-section;
+    border-radius: $border-radius-section;
+
+}
+
+.demo__child__flexCentered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

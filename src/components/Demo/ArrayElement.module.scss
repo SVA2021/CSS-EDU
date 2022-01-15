@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+// div.fix {
+//     position: sticky;
+//     padding: $offset-basic * 4;
+//     margin: auto;
+//     border-radius: $border-radius-default;
+//     border: $size-default-border * 2 solid $light;
+// }
+
+// .parent {
+//     position: relative;
+//     margin: $offset-basic * 4;
+//     padding: $offset-basic * 4;
+//     border: $size-default-border * 4 solid $orange;
+//     border-radius: $border-radius-default;
+//     // background-color: $green;
+//     // text-align: center;
+// }
+
+.original {
+    margin: $offset-basic * 2;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px - $offset-basic * 2;
+    border: $size-default-border * 2 solid $dark;
+    background-color: $orange;
+    border-radius: $border-radius-default;
+}
+
+.modified {
+    @extend .original;
+    border-radius: 50%;
+}
+
+// .result {
+//     @extend .original;
+//     color: $dark;
+//     height: 50px;
+//     width: 250px;
+// }
+
+
+// .demo__description {
+//     //mixin
+//     border: $size-default-border solid $color-border-section;
+//     border-radius: $border-radius-section;
+// }
+
