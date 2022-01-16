@@ -23,6 +23,11 @@
     text-transform: uppercase;
 }
 
+.subTitleUpper__dark {
+    @extend .subTitleUpper;
+    color: $dark;
+}
+
 .strong {
     // margin: $offset-element-content-desktop;
     // text-transform: uppercase;

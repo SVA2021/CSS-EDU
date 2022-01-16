@@ -38,7 +38,7 @@ const DemoAnimation = (props) => {
                     <button className={style.button} onClick={() => setCancel(true)}>stop</button>
                 </div>
                 <div className={style.demo__parent}>
-                    <AnimatedBlock className={style.demo__child}
+                    <AnimatedBlock className={style.demo__child__positioned}
                         name={animationProperty}
                         initialParam={initialParam}
                         finalParam={finalParam}

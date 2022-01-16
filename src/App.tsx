@@ -1,12 +1,14 @@
 import Demo from './components/Demo/Demo';
-import Header from './components/Header/Header';
+import NavBar from './components/Header/NavBar';
 import SideBar from './components/Sidebar/SideBar';
 
 function App() {
 
   return (
     <div className="container">
-      <Header />
+      <header className="header">
+        <NavBar />
+      </header>
       <SideBar />
       <Demo />
     </div>

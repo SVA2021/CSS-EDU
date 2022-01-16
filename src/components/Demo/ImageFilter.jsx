@@ -26,7 +26,7 @@ const ImageFilter = (props) => {
             : String(activeFilter) + '(' + String(optionNumValue) + unit + ')';
     const currentStyle = { filter: optionStringValue }
     const currentStyleTexted = normalizeObjText(currentStyle);
-    
+
     return (
         <section className={"demo"}>
             <SectionTitle>Image filter</SectionTitle>

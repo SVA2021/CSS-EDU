@@ -29,13 +29,11 @@ const StringJS = (props) => {
     let endDescription = (id === 11) ? 'set length ' : 'set end position ';
 
     const result = stringHandle(initString, method, start, end, subStr);
-
     if (id === 4 || id === 5 || id === 8) {
         resultDescription = result.toString();
     } else {
         resultDescription = result;
     }
-
     return (
         <section className={"demo"}>
             <SectionTitle>String methods</SectionTitle>

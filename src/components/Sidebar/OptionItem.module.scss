@@ -1,24 +1,23 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.sidebar__optionBlock {
-    margin: $offset-element-content-desktop * 0.5 0;
-}
+// .sidebar__optionBlock {
+//     // margin: $offset-element-content-desktop * 0.5 0;
+// }
 
 .sidebar__optionBlock__btnList {
-    // @include elementOffset;
-    padding: $offset-basic * 4;
+    @include borderDefault;
+    padding: $offset-basic * 2;
 
     display: grid;
-    grid-template-columns:  repeat(auto-fill, minmax(40%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     justify-self: center;
-
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
 }
 
 .sidebar__optionItem__btn {
+    @include buttonOffset;
     @include buttonBase;
+    @include greenDark;
 
     &:hover {
         box-shadow: 2px 2px 5px $orange, -2px -2px 5px $orange;
@@ -26,9 +25,9 @@
 }
 
 .sidebar__optionItem__btn__active {
-    @extend .sidebar__optionItem__btn;
-    background-color: $color-button-active-background;
-    color: $color-button-hover;
+    @include buttonOffset;
+    @include buttonBase;
+    @include orangeLight;
 
     &:hover {
         box-shadow: 2px 2px 5px $green, -2px -2px 5px $green;

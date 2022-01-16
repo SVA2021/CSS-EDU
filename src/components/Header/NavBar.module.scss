@@ -4,34 +4,25 @@
 .navbar {
 
     ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        @include flexEvenly;
         list-style-type: none;
 
         li {
-            @include buttonOffset;
+            @include buttonOffsetNav;
+            @include lightDark;
+
             display: block;
-            border-radius: $border-radius-default * 2;
-            background-color: $color-nav-background;
-            color: $color-nav;
+            border-radius: $border-radius-section;
+
             font-size: $font-size-subtitle;
             font-weight: bold;
             cursor: pointer;
         }
 
         li:hover {
-            border-radius: $border-radius-section;
-            background-color: $color-nav-hover-background;
-            color: $color-nav-hover;
-            transform: scale(1.25);
-            transition: all 0.25s linear;
+            @include orangeLight;
+            transform: scale(1.2);
+            transition: all 0.2s linear;
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
     }
 }

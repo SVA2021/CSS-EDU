@@ -2,81 +2,59 @@
 @import '../../styles/mixins';
 
 .demo__container__sticked {
-    //mixin
+    @include borderDefault;
+    @include sectionOffset;
     position: sticky;
-    margin: $offset-basic *2 auto;
-    padding: $offset-basic * 4;
     top: 0;
     overflow-y: auto;
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
 }
 
 .demo__description {
-
-    //mixin
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
+    @include borderDefault;
 }
 
 .demo__settings {
-    //mixin
-    margin: $offset-basic auto;
+    @include baseYOffset;
     border-radius: $border-radius-default;
 }
 
 .demo__parent {
-    //mixin
-    margin: $offset-basic * 2 auto;
-    padding: $offset-basic * 2;
-    border: $size-default-border * 2 solid $orange;
-    border-radius: $border-radius-default;
-    background-color: $green;
+    @include greenDark;
+    @include borderSectionOrange;
+    @include sectionOffset;
 }
 
 .demo__child {
-    //mixin
-    margin: $offset-basic * 4;
-    padding: $offset-basic * 4;
+    @include orangeDark;
+    @include borderSectionDark;
+    @include maxOffset;
     height: auto;
-    color: $dark;
-    border: $size-default-border * 2 solid $dark;
-    border-radius: $border-radius-default;
-    background-color: $orange;
 }
 
 //only in selectors
 .demo__selectors__main {
+    @include greenDark;
+    @include borderSectionOrange;
+    @include maxOffset;
     display: block;
-    border: $size-default-border * 2 solid $orange;
-    border-radius: $border-radius-default;
-    margin: $offset-basic * 4;
-    padding: $offset-basic;
-    background-color: $green;
 
     & li {
         display: block;
-        margin: $offset-basic;
-        padding: $offset-basic;
-        border-radius: $border-radius-default;
-        border: $size-default-border * 2 solid $dark;
+        @include borderSectionDark;
+        @include minOffset;
 
         & p,
         a {
             display: inline-block;
-            margin: $offset-basic;
-            padding: $offset-basic;
-            border-radius: $border-radius-default;
-            border: $size-default-border * 2 solid $orange;
+            @include borderSectionOrange;
+            @include minOffset;
         }
     }
-
 }
 
 .demo__selectors__externalP {
     color: $orange;
 }
-
 
 //only in animation
 .demo__parent__positioned {
@@ -89,13 +67,10 @@
     position: relative;
 }
 
-
 .button {
-
     @include buttonBase;
+    @include buttonOffset;
 
-    z-index: 100;
-    cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
 
@@ -109,10 +84,9 @@
 // image - gradient only classes
 
 .demo__settings__gradient {
-    //mixin
-    border-radius: $border-radius-section;
     width: calc(100% - $offset-basic * 2);
     height: 120px;
+    border-radius: $border-radius-section;
 
     & input {
         width: 100%;
@@ -120,33 +94,27 @@
 }
 
 .block__gradient {
-    //only gradient
+    @include borderDefault;
+    @include maxOffset;
+
     height: 360px;
-    margin: $offset-basic;
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
 }
 
 .form__gradient {
-    //only gradient
-    margin: $offset-basic *2 $offset-basic;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
+    @include baseOffset;
 }
 
 // js - array classes
-
 .demo__array__original {
-    margin: $offset-basic * 2;
+    @include orangeDark;
+    @include borderSectionLight;
+    @include baseOffset;
+
     display: inline-block;
     height: 50px;
     width: 50px;
     line-height: 50px - $offset-basic * 2;
-    border: $size-default-border * 2 solid $light;
-    background-color: $orange;
-    border-radius: $border-radius-default;
 }
 
 .demo__array__modified {
@@ -154,43 +122,12 @@
     border-radius: 50%;
 }
 
-// .demo__array__result {
-//     // @extend .demo__array__original;
-    
-//     margin: $offset-basic * 2;
-//     display: inline-block;
-//     // height: 50px;
-//     // width: 50px;
-//     line-height: 50px - $offset-basic * 2;
-//     border: $size-default-border * 2 solid $light;
-//     background-color: $orange;
-//     border-radius: $border-radius-default;
-//     color: $dark;
-//     height: 50px;
-//     width: 250px;
-// }
-
-// .demo__parent__array {
-//     @extend .demo__parent;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-// }
-
 .demo__child__array {
     @extend .demo__child;
-    
-    margin: $offset-basic * 4;
-    padding: $offset-basic * 2;
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
-
+    @include borderDefault;
+    @include baseOffset;
 }
 
 .demo__child__flexCentered {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
 }

@@ -1,50 +1,31 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-.sidebar__mainBtn_group {
-    
-    margin: $offset-basic *2 auto;
-    // padding: $offset-basic * 4;
-    // @include elementOffset;
-    // border: $size-default-border solid $color-border-section;
-    // border-radius: $border-radius-section;
-}
-
 .sidebar__mainBtn__list {
-    // @include elementOffset;
-    padding: $offset-basic * 2;
-
-    border: $size-default-border solid $color-border-section;
-    border-radius: $border-radius-section;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flexEvenly;
+    @include baseYOffset;
+    @include borderDefault;
 }
 
 .sidebar__mainBtn {
     @include buttonBase;
+    @include buttonOffsetMain;
 
     text-transform: uppercase;
     font-weight: bold;
-    &:hover {
-        transform: scale(1.1);
-        transition: transform 0.15s linear;
-    }
 
+    &:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s linear;
+    }
 }
 
 .sidebar__mainBtn__active {
     @extend .sidebar__mainBtn;
-    background-color: $color-button-active-background;
-
-    &:hover {
-        cursor: no-drop;
-        color: $color-button-hover;
-    }
+    @include buttonActive;
 }
 
 .sidebar__mainBtn__reset {
     @extend .sidebar__mainBtn;
-    background-color: $color-button-reset-background;
+    @include lightDark;
 }

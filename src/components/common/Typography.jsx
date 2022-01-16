@@ -18,6 +18,12 @@ export const SubTitleUpper = ({ children }) => (
     </h4>
 );
 
+export const SubTitleUpperDark = ({ children }) => (
+    <h4 className={s.subTitleUpper__dark}>
+        {children}
+    </h4>
+);
+
 export const Strong = ({ children }) => (
     <strong className={s.strong}>
         {children}
