@@ -1,5 +1,20 @@
 @import './variables';
 
+//position
+@mixin flexEvenly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+//fonts
 @mixin baseFont {
   margin: 0;
 
@@ -7,6 +22,18 @@
   font-size: $font-size;
   font-family: $font-text;
   font-style: normal;
+}
+
+@mixin sectionFont {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.8rem;
+}
+
+@mixin subTitleFont {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
 }
 
 //color 
@@ -41,6 +68,7 @@
   color: $light;
 }
 
+//borders
 @mixin borderDefault {
   border: $size-default-border solid $light;
   border-radius: $border-radius-section;
@@ -61,6 +89,7 @@
   border-radius: $border-radius-default;
 }
 
+//offset
 @mixin baseOffset {
   margin: $offset-basic * 2;
   padding: $offset-basic * 2;
@@ -86,9 +115,6 @@
   padding: $offset-basic;
 }
 
-
-
-
 @mixin buttonOffset {
   margin: $offset-basic;
   padding: $offset-basic $offset-basic * 2;
@@ -100,15 +126,10 @@
 }
 
 @mixin buttonOffsetNav {
-  // margin: $offset-basic * 4 $offset-basic * 2;
-  padding: $offset-basic *2 $offset-basic * 4;
+  padding: $offset-basic * 2 $offset-basic * 4;
 }
 
-@mixin elementOffset {
-  margin: $offset-element-content-desktop * 0.5 $offset-element-content-desktop;
-  padding: $offset-element-content-desktop * 0.5 $offset-element-content-desktop;
-}
-
+//buttons
 @mixin buttonBase {
   @include greenDark;
 
@@ -125,21 +146,9 @@
   border-radius: $border-radius-default;
 }
 
+//special for css selectors
 @mixin select {
   color: $light;
   background-color: $orange;
   font-weight: bold;
-}
-
-@mixin flexEvenly {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-@mixin flexCenter {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }

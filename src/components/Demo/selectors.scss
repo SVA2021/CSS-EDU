@@ -102,9 +102,9 @@
 
 .style39 {
     p:last-of-type {
+        @include select;
         width: 200px;
         height: 30px;
-        @include select;
     }
 }
 

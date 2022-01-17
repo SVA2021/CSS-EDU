@@ -1,5 +1,5 @@
 import Demo from './components/Demo/Demo';
-import NavBar from './components/Header/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import SideBar from './components/Sidebar/SideBar';
 
 function App() {

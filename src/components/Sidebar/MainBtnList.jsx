@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import style from './MainBtnList.module.scss'
+import style from './SideBar.module.scss';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { resetOptions, selectMainOption, selectSlider, setMainOption } from '../../app/demoSlice';
 import MainBtn from './MainBtn';
@@ -24,7 +24,7 @@ const MainBtnList = () => {
 
     const isActive = (value) => {
         return (active === value)
-            ? style.sidebar__mainBtn__active : style.sidebar__mainBtn;
+            ? style.mainBtn__active : style.mainBtn;
     }
 
     const reset = () => {
@@ -32,16 +32,16 @@ const MainBtnList = () => {
     }
 
     return (
-        <div className={style.sidebar__mainBtn_group} >
+        <div>
             <SectionTitle>settings</SectionTitle>
-            <div className={style.sidebar__mainBtn__list} >
+            <div className={style.mainBtn__list} >
                 {mainBtnList.map((item) => <MainBtn
                     key={item}
                     value={item}
                     class={isActive(item)}
                     setMain={() => setMain(item)}
                 />)}
-                <button className={style.sidebar__mainBtn__reset} onClick={reset}>
+                <button className={style.mainBtn__reset} onClick={reset}>
                     reset all
                 </button>
             </div>

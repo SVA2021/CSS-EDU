@@ -1,6 +1,6 @@
 /********************* TYPOGRAPHY *************************OK*************/
-$font-size-min: 10px;
-$font-size-max: 16px;
+// $font-size-min: 10px;
+// $font-size-max: 16px;
 $font-size: 14px;
 
 $font-titles: 'Roboto',
@@ -9,53 +9,53 @@ sans-serif;
 $font-text: 'Montserrat',
 sans-serif;
 
-$font-size-sectionTitle: 2rem;
-$font-size-subtitle: 1.5rem;
-$line-height-subtitle: 1.8rem;
-$font-size-plainText: 1.2rem;
-$line-height-plainText: 1.7rem;
+            // $font-size-sectionTitle: 2rem;
+            // $font-size-subtitle: 1.5rem;
+            // $line-height-subtitle: 1.8rem;
+            // $font-size-plainText: 1.2rem;
+            // $line-height-plainText: 1.7rem;
 
-/********************* Screen Sizes ************************ok*/
+            /********************* Screen Sizes ************************ok*/
 
-// Width
-$screen-mobile-width: 400px;
-$screen-tablet-width: 700px;
-$screen-desktop-width: 1200px;
+            // // Width
+            // $screen-mobile-width: 400px;
+            // $screen-tablet-width: 700px;
+            // $screen-desktop-width: 1200px;
 
-// Height
-$screen-mobile-height: 640px;
-$screen-tablet-height: 720px;
-$screen-desktop-height: 980px;
+            // // Height
+            // $screen-mobile-height: 640px;
+            // $screen-tablet-height: 720px;
+            // $screen-desktop-height: 980px;
 
 /********************* Offsets Basic *********************ok*/
 
 // Offset = padding or margin
-// Margin could be only right and bottom. Top or left should be parent's padding
+        // Margin could be only right and bottom. Top or left should be parent's padding
 $offset-basic: 4px;
 
-// Section
-$offset-section-mobile: $offset-basic * 1;
-$offset-section-tablet: $offset-section-mobile * 2;
-$offset-section-desktop: $offset-section-tablet;
+            // Section
+            // $offset-section-mobile: $offset-basic * 1;
+            // $offset-section-tablet: $offset-section-mobile * 2;
+            // $offset-section-desktop: $offset-section-tablet;
 
-// Between Elements
-$offset-between-elements-mobile: $offset-basic;
-$offset-between-elements-tablet: $offset-between-elements-mobile * 2;
-$offset-between-elements-desktop: $offset-between-elements-tablet * 2;
+            // // Between Elements
+            // $offset-between-elements-mobile: $offset-basic;
+            // $offset-between-elements-tablet: $offset-between-elements-mobile * 2;
+            // $offset-between-elements-desktop: $offset-between-elements-tablet * 2;
 
-// Element content (offset from borders of element to content)
-$offset-element-content-mobile: $offset-basic;
-$offset-element-content-tablet: $offset-element-content-mobile * 2;
-$offset-element-content-desktop: $offset-element-content-tablet;
+            // // Element content (offset from borders of element to content)
+            // $offset-element-content-mobile: $offset-basic;
+            // $offset-element-content-tablet: $offset-element-content-mobile * 2;
+            // $offset-element-content-desktop: $offset-element-content-tablet;
 
 /******************** Element Sizes ***********************/
 
-// Header 
-$height-header-mobile: 75px; //not used
-$height-header-tablet: 100px; //not used
-$height-header-desktop: 75px;
-$height-demo-parent: 75px;
-$height-demo-child: 60px;
+            // // Header 
+            // $height-header-mobile: 75px; //not used
+            // $height-header-tablet: 100px; //not used
+            // $height-header-desktop: 75px;
+            // $height-demo-parent: 75px;
+            // $height-demo-child: 60px;
 
 //border-radius
 $border-radius-default: 4px;
@@ -71,59 +71,59 @@ $green: #DFF296;
 $dark: #19283F;
 $light: #F5F5F5;
 
-// Background colors
-// // base values and names
-// $color-section-background: #090A1D;
-// $color-element-background: $pink;
-// $color-label-background: #AAAAAA;
-// $color-element-hover-background: #EBEBEB;
+            // Background colors
+            // // base values and names
+            // $color-section-background: #090A1D;
+            // $color-element-background: $pink;
+            // $color-label-background: #AAAAAA;
+            // $color-element-hover-background: #EBEBEB;
 
-// main sections
+            // main sections
 
-$color-nav-background: $light;
-$color-nav-hover-background: $orange;
-// $color-sidebar-background: $lightblue;
-// $color-demo-background: $lightblue;
-// $color-preloader-background: $lightblue;
-// elements
-$color-button-background: $green;
-$color-button-active-background: $orange;
-$color-button-reset-background: $light;
-// $color-button-option-background: $green;
-// $color-button-option-active-background: $orange;
+            // $color-nav-background: $light;
+            // $color-nav-hover-background: $orange;
+            // // $color-sidebar-background: $lightblue;
+            // // $color-demo-background: $lightblue;
+            // // $color-preloader-background: $lightblue;
+            // // elements
+            // $color-button-background: $green;
+            // $color-button-active-background: $orange;
+            // $color-button-reset-background: $light;
+            // // $color-button-option-background: $green;
+            // // $color-button-option-active-background: $orange;
 
-// Typography colors
-$color-element-text: $dark;
-$color-plain-text: $dark;
-$color-title-text: $light;
-$color-label-text: $dark;
-$color-highlited-text: $orange;
-$color-nav-text: $dark;
+            // // // Typography colors
+            // $color-element-text: $dark;
+            // $color-plain-text: $dark;
+            // $color-title-text: $light;
+            // $color-label-text: $dark;
+            // $color-highlited-text: $orange;
+            // $color-nav-text: $dark;
 
-// Element decoration colors
+            // // Element decoration colors
 
-$color-nav: $dark;
-$color-nav-hover: $light;
-$color-button: $dark;
-$color-button-hover: $light;
-// $color-underline: #00B3BE;
-// $color-element-border: #F6F6F6;
-// $color-title-text-highliter: #6E3ED2;
+            // $color-nav: $dark;
+            // $color-nav-hover: $light;
+            // $color-button: $dark;
+            // $color-button-hover: $light;
+            // // $color-underline: #00B3BE;
+            // // $color-element-border: #F6F6F6;
+            // // $color-title-text-highliter: #6E3ED2;
 
-// border
-$color-border-nav: $orange;
-$color-border-parent: $dark;
-$color-border-child: $light;
-$color-border-section: $light;
+            // // border
+            // $color-border-nav: $orange;
+            // $color-border-parent: $dark;
+            // $color-border-child: $light;
+            // $color-border-section: $light;
 
 
 
-// Colors Used: #25395C, #2787EA, #1C67D2, #A4B0FF, #EA7166, #FCA78A
+            // Colors Used: #25395C, #2787EA, #1C67D2, #A4B0FF, #EA7166, #FCA78A
 
-// Colors Used: #F9F9F9, #95060F, #1F563E, #BEC1C2
+            // Colors Used: #F9F9F9, #95060F, #1F563E, #BEC1C2
 
-// Colors Used: #AFD5EB, #F04520, #EF869C, #1073E5
+            // Colors Used: #AFD5EB, #F04520, #EF869C, #1073E5
 
-// Colors Used: #FCFCF6, #111111, #FF460F, #7EAFFF, #F68CB9
+            // Colors Used: #FCFCF6, #111111, #FF460F, #7EAFFF, #F68CB9
 
-// Colors Used: #1A2EC6, #3044CA, #4C6AD6, #F7250E, #FA4F40, #FA5F52
+            // Colors Used: #1A2EC6, #3044CA, #4C6AD6, #F7250E, #FA4F40, #FA5F52

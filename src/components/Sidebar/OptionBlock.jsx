@@ -1,5 +1,5 @@
-import React from 'react';
-import style from './OptionItem.module.scss'
+// import React from 'react';
+import style from './SideBar.module.scss';
 import OptionBtn from './OptionBtn';
 import { SubTitle } from '../common/Typography';
 
@@ -12,9 +12,9 @@ const OptionBlock = (props) => {
     let isAlone = (optionValues.length === 1);
 
     return (
-        <div className={style.sidebar__optionBlock}>
+        <div>
             <SubTitle>{optionName}</SubTitle>
-            <div className={style.sidebar__optionBlock__btnList}>
+            <div className={style.optionBlock__list}>
                 {optionValues.map((item) =>
                     <OptionBtn
                         key={item.optionName + String(Math.random(1))} 

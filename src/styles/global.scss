@@ -43,9 +43,3 @@ a {
     @include baseOffset;
     grid-area: 2 / 1 / 5 / 7;
 }
-
-// Сначала положение элемента относительно других: position, left/right/top/bottom, float, clear, z-index.
-// Затем размеры и отступы: width, height, margin, padding…
-// Рамка border, она частично относится к размерам.
-// Общее оформление содержимого: list-style-type, overflow…
-// Цветовое и стилевое оформление: background, color, font…

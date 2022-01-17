@@ -10,12 +10,10 @@
         li {
             @include buttonOffsetNav;
             @include lightDark;
+            @include subTitleFont;
 
             display: block;
             border-radius: $border-radius-section;
-
-            font-size: $font-size-subtitle;
-            font-weight: bold;
             cursor: pointer;
         }
 

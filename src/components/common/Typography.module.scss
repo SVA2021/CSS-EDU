@@ -2,20 +2,17 @@
 @import '../../styles/mixins';
 
 .sectionTitle {
-    margin: $offset-element-content-desktop;
+    @include sectionFont;
+
+    margin: $offset-basic * 2;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: $font-size-sectionTitle;
-    line-height: $line-height-subtitle;
-    color: $color-title-text;
+    color: $light;
 }
 
 .subTitle {
-    margin: $offset-element-content-desktop;
-    padding: $offset-element-content-desktop;
-    font-size: $font-size-subtitle;
-    line-height: $line-height-subtitle;
-    color: $color-title-text;
+    @include sectionFont;
+    @include baseOffset;
+    color: $light;
 }
 
 .subTitleUpper {
@@ -29,20 +26,10 @@
 }
 
 .strong {
-    // margin: $offset-element-content-desktop;
-    // text-transform: uppercase;
     font-weight: bolder;
-    // font-size: $font-size-sectionTitle;
-    // line-height: $line-height-subtitle;
-    color: $color-title-text;
+    color: $light;
 }
 
 .highlighted {
-    // margin: $offset-element-content-desktop;
-    // text-transform: uppercase;
-    // font-weight: bold;
-    // font-size: $font-size-sectionTitle;
-    // line-height: $line-height-subtitle;
-    color: $color-highlited-text;
-    // background-color: ;
+    color: $orange;
 }
