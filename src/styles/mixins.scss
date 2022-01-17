@@ -24,6 +24,12 @@
   font-style: normal;
 }
 
+@mixin heroFont {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
 @mixin sectionFont {
   font-weight: bold;
   font-size: 2rem;
@@ -32,8 +38,8 @@
 
 @mixin subTitleFont {
   font-weight: bold;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 //color 

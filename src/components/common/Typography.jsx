@@ -1,5 +1,11 @@
 import s from './Typography.module.scss';
 
+export const HeroTitle = ({ children }) => (
+    <h1 className={s.heroTitle}>
+        {children}
+    </h1>
+);
+
 export const SectionTitle = ({ children }) => (
     <h3 className={s.sectionTitle}>
         {children}
@@ -32,6 +38,13 @@ export const Strong = ({ children }) => (
 
 export const Highlighted = ({ children }) => (
     <p className={s.highlighted}>
+        {children}
+    </p>
+);
+
+
+export const IconLabel = ({ children }) => (
+    <p className={s.icon_label}>
         {children}
     </p>
 );
