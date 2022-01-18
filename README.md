@@ -1,7 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), 
 using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+
+"CSS EDU" project was created to demonstrate how to make SPA, based on React and Redux. Target of this project is site where I can see what happened if dynamically change some CSS properties of elements.
+
+Text below is standard CRA template description:
+## Available Scripts (all from CRA template)
 
 In the project directory, you can run:
 
