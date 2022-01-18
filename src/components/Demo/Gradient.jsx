@@ -3,7 +3,9 @@ import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
-import { normalizeObjText } from '../../app/functionStore';
+// import { normalizeObjText } from '../../app/functionStore';
+// import { normalizeObjText } from '../../app/functionStore';
+import { normalizeObjText } from '../../app/commonFunctions';
 import { InputRange } from '../common/Input.jsx';
 
 const Gradient = (props) => {

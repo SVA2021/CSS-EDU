@@ -3,7 +3,8 @@ import MainBtnList from './MainBtnList';
 import TotalOptionList from './TotalOptionList';
 import { useAppSelector } from '../../app/hooks';
 import { selectSlider } from '../../app/demoSlice';
-import { isEmpty } from '../../app/functionStore';
+// import { isEmpty } from '../../app/functionStore';
+import { isEmpty } from '../../app/commonFunctions';
 
 const SideBar = () => {
     const page = useAppSelector(selectSlider);

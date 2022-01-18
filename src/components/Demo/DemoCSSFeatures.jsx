@@ -1,9 +1,10 @@
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
-import { isEmpty } from '../../app/functionStore';
+// import { isEmpty } from '../../app/functionStore';
 import ImageFilter from './ImageFilter';
 import Gradient from './Gradient';
 import DemoBlank from './DemoBlank';
+import { isEmpty } from '../../app/commonFunctions';
 
 const DemoCSSFeatures = (props) => {
     const activeStyle = useAppSelector(selectDemo);

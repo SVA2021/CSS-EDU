@@ -4,6 +4,7 @@ import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
 import image from '../../img/OrangeCar.svg';
+// import { normalizeObjText } from '../../app/commonFunctions';
 import { normalizeObjText } from '../../app/functionStore';
 import { InputRange } from '../common/Input.jsx';
 

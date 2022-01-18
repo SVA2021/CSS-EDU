@@ -4,7 +4,8 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { resetOptions, selectMainOption, selectSlider, setMainOption } from '../../app/demoSlice';
 import MainBtn from './MainBtn';
 import { SectionTitle } from '../common/Typography';
-import { isEmpty } from '../../app/functionStore';
+// import { isEmpty } from '../../app/functionStore';
+import { isEmpty } from '../../app/commonFunctions';
 
 const MainBtnList = () => {
 

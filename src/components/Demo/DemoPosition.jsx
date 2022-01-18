@@ -3,7 +3,8 @@ import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
-import { normalizeObjText, propertyCopy, setArray } from '../../app/functionStore';
+// import { normalizeObjText, propertyCopy, setArray } from '../../app/functionStore';
+import { normalizeObjText, propertyCopy, setArray } from '../../app/commonFunctions';
 import { InputRange, InputNumber } from '../common/Input.jsx';
 
 const DemoPosition = (props) => {

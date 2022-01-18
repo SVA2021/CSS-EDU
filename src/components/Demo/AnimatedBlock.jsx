@@ -1,6 +1,7 @@
 import { useSpring, animated } from 'react-spring';
-import { usePrevious, isEmpty, getDiff } from '../../app/functionStore.js';
 import image from '../../img/OrangeCar.svg';
+// import { usePrevious, isEmpty, getDiff } from '../../app/functionStore.js';
+import { usePrevious, isEmpty, getDiff  } from '../../app/commonFunctions';
 
 const AnimatedBlock = (props) => {
 
