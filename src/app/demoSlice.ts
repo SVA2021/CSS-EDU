@@ -1,7 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { positionElem, selectorsCSS, animations, features } from "./data";
+import { positionElem } from "./dataPosition";
 import { js } from './dataJS';
+import { features } from './dataFeatures';
+import { animations } from './dataAnimation';
+import { selectorsCSS } from './dataSelectors';
 
 const initialState: demoState = {
   activeSlider: {},
@@ -9,8 +12,6 @@ const initialState: demoState = {
     parent: {},
     childItem: {},
     part1: {},
-    part2: {},
-    part3: {},
   },
 
   mainOption: "",
@@ -44,8 +45,6 @@ export const demoSlice = createSlice({
         parent: {},
         childItem: {},
         part1: {},
-        part2: {},
-        part3: {},
       };
     },
 
@@ -54,8 +53,6 @@ export const demoSlice = createSlice({
         parent: {},
         childItem: {},
         part1: {},
-        part2: {},
-        part3: {},
       };
       state.mainOption = "";
     }
