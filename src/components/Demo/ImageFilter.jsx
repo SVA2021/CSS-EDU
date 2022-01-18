@@ -3,7 +3,7 @@ import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
-import image from '../../img/OrangeCar.png';
+import image from '../../img/OrangeCar.svg';
 import { normalizeObjText } from '../../app/functionStore';
 import { InputRange } from '../common/Input.jsx';
 
