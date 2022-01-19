@@ -9,7 +9,7 @@ const DemoJS = () => {
     const activeStyle = useAppSelector(selectDemo);
     const activeDemoStatus = activeStyle.part1;
 
-    if (isEmpty(activeDemoStatus)) return <DemoBlank/>
+    if (isEmpty(activeDemoStatus)) return <DemoBlank />
 
     const activeOption = Object.keys(activeDemoStatus)[0];
 

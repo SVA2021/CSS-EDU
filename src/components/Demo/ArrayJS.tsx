@@ -1,9 +1,9 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, Strong, SectionTitle, SubTitleUpperDark } from '../common/Typography';
-import { arrayHandle } from '../../app/dataJS';
+import style from './Demo.module.scss';
 import ArrayElement from './ArrayElement';
+import { arrayHandle } from '../../app/dataJS';
+import { Highlighted, Strong, SectionTitle, SubTitleUpperDark } from '../common/Typography';
 
 const ArrayJS = (props: any) => {
     const activeStyle = useAppSelector(selectDemo);
@@ -18,7 +18,7 @@ const ArrayJS = (props: any) => {
     const result: any = arrayHandle(method, initArray);
 
     return (
-        <section className={"demo"}>
+        <section className={'demo'}>
             <SectionTitle>Array method</SectionTitle>
             <header className={style.demo__description}>
                 <Highlighted><Strong>Method: </Strong>{method}</Highlighted>
