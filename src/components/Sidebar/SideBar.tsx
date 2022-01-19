@@ -1,5 +1,5 @@
-import MainBtnList from './MainBtnList';
-import TotalOptionList from './TotalOptionList';
+import MainOptions from './MainOptions';
+import CommmonOptions from './CommonOptions';
 import { useAppSelector } from '../../app/hooks';
 import { selectSlider } from '../../app/demoSlice';
 import { isEmpty } from '../../app/commonFunctions';
@@ -9,10 +9,10 @@ const SideBar = () => {
     let showSideBar = isEmpty(page) ? null : true;
     return (
         showSideBar &&
-        <article className={"sidebar"} >
-            <MainBtnList />
-            <TotalOptionList />
-        </article>
+        <section className={"sidebar"} >
+            <MainOptions />
+            <CommmonOptions />
+        </section>
     )
 }
 

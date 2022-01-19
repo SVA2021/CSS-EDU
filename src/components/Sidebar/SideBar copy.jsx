@@ -1,6 +1,6 @@
 // import React from 'react';
-import MainBtnList from './MainBtnList';
-import TotalOptionList from './TotalOptionList';
+import MainOptions from './MainOptions';
+import CommmonOptions from './CommonOptions';
 import { useAppSelector } from '../../app/hooks';
 import { selectSlider } from '../../app/demoSlice';
 // import { isEmpty } from '../../app/functionStore';
@@ -12,8 +12,8 @@ const SideBar = () => {
     return (
         showSideBar &&
         <article className={"sidebar"} >
-            <MainBtnList />
-            <TotalOptionList />
+            <MainOptions />
+            <CommmonOptions />
         </article>
     )
 }

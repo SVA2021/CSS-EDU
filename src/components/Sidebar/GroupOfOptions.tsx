@@ -3,7 +3,7 @@ import { selectDemo } from '../../app/demoSlice';
 import OptionBlock from './OptionBlock';
 import { SubTitleUpper } from '../common/Typography';
 
-const ComponentOptionList = (props: { key: string, section: string, sectionOfOptions: Array<any> }) => {
+const GroupOfOptions = (props: { key: string, section: string, sectionOfOptions: Array<any> }) => {
 
     const activeOption = useAppSelector(selectDemo);
     const groupName = props.section;
@@ -29,4 +29,4 @@ const ComponentOptionList = (props: { key: string, section: string, sectionOfOpt
     )
 }
 
-export default ComponentOptionList;
+export default GroupOfOptions;

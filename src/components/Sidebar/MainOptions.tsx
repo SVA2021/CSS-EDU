@@ -6,7 +6,7 @@ import MainBtn from './MainBtn';
 import { SectionTitle } from '../common/Typography';
 import { isEmpty } from '../../app/commonFunctions';
 
-const MainBtnList = () => {
+const MainOptions = () => {
 
     const active = useAppSelector(selectMainOption);
     const page = useAppSelector(selectSlider);
@@ -49,4 +49,4 @@ const MainBtnList = () => {
     )
 }
 
-export default MainBtnList;
+export default MainOptions;

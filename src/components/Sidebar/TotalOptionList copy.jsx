@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppSelector } from '../../app/hooks';
 import { selectMainOption, selectSlider } from '../../app/demoSlice';
-import ComponentOptionList from './ComponentOptionList';
+import GroupOfOptions from './GroupOfOptions';
 import { SubTitleUpper } from '../common/Typography';
 
 const TotalOptionList = () => {
@@ -21,7 +21,7 @@ const TotalOptionList = () => {
     return (
         <article>
             {optionListKeys.map((item) =>
-                <ComponentOptionList
+                <GroupOfOptions
                     key={item}
                     section={item}
                     sectionOfOptions={mainOption[item]}
