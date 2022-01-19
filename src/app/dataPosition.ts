@@ -67,7 +67,7 @@ export const positionElem: positionElemType = {
                 { id: 4, name: 'inherit' },
                 { id: 5, name: 'both' }
             ],
-        }, 
+        },
         childItem: {
             display: [
                 { id: 1, name: 'initial' },
@@ -92,7 +92,7 @@ export const positionElem: positionElemType = {
             ],
         }
     },
-    flex: { 
+    flex: {
         parent: {
             display: [{ id: 1, name: 'flex' }],
             flexDirection: [
@@ -152,7 +152,7 @@ export const positionElem: positionElemType = {
             ],
         }
     },
-    grid: { 
+    grid: {
         parent: {
             display: [{ id: 1, name: 'grid' }],
             justifyContent: [

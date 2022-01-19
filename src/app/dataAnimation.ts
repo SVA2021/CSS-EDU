@@ -130,10 +130,6 @@ export const animations: animationsType = {
                     id: 30, name: `filter`, initValue: `grayscale(0%)`, finalValue: `grayscale(100%)`,
                     description: `another sub-options for filter property also animatable`
                 },
-                //not worked
-                // { id: 23, name: `vertical-align`, initValue: `5px`, finalValue: `1500px` },
-                // { id: 30, name: `object-position`, initValue: `0% 0%`, finalValue: `100% 100%` },
-                // { id: 28, name: `grid`, initValue: `auto auto auto`, finalValue: `100px 100px 100px` },
             ]
         }
     }

@@ -3,7 +3,6 @@ interface selectorsElementType {
     name: string
     class: string
     description: string
-
 }
 
 interface selectorsCSSType {
@@ -61,7 +60,6 @@ export const selectorsCSS: selectorsCSSType = {
                 { style: `style32`, name: `:focus`, class: `input:focus`, description: `Selects the input element which has focus` },
                 { style: `style33`, name: `:hover`, class: `a:hover`, description: `Selects links on mouse over` },
                 { style: `style34`, name: `:in-range`, class: `input:in-range`, description: `Selects input elements with a value within a specified range` },
-                // { style: `style35`, name: `:indeterminate`, class: `input:indeterminate`, description: `Selects input elements that are in an indeterminate state` },
                 { style: `style36`, name: `:invalid`, class: `input:invalid`, description: `Selects all input elements with an invalid value` },
                 { style: `style37`, name: `:lang(language)`, class: `p:lang(it)`, description: `Selects every <p> element with a lang attribute equal to "it" (Italian)` },
                 { style: `style40`, name: `:link`, class: `a:link`, description: `Selects all unvisited links` },

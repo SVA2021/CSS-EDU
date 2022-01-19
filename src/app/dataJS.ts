@@ -97,7 +97,6 @@ export const js: jsMethod = {
                     target: null,
                     initial: allSameItemArray
                 },
-                //searching in array
                 {
                     id: 8,
                     name: 'indexOf',
@@ -170,7 +169,6 @@ export const js: jsMethod = {
                     target: 'key',
                     initial: notSameArray
                 },
-                //transforming methods
                 {
                     id: 16,
                     name: 'forEach',
@@ -357,7 +355,7 @@ export const stringHandle = (
     method: string,
     start: number | null | undefined,
     end: number | null | undefined,
-    subStr: string ) => {
+    subStr: string) => {
     switch (method) {
         case 'trim':
             return str.trim();
