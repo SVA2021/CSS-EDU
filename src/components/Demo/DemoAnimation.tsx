@@ -1,9 +1,9 @@
 import { useAppSelector } from '../../app/hooks';
-import style from './Demo.module.scss';
-import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import { useState } from 'react';
+import { selectDemo } from '../../app/demoSlice';
+import style from './Demo.module.scss';
 import AnimatedBlock from './AnimatedBlock';
+import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
 const DemoAnimation = (props: any) => {
     const activeStyle = useAppSelector(selectDemo);

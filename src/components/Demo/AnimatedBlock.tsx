@@ -1,7 +1,7 @@
 import { useSpring, animated } from 'react-spring';
 import image from '../../img/OrangeCar.svg';
-import { usePrevious, isEmpty, getDiff  } from '../../app/commonFunctions';
 import { AnimatedPropsType } from './DemoAnimation';
+import { usePrevious, isEmpty, getDiff } from '../../app/commonFunctions';
 
 const AnimatedBlock = (props: AnimatedPropsType) => {
 
