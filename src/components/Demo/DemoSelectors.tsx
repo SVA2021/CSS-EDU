@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../app/hooks';
 import { selectDemo } from '../../app/demoSlice';
+import './selectors.scss';
 import style from './Demo.module.scss';
-import './selectors.scss'
 import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
 const DemoSelectors = () => {
@@ -67,8 +67,14 @@ const DemoSelectors = () => {
                             </li>
                             <li>
                                 <input type="text" placeholder='this is placeholder' readOnly />
-                                <label htmlFor="type1"><input type="checkbox" name="type1" checked readOnly />checked</label>
-                                <label htmlFor="type2"><input type="checkbox" name="type2" />not checked</label>
+                                <label htmlFor="type1">
+                                    <input type="checkbox" name="type1" checked readOnly />
+                                    checked
+                                </label>
+                                <label htmlFor="type2">
+                                    <input type="checkbox" name="type2" />
+                                    not checked
+                                </label>
                                 <input type="number" min="5" max="10" value="7" required onChange={(e) => (e)} />
                                 <input type="number" min="5" max="10" value="17" onChange={(e) => (e)} />
                                 <input type="text" required />
