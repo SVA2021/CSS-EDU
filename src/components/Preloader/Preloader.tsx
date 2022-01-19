@@ -16,9 +16,14 @@ const Preloader = () => {
     return (
         <section className={'preloader'}>
             <HeroTitle>
-                "CSS EDU" project was created to demonstrate how to make SPA, based on React and Redux.
-                Target of this project is site where I can see what happened if dynamically change some CSS properties of elements.
+                "CSS EDU" project is template SPA project,
+                based on React and Redux. <br />
+                where I can implement and adjust my skills in new technologies in future.
             </HeroTitle>
+            <blockquote className={style.description}>
+                Current target is simple SPA without any backend<br />
+                that can show how can be dynamically changed some CSS properties.
+            </blockquote>
             <div className={style.main}>
                 <SectionTitle>Technologies:</SectionTitle>
                 <ul>
