@@ -1,11 +1,11 @@
+import React, { useState } from 'react';
 import { useAppSelector } from '../../app/hooks';
 import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, SectionTitle, Strong } from '../common/Typography';
-import React, { useState } from 'react';
 import image from '../../img/OrangeCar.svg';
-import { normalizeObjText } from '../../app/functionStore';
 import { InputRange } from '../common/Input';
+import { normalizeObjText } from '../../app/commonFunctions';
+import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
 const ImageFilter = () => {
     const activeStyle = useAppSelector(selectDemo);
@@ -28,7 +28,7 @@ const ImageFilter = () => {
     const currentStyleTexted = normalizeObjText(currentStyle);
 
     return (
-        <section className={"demo"}>
+        <section className={'demo'}>
             <SectionTitle>Image filter</SectionTitle>
             <header className={style.demo__description}>
                 <Highlighted><Strong>CSS: </Strong>{currentStyleTexted}</Highlighted>

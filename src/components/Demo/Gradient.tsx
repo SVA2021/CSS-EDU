@@ -1,10 +1,10 @@
+import React, { useState } from 'react';
 import { useAppSelector } from '../../app/hooks';
 import style from './Demo.module.scss';
 import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, SectionTitle, Strong } from '../common/Typography';
-import React, { useState } from 'react';
 import { normalizeObjText } from '../../app/commonFunctions';
 import { InputRange } from '../common/Input';
+import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 
 const Gradient = () => {
     const activeStyle = useAppSelector(selectDemo);
@@ -47,17 +47,21 @@ const Gradient = () => {
                         <legend><Strong>Color Positions</Strong></legend>
                         <label htmlFor="startColorPos"><Strong>set startColor</Strong></label>
                         <InputRange min="0" max="20" value={startColorPos} name="startColorPos"
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setStartColorPos(Number(e.target.value))} />
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setStartColorPos(Number(e.target.value))} />
                         <label htmlFor="endColorPos"><Strong>set endColor</Strong></label>
                         <InputRange min="0" max="20" value={endColorPos} name="endColorPos"
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEndColorPos(Number(e.target.value))} />
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setEndColorPos(Number(e.target.value))} />
                     </fieldset>
-                    {!showDirectionField && <fieldset className={style.demo__settings__gradient} hidden={showDirectionField}>
-                        <legend><Strong>Direction</Strong></legend>
-                        <label htmlFor="angle"><Strong>set direction angle</Strong></label>
-                        <InputRange min="0" max="24" value={angle} name="angle"
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAngle(Number(e.target.value))} />
-                    </fieldset>}
+                    {!showDirectionField &&
+                        <fieldset className={style.demo__settings__gradient} hidden={showDirectionField}>
+                            <legend><Strong>Direction</Strong></legend>
+                            <label htmlFor="angle"><Strong>set direction angle</Strong></label>
+                            <InputRange min="0" max="24" value={angle} name="angle"
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                    setAngle(Number(e.target.value))} />
+                        </fieldset>}
                     {!showPositionField && <fieldset className={style.demo__settings__gradient} >
                         <legend><Strong>Set XY Position</Strong></legend>
                         <label htmlFor="x"><Strong>set X position</Strong></label>
