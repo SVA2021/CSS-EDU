@@ -1,4 +1,3 @@
-
 const MainBtn = (props: { value: string, class: string, setMain: any }) => {
 
     return (
