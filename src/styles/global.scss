@@ -46,3 +46,7 @@ a {
     @include baseOffset;
     grid-area: 2 / 1 / 5 / 7;
 }
+
+.footer {
+    grid-column: 1 / 7;
+}
