@@ -1,7 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import { HeroTitle, IconLabel, SectionTitle } from '../common/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3Alt, faFontAwesomeFlag, faGitAlt, faGithub, faHtml5, faReact, faSass } from '@fortawesome/free-brands-svg-icons'
+import {
+    faCss3Alt, faFontAwesomeFlag, faGitAlt,
+    faGithub, faHtml5, faReact, faSass
+} from '@fortawesome/free-brands-svg-icons'
 import springImg from '../../img/react-spring-svg.svg';
 import typescriptImg from '../../img/typescript.svg';
 import reduxImg from '../../img/redux.svg';

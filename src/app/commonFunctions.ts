@@ -47,6 +47,6 @@ export const setArray = (qty: number, array: Array<any>, item = '') => {
     return array;
 }
 
-export const normalizeObjText = (str: string) => {
+export const normalizeObjText = (str: any) => {
     return JSON.stringify(str, null, ' ').replace(/"/gm, '');
 }

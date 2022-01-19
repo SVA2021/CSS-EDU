@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
-import { positionElem } from "./dataPosition";
 import { js } from './dataJS';
 import { features } from './dataFeatures';
 import { animations } from './dataAnimation';
 import { selectorsCSS } from './dataSelectors';
+import { positionElem } from "./dataPosition";
 
 const initialState: demoState = {
   activeSlider: {},
@@ -24,7 +24,7 @@ interface demoState {
 }
 
 const pages = { positionElem, animations, selectorsCSS, features, js }
-type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features" | "js";
+export type pagesType = "positionElem" | "selectorsCSS" | "animations" | "features" | "js";
 
 export const demoSlice = createSlice({
   name: 'demo',
