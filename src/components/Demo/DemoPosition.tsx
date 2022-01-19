@@ -1,10 +1,10 @@
-import { useAppSelector } from '../../app/hooks';
-import style from './Demo.module.scss';
-import { selectDemo } from '../../app/demoSlice';
-import { Highlighted, SectionTitle, Strong } from '../common/Typography';
 import React, { useState } from 'react';
-import { normalizeObjText, propertyCopy, setArray } from '../../app/commonFunctions';
+import { useAppSelector } from '../../app/hooks';
+import { selectDemo } from '../../app/demoSlice';
+import style from './Demo.module.scss';
 import { InputRange, InputNumber } from '../common/Input';
+import { Highlighted, SectionTitle, Strong } from '../common/Typography';
+import { normalizeObjText, propertyCopy, setArray } from '../../app/commonFunctions';
 
 const DemoPosition = () => {
     const activeStyle = useAppSelector(selectDemo);
