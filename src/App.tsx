@@ -5,18 +5,20 @@ import SideBar from './components/Sidebar/SideBar';
 
 function App() {
 
-  return (
-    <div className="container">
-      <header className="header">
-        <NavBar />
-      </header>
-      <SideBar />
-      <Demo />
-      <footer className="footer">
-        <Highlighted>SVA</Highlighted>
-      </footer>
-    </div>
-  );
+	return (
+		<>
+			<header className="header">
+				<NavBar />
+			</header>
+			<main className="container">
+				<SideBar />
+				<Demo />
+			</main>
+			<footer className="footer">
+				<Highlighted>SVA</Highlighted>
+			</footer>
+		</>
+	);
 }
 
 export default App;
