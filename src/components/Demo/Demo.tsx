@@ -7,18 +7,21 @@ import DemoCSSFeatures from './DemoCSSFeatures';
 import DemoJS from './DemoJS';
 
 const Demo = () => {
-    return (
-        <>
-            <Routes >
-                <Route path="/" element={<Preloader />} />
-                <Route path="/position" element={<DemoPosition />} />
-                <Route path="/selectors" element={<DemoSelectors />} />
-                <Route path="/animation" element={<DemoAnimation />} />
-                <Route path="/css-features" element={<DemoCSSFeatures />} />
-                <Route path="/js" element={<DemoJS />} />
-            </Routes>
-        </>
-    )
+	return (
+		<>
+			<Routes >
+				<Route path="/CSS-EDU/" >
+					<Route index element={<Preloader />} />
+					<Route path="position" element={<DemoPosition />} />
+					<Route path="selectors" element={<DemoSelectors />} />
+					<Route path="animation" element={<DemoAnimation />} />
+					<Route path="css-features" element={<DemoCSSFeatures />} />
+					<Route path="js" element={<DemoJS />} />
+				</Route>
+				<Route path="*" element={<Preloader />} />
+			</Routes>
+		</>
+	)
 }
 
 export default Demo;
