@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/CSS-EDU/static/css/main.5667f7a8.chunk.css",
-    "main.js": "/CSS-EDU/static/js/main.5d06a862.chunk.js",
-    "main.js.map": "/CSS-EDU/static/js/main.5d06a862.chunk.js.map",
+    "main.css": "/CSS-EDU/static/css/main.ff4f232a.chunk.css",
+    "main.js": "/CSS-EDU/static/js/main.0a505197.chunk.js",
+    "main.js.map": "/CSS-EDU/static/js/main.0a505197.chunk.js.map",
     "runtime-main.js": "/CSS-EDU/static/js/runtime-main.9c00d368.js",
     "runtime-main.js.map": "/CSS-EDU/static/js/runtime-main.9c00d368.js.map",
     "static/js/2.1e1d82ef.chunk.js": "/CSS-EDU/static/js/2.1e1d82ef.chunk.js",
     "static/js/2.1e1d82ef.chunk.js.map": "/CSS-EDU/static/js/2.1e1d82ef.chunk.js.map",
     "index.html": "/CSS-EDU/index.html",
-    "static/css/main.5667f7a8.chunk.css.map": "/CSS-EDU/static/css/main.5667f7a8.chunk.css.map",
+    "static/css/main.ff4f232a.chunk.css.map": "/CSS-EDU/static/css/main.ff4f232a.chunk.css.map",
     "static/js/2.1e1d82ef.chunk.js.LICENSE.txt": "/CSS-EDU/static/js/2.1e1d82ef.chunk.js.LICENSE.txt",
     "static/media/OrangeCar.0ee48268.svg": "/CSS-EDU/static/media/OrangeCar.0ee48268.svg",
     "static/media/css-modules-logo.f1e96907.svg": "/CSS-EDU/static/media/css-modules-logo.f1e96907.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.9c00d368.js",
     "static/js/2.1e1d82ef.chunk.js",
-    "static/css/main.5667f7a8.chunk.css",
-    "static/js/main.5d06a862.chunk.js"
+    "static/css/main.ff4f232a.chunk.css",
+    "static/js/main.0a505197.chunk.js"
   ]
 }
