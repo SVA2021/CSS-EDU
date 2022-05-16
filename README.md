@@ -10,15 +10,14 @@
 
   ## TECHNOLOGIES
 	- HTML5
+	- CSS3
+	- Git
+	- SASS
 	- React
 	- Redux
-	- Redux logo
 	- Redux Toolkit
 	- TypeScript
+	- CSS modules
 	- react-spring
 	- Font Awesome
-	- SASS
-	- CSS3
-	- CSS modules
 	- GitHub
-	- Git
