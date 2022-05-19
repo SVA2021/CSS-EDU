@@ -3,24 +3,43 @@
 
 .navbar {
 
-    ul {
-        @include flexEvenly;
-        list-style-type: none;
+	ul {
+		@include flexEvenly;
+		list-style-type: none;
 
-        li {
-            @include buttonOffsetNav;
-            @include lightDark;
-            @include subTitleFont;
+		li {
+			// @include buttonOffsetNav;
+			@include lightDark;
+			@include subTitleFont;
+			margin: $offset-basic;
+			border-radius: $border-radius-section;
+			cursor: pointer;
+			height: 4rem;
 
-            display: block;
-            border-radius: $border-radius-section;
-            cursor: pointer;
-        }
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
 
-        li:hover {
-            @include orangeLight;
-            transform: scale(1.2);
-            transition: all 0.2s linear;
-        }
-    }
+			a {
+				padding: $offset-basic;
+				text-align: center;
+			}
+
+			@media (max-width: 800px) {
+				text-transform: uppercase;
+				font-size: 1.2rem;
+			}
+		}
+
+		li:hover {
+			@include orangeLight;
+			transform: scale(1.2);
+			transition: all 0.2s linear;
+
+			@media (max-width: 800px) {
+				transform: scale(1.05);
+			}
+		}
+	}
 }

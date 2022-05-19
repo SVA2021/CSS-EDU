@@ -5,6 +5,7 @@
     @include flexEvenly;
     @include baseYOffset;
     @include borderDefault;
+		flex-wrap: wrap;
 }
 
 .mainBtn {
